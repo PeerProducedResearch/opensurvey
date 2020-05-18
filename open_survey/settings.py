@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'openhumans'
+    'openhumans',
+    'main'
 ]
 
 MIDDLEWARE = [
@@ -120,7 +121,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_URL = "/static/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "managedfiles")
+MEDIA_URL = "/files/"
 
 # Open Humans configuration
 
@@ -129,6 +135,14 @@ OPENHUMANS_CLIENT_ID = os.getenv("OPENHUMANS_CLIENT_ID", "your_client_id")
 OPENHUMANS_CLIENT_SECRET = os.getenv("OPENHUMANS_CLIENT_SECRET", "your_client_secret")
 
 LOGIN_REDIRECT_URL = "/"
+
+
+OPENCLINICA_TOKEN = os.getenv("OPENCLINICA_TOKEN", "OPENCLINICA_TOKEN")
+
+OPENCLINICA_STUDY = os.getenv("OPENCLINICA_STUDY", "OPENCLINICA_STUDY ")
+
+OPENCLINICA_SITE = os.getenv("OPENCLINICA_SITE", "OPENCLINICA_SITE")
+
 
 if ON_HEROKU:
     django_heroku.settings(locals())

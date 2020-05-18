@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+{% if not request.user.is_authenticated %}
+
+<h1 class="mt-3 text-center">Welcome to the <i>Our Survey</i>!</h1>
+<h4 class="text-center text-muted">Text goes Here!</h4>
+<hr class="my-4">
+<p>
+  <a class="btn btn-primary btn-lg" href="{{ openhumans_login_url }}" role="button">Get started</a>
+</p>
+<p>
+  Click the button above to get started. Accounts are managed via Open Humans, which enables you to securely store, access, and manage your
+  wearable data. You can easily create an account as part of the login process.
+</p>
+{% endif %}
+
+{% if request.user.is_authenticated %}
+You're authenticated! Tada!
+{{files}}
+{% endif %} {# if user.is_authenticated #}
+
+{% endblock main %}

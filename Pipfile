@@ -10,6 +10,7 @@ django = "*"
 django-open-humans = "*"
 django-heroku = "*"
 gunicorn = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.6"
