@@ -3,9 +3,23 @@ import requests
 import json
 
 
+def get_access_token():
+    url = 'https://opencovid.build.openclinica.io/user-service/api/oauth/token'
+    headers = {'Content-Type': "application/json"}
+    data = json.dumps(
+        {'username': settings.OPENCLINICA_USERNAME, 'password': settings.OPENCLINICA_PASSWORD}
+    )
+    response = requests.post(url, headers=headers, data=data)
+    print(response.text)
+    return response.text
+
+
 def create_openclinica_user(survey_member):
+
+    requests
+
     headers = {
-        "Authorization": "bearer {}".format(settings.OPENCLINICA_TOKEN),
+        "Authorization": "bearer {}".format(get_access_token()),
         "Content-Type": "application/json"
     }
     data = {
@@ -16,11 +30,12 @@ def create_openclinica_user(survey_member):
         settings.OPENCLINICA_STUDY, settings.OPENCLINICA_SITE
     )
     response = requests.post(url, headers=headers, data=json.dumps(data))
+    print(response.text)
 
 
 def create_openclinica_event(survey_member, event, date):
     headers = {
-        "Authorization": "bearer {}".format(settings.OPENCLINICA_TOKEN),
+        "Authorization": "bearer {}".format(get_access_token()),
         "Content-Type": "application/json"
     }
     data = {
@@ -34,18 +49,18 @@ def create_openclinica_event(survey_member, event, date):
         settings.OPENCLINICA_STUDY, settings.OPENCLINICA_SITE
     )
     response = requests.post(url, headers=headers, data=json.dumps(data))
+    print(response.text)
 
 
 def get_openclinica_token(survey_member):
     headers = {
-        "Authorization": "bearer {}".format(settings.OPENCLINICA_TOKEN),
+        "Authorization": "bearer {}".format(get_access_token()),
         "Content-Type": "application/json"
     }
     url = "https://opencovid.openclinica.io/OpenClinica/pages/auth/api/clinicaldata/studies/{}/sites/{}/participant?includeParticipateInfo=y&participantID={}".format(
         settings.OPENCLINICA_STUDY, settings.OPENCLINICA_SITE, survey_member.member.oh_id
     )
     response = requests.get(url, headers=headers)
-    print(response)
     print(response.json())
     survey_member.survey_token = response.json()['accessCode']
     survey_member.save()
