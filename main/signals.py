@@ -16,5 +16,3 @@ def my_handler(sender, instance, created, **kwargs):
         create_openclinica_event(survey_account, "SE_FSFD", str(datetime.date.today()))
         get_openclinica_token(survey_account)
         send_user_survey_link(survey_account)
-        # TODO:
-        # - get URl…
