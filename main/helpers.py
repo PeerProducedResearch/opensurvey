@@ -10,7 +10,6 @@ def get_access_token():
         {'username': settings.OPENCLINICA_USERNAME, 'password': settings.OPENCLINICA_PASSWORD}
     )
     response = requests.post(url, headers=headers, data=data)
-    print(response.text)
     return response.text
 
 
