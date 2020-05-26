@@ -9,6 +9,6 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         for survey_account in SurveyAccount.objects.all():
-            create_openclinica_event(survey_account, "SE_DAILY", str(datetime.date.today()))
+            #create_openclinica_event(survey_account, "SE_DAILY", str(datetime.date.today()))
             get_openclinica_token(survey_account)
             send_user_survey_link(survey_account)

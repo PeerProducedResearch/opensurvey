@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from openhumans.models import OpenHumansMember
+from .models import ReportToken
 from django.contrib.auth import logout
 from django.shortcuts import redirect
 from django.conf import settings
+import datetime
+from .helpers import create_openclinica_event
 
 # Create your views here.
 
@@ -50,3 +53,27 @@ def logout_user(request):
     if not redirect_url:
         redirect_url = "/"
     return redirect(redirect_url)
+
+
+def take_survey(request, oh_id):
+    logged_in = False
+    if request.user.is_authenticated:
+        if request.user.openhumansmember.oh_id == oh_id:
+            print('user is logged in')
+            logged_in = True
+    token_string = request.GET.get('login_token', None)
+    if token_string:
+        token = ReportToken.objects.get(token=token_string)
+        if token.is_valid():
+            print('token is valid')
+            logged_in = True
+    if logged_in:
+        oh_member = OpenHumansMember.objects.get(oh_id=oh_id)
+        survey_member = oh_member.surveyaccount
+        if survey_member.last_survey != datetime.date.today():
+            create_openclinica_event(survey_member, "SE_DAILY", str(datetime.date.today()))
+            survey_member.last_survey = datetime.date.today()
+            survey_member.save()
+        return redirect(settings.OPENCLINICA_PARTICIPATE_LINK + "?accessCode={}".format(survey_member.survey_token))
+    else:
+        redirect('/')

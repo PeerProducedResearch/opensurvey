@@ -5,6 +5,7 @@ from .models import SurveyAccount
 from .helpers import create_openclinica_user, create_openclinica_event, get_openclinica_token, send_user_survey_link
 import datetime
 
+
 @receiver(post_save, sender=OpenHumansMember)
 def my_handler(sender, instance, created, **kwargs):
     if created:
@@ -13,6 +14,6 @@ def my_handler(sender, instance, created, **kwargs):
         )
         survey_account.save()
         create_openclinica_user(survey_account)
-        create_openclinica_event(survey_account, "SE_DAILY", str(datetime.date.today()))
+        create_openclinica_event(survey_account, "SE_FSFD", str(datetime.date.today()))
         get_openclinica_token(survey_account)
         send_user_survey_link(survey_account)
