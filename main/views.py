@@ -77,3 +77,24 @@ def take_survey(request, oh_id):
         return redirect(settings.OPENCLINICA_PARTICIPATE_LINK + "?accessCode={}".format(survey_member.survey_token))
     else:
         redirect('/')
+
+
+def faq(request):
+    """
+    Logout user.
+    """
+    return render(request, 'main/faq.html')
+
+
+def team(request):
+    """
+    Logout user.
+    """
+    return render(request, 'main/team.html')
+
+
+def vision(request):
+    """
+    Logout user.
+    """
+    return render(request, 'main/vision.html')

@@ -45,6 +45,15 @@
           </button>
           <div class="collapse navbar-collapse text-right" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
+              <li class="nav-item mt-2 mt-md-0 mr-md-2">
+                <a class="nav-link" href="{% url 'vision'%}">Vision</a>
+              </li>
+              <li class="nav-item mt-2 mt-md-0 mr-md-2">
+                <a class="nav-link" href="{% url 'faq'%}">FAQ</a>
+              </li>
+              <li class="nav-item mt-2 mt-md-0 mr-md-2">
+                <a class="nav-link" href="{% url 'team'%}">Team</a>
+              </li>
               {% if request.user.is_authenticated %}
               <li class="nav-item mt-2 mt-md-0 mr-md-2">
               <a class='nav-link' href="#">User Is Logged In</a>

@@ -5,21 +5,37 @@
 
 {% if not request.user.is_authenticated %}
 
-<h1 class="mt-3 text-center">Welcome to the <i>Our Survey</i>!</h1>
-<h4 class="text-center text-muted">Text goes Here!</h4>
-<hr class="my-4">
-<p>
-  <a class="btn btn-primary btn-lg" href="{{ openhumans_login_url }}" role="button">Get started</a>
+
+<div class="jumbotron">
+  <h1 class="display-4">Open COVID-19 Survey</h1>
+  <p class="lead">COVID-19 has turned our lives upside down. And while this virus continues to spread, millions around the world begin to take positive action. From the comfort of your home, you too can join the global fight against this virus!</p>
+  <p class="lead">5 minutes. That’s all it takes to advance science</p>
+  <hr class="my-4">
+  <p>
+    We’re tackling:
+    <ul>
+<li>Your physical health</li>
+<li>Your mental wellbeing</li>
+<li>Transmission properties of the virus</li>
+<li>Susceptibility to develop the illness</li>
+<li>Medication repurposing</li>
+<li>And more...</li>
+</ul>
 </p>
 <p>
-  Click the button above to get started. Accounts are managed via Open Humans, which enables you to securely store, access, and manage your
-  wearable data. You can easily create an account as part of the login process.
+
+  And you can shape the future questions
+</p>
+  <a class="btn btn-primary btn-lg" href="{{ openhumans_login_url }}" role="button">I want to fight COVID-19 by doing the survey!</a>
+</div>
+
+<p>
+  Click the button above to get started. Accounts are managed via Open Humans, which enables you to securely store, access, and manage your data, without us having access to any of your personal details. You can easily create an account as part of the login process.
 </p>
 {% endif %}
 
 {% if request.user.is_authenticated %}
-You're authenticated! Tada!
-{{files}}
+You're authenticated and should now get an email to get started with your survey!
 {% endif %} {# if user.is_authenticated #}
 
 {% endblock main %}
