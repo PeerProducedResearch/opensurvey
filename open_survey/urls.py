@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from main.views import HomeView, logout_user, take_survey, team, faq, vision
+from main.views import citizen_science, data
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,8 @@ urlpatterns = [
     path('team/', team, name='team'),
     path('faq/', faq, name='faq'),
     path('vision/', vision, name='vision'),
+    path('citizen-science/', citizen_science, name='citizen_science'),
+    path('data/', data, name='data'),
 ]
 
 urlpatterns += [path("openhumans/", include("openhumans.urls"))]

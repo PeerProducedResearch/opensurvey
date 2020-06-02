@@ -8,8 +8,7 @@
 
 <div class="jumbotron">
   <h1 class="display-4">Open COVID-19 Survey</h1>
-  <p class="lead">COVID-19 has turned our lives upside down. And while this virus continues to spread, millions around the world begin to take positive action. From the comfort of your home, you too can join the global fight against this virus!</p>
-  <p class="lead">5 minutes. That’s all it takes to advance science</p>
+  <p class="lead">COVID-19 has turned our lives upside down. And while this virus continues to spread, millions around the world begin to take positive action. From the comfort of your home, you too can join the global fight against this virus! 5 minutes. That’s all it takes to advance science</p>
   <hr class="my-4">
   <p>
     We’re tackling:
@@ -27,11 +26,32 @@
   And you can shape the future questions
 </p>
   <a class="btn btn-primary btn-lg" href="{{ openhumans_login_url }}" role="button">I want to fight COVID-19 by doing the survey!</a>
+  <p>
+  <small>
+    Click the button above to get started. Accounts are managed via Open Humans, which enables you to securely store, access, and manage your data, without us having access to any of your personal details. You can easily create an account as part of the login process.
+  </small>
+  </p>
 </div>
 
-<p>
-  Click the button above to get started. Accounts are managed via Open Humans, which enables you to securely store, access, and manage your data, without us having access to any of your personal details. You can easily create an account as part of the login process.
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Citizen Science</h2>
+      <p>
+        When it comes to science, we believe in harnessing the ingenuity of all citizens. We want you to contribute your own survey items according to your research questions and interests. This will not only help us develop the study to cover the needs and interests of the cohort, but will also help us understand key questions and concerns that citizens outside of Academia have regarding the pandemic.
+      </p>
+      <a class="btn btn-primary" href="{% url "citizen_science" %}" role="button">Learn more</a>
+    </div>
+    <div class="col">
+      <h2>Shared Data, Shared Knowledge</h2>
+      <p>
+        De-identified data will be made available to the scientific community, and will be distributed with any publications that arise from this study. If necessary to protect the privacy of participants, individual bits of data might be removed or only shared in aggregate. These data cannot be used to identify participants. Additionally, each participant will be given a copy of their own data as part of this study.
+      </p>
+      <a class="btn btn-primary" href="{% url "data" %}" role="button">Learn more</a>
+    </div>
+  </div>
+
+
 {% endif %}
 
 {% if request.user.is_authenticated %}

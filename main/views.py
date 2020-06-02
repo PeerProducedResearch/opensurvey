@@ -98,3 +98,17 @@ def vision(request):
     Logout user.
     """
     return render(request, 'main/vision.html')
+
+
+def citizen_science(request):
+    """
+    Logout user.
+    """
+    return render(request, 'main/citizen-science.html')
+
+
+def data(request):
+    """
+    Logout user.
+    """
+    return render(request, 'main/data.html')
