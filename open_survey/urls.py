@@ -28,6 +28,8 @@ urlpatterns = [
     path('vision/', vision, name='vision'),
     path('citizen-science/', citizen_science, name='citizen_science'),
     path('data/', data, name='data'),
+
+    path('i18n/', include('django.conf.urls.i18n')),
 ]
 
 urlpatterns += [path("openhumans/", include("openhumans.urls"))]

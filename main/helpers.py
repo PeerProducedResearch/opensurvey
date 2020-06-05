@@ -4,6 +4,7 @@ import json
 from .models import ReportToken
 from urllib.parse import urljoin
 from django.shortcuts import reverse
+from django.utils.translation import gettext_lazy as _
 
 
 def get_access_token(download=False):
@@ -94,5 +95,6 @@ def send_user_survey_link(survey_member):
     token.save()
     url = create_token_url(survey_member.member, token)
     survey_member.member.message(
-        subject="Here's your survey link!",
-        message="Please use this URL to fill out the survey: {}".format(url))
+        subject=_("Here's your survey link!"),
+        message="{}: {}".format(_("Please use this link to fill out the survey"), url)
+    )

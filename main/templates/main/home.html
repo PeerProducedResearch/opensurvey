@@ -1,61 +1,80 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block main %}
+    {% if not request.user.is_authenticated %}
+        <div class="jumbotron">
+            <h1 class="display-4">Open COVID-19 Survey</h1>
+            <p class="lead">
+                {% blocktrans %}
+                    COVID-19 has turned our lives upside down. And while this virus continues to spread,
+                    millions around the world begin to take positive action. From the comfort of your home, you too can
+                    join the global fight against this virus! 5 minutes. That’s all it takes to advance science.
+                {% endblocktrans %}
+            </p>
+            <hr class="my-4">
+            <p>
+                {% trans "We’re tackling:" %}
+                <ul>
+                    <li>{% trans "Your physical health" %}</li>
+                    <li>{% trans "Your mental wellbeing" %}</li>
+                    <li>{% trans "Transmission properties of the virus" %}</li>
+                    <li>{% trans "Susceptibility to develop the illness" %}</li>
+                    <li>{% trans "Medication repurposing" %}</li>
+                    <li>{% trans "And more..." %}</li>
+                </ul>
+            </p>
+            <p>
+                {% trans "And you can shape the future questions." %}
+            </p>
+            <a class="btn btn-primary btn-lg" href="{{ openhumans_login_url }}" role="button">
+                {% trans "I want to fight COVID-19 by doing the survey!" %}
+            </a>
+            <p>
+                <small>
+                    {% blocktrans %}
+                        Click the button above to get started. Accounts are managed via Open Humans, which enables you to
+                        securely store, access, and manage your data, without us having access to any of your personal
+                        details. You can easily create an account as part of the login process.
+                    {% endblocktrans %}
+                </small>
+            </p>
+        </div>
 
-{% if not request.user.is_authenticated %}
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>{% trans "Citizen Science" %}</h2>
+                    <p>
+                        {% blocktrans %}
+                            When it comes to science, we believe in harnessing the ingenuity of all citizens. We want you
+                            to contribute your own survey items according to your research questions and interests. This
+                            will not only help us develop the study to cover the needs and interests of the cohort, but
+                            will also help us understand key questions and concerns that citizens outside of Academia have
+                            regarding the pandemic.
+                        {% endblocktrans %}
+                    </p>
+                    <a class="btn btn-primary" href="{% url "citizen_science" %}" role="button">{% trans "Learn more" %}</a>
+                </div>
+                <div class="col">
+                    <h2>{% trans "Shared Data, Shared Knowledge" %}</h2>
+                    <p>
+                        {% blocktrans %}
+                            De-identified data will be made available to the scientific community, and will be distributed
+                            with any publications that arise from this study. If necessary to protect the privacy of
+                            participants, individual bits of data might be removed or only shared in aggregate. These data
+                            cannot be used to identify participants. Additionally, each participant will be given a copy of
+                            their own data as part of this study.
+                        {% endblocktrans %}
+                    </p>
+                    <a class="btn btn-primary" href="{% url "data" %}" role="button">{% trans "Learn more" %}</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 
-
-<div class="jumbotron">
-  <h1 class="display-4">Open COVID-19 Survey</h1>
-  <p class="lead">COVID-19 has turned our lives upside down. And while this virus continues to spread, millions around the world begin to take positive action. From the comfort of your home, you too can join the global fight against this virus! 5 minutes. That’s all it takes to advance science</p>
-  <hr class="my-4">
-  <p>
-    We’re tackling:
-    <ul>
-<li>Your physical health</li>
-<li>Your mental wellbeing</li>
-<li>Transmission properties of the virus</li>
-<li>Susceptibility to develop the illness</li>
-<li>Medication repurposing</li>
-<li>And more...</li>
-</ul>
-</p>
-<p>
-
-  And you can shape the future questions
-</p>
-  <a class="btn btn-primary btn-lg" href="{{ openhumans_login_url }}" role="button">I want to fight COVID-19 by doing the survey!</a>
-  <p>
-  <small>
-    Click the button above to get started. Accounts are managed via Open Humans, which enables you to securely store, access, and manage your data, without us having access to any of your personal details. You can easily create an account as part of the login process.
-  </small>
-  </p>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h2>Citizen Science</h2>
-      <p>
-        When it comes to science, we believe in harnessing the ingenuity of all citizens. We want you to contribute your own survey items according to your research questions and interests. This will not only help us develop the study to cover the needs and interests of the cohort, but will also help us understand key questions and concerns that citizens outside of Academia have regarding the pandemic.
-      </p>
-      <a class="btn btn-primary" href="{% url "citizen_science" %}" role="button">Learn more</a>
-    </div>
-    <div class="col">
-      <h2>Shared Data, Shared Knowledge</h2>
-      <p>
-        De-identified data will be made available to the scientific community, and will be distributed with any publications that arise from this study. If necessary to protect the privacy of participants, individual bits of data might be removed or only shared in aggregate. These data cannot be used to identify participants. Additionally, each participant will be given a copy of their own data as part of this study.
-      </p>
-      <a class="btn btn-primary" href="{% url "data" %}" role="button">Learn more</a>
-    </div>
-  </div>
-
-
-{% endif %}
-
-{% if request.user.is_authenticated %}
-You're authenticated and should now get an email to get started with your survey!
-{% endif %} {# if user.is_authenticated #}
-
+    {% if request.user.is_authenticated %}
+        {% trans "You're authenticated and should now get an email to get started with your survey!" %}
+    {% endif %}
 {% endblock main %}

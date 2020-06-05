@@ -1,0 +1,207 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-05 16:24+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: main/helpers.py:94
+msgid "Here's your survey link!"
+msgstr "Voilà le lien pour votre questionnaire !"
+
+#: main/helpers.py:95
+msgid "Please use this link to fill out the survey"
+msgstr "Merci d'utiliser ce lien pour remplir votre questionnaire"
+
+#: main/templates/base.html:60 main/templates/main/home.html:48
+msgid "Citizen Science"
+msgstr "Science citoyenne"
+
+#: main/templates/base.html:63
+msgid "Vision"
+msgstr "Vision"
+
+#: main/templates/base.html:66
+msgid "Data"
+msgstr "Données"
+
+#: main/templates/base.html:69
+msgid "Team"
+msgstr "L'équipe"
+
+#: main/templates/base.html:72
+msgid "FAQ"
+msgstr "FAQ"
+
+#: main/templates/base.html:101
+msgid "Log in"
+msgstr "Connexion"
+
+#: main/templates/base.html:107
+msgid "Log out"
+msgstr "Déconnexion"
+
+#: main/templates/base.html:141
+msgid "view our code"
+msgstr "voir notre code"
+
+#: main/templates/main/home.html:10
+msgid ""
+"\n"
+"                    COVID-19 has turned our lives upside down. And while "
+"this virus continues to spread,\n"
+"                    millions around the world begin to take positive action. "
+"From the comfort of your home, you too can\n"
+"                    join the global fight against this virus! 5 minutes. "
+"That’s all it takes to advance science.\n"
+"                "
+msgstr ""
+"\n"
+"                    La COVID-19 a mis nos vies sens dessus dessous. Et bien "
+"que ce virus continue à se propager,\n"
+"                    des millions de personnes autour du monde commencent à "
+"passer à l'action. Depuis le confort de chez vous, vous aussi pouvez\n"
+"                    rejoindre le combat global contre ce virus ! 5 minutes. "
+"Cela suffit pour faire progresser la science.\n"
+"                "
+
+#: main/templates/main/home.html:18
+msgid "We’re tackling:"
+msgstr "Nous abordons :"
+
+#: main/templates/main/home.html:20
+msgid "Your physical health"
+msgstr "Votre santé physique"
+
+#: main/templates/main/home.html:21
+msgid "Your mental wellbeing"
+msgstr "Votre bien-être mental"
+
+#: main/templates/main/home.html:22
+msgid "Transmission properties of the virus"
+msgstr "Les propriétés de transmission du virus"
+
+#: main/templates/main/home.html:23
+msgid "Susceptibility to develop the illness"
+msgstr "La susceptibilité de développement de la maladie"
+
+#: main/templates/main/home.html:24
+msgid "Medication repurposing"
+msgstr "L'utilisation détournée de médicaments"
+
+#: main/templates/main/home.html:25
+msgid "And more..."
+msgstr "Et plus..."
+
+#: main/templates/main/home.html:29
+msgid "And you can shape the future questions."
+msgstr "Et vous pouvez façonner les futures questions."
+
+#: main/templates/main/home.html:32
+msgid "I want to fight COVID-19 by doing the survey!"
+msgstr "Je veux aider à combattre la COVID-19 en participant à l'étude !"
+
+#: main/templates/main/home.html:36
+msgid ""
+"\n"
+"                        Click the button above to get started. Accounts are "
+"managed via Open Humans, which enables you to\n"
+"                        securely store, access, and manage your data, "
+"without us having access to any of your personal\n"
+"                        details. You can easily create an account as part of "
+"the login process.\n"
+"                    "
+msgstr ""
+"\n"
+"                        Cliquez sur le bouton ci-dessus pour démarrer. Les "
+"comptes sont gérés via Open Humans, qui vous permet de\n"
+"                        stocker, accéder à, et gérer vos données de manière "
+"sécurisée, sans que nous ayons accès à aucune de vos informations\n"
+"                        personnelles. Vous pouvez facilement créer un compte "
+"lors du processus de connexion.\n"
+"                    "
+
+#: main/templates/main/home.html:50
+msgid ""
+"\n"
+"                            When it comes to science, we believe in "
+"harnessing the ingenuity of all citizens. We want you\n"
+"                            to contribute your own survey items according to "
+"your research questions and interests. This\n"
+"                            will not only help us develop the study to cover "
+"the needs and interests of the cohort, but\n"
+"                            will also help us understand key questions and "
+"concerns that citizens outside of Academia have\n"
+"                            regarding the pandemic.\n"
+"                        "
+msgstr ""
+"\n"
+"                            Lorsqu'il s'agit de science, nous croyons en "
+"l'utilisation de l'ingéniosité de tous les citoyens. Nous voulons que vous\n"
+"                            contribuiez avec vos propres questionnaires en "
+"accord avec vos sujets de recherche et vos intérêts. Cela\n"
+"                            nous aidera non seulement à developper l'étude "
+"pour couvrir les besoin et intérêts de la cohorte, mais\n"
+"                            nous aidera aussi à comprendre les questions "
+"clés et les préoccupations que les citoyens en dehors du monde "
+"universitaire\n"
+"                            ont concernant l'épidémie.\n"
+"                        "
+
+#: main/templates/main/home.html:58 main/templates/main/home.html:71
+msgid "Learn more"
+msgstr "En savoir plus"
+
+#: main/templates/main/home.html:61
+msgid "Shared Data, Shared Knowledge"
+msgstr "Données partagées, Connaissances partagées"
+
+#: main/templates/main/home.html:63
+msgid ""
+"\n"
+"                            De-identified data will be made available to the "
+"scientific community, and will be distributed\n"
+"                            with any publications that arise from this "
+"study. If necessary to protect the privacy of\n"
+"                            participants, individual bits of data might be "
+"removed or only shared in aggregate. These data\n"
+"                            cannot be used to identify participants. "
+"Additionally, each participant will be given a copy of\n"
+"                            their own data as part of this study.\n"
+"                        "
+msgstr ""
+"\n"
+"                            Les données anonymisées seront mises à "
+"disposition de la communauté scientifique, et seront distribuées\n"
+"                            avec toute publication émergeant de cette étude. "
+"Si nécessaire pour protéger la vie privée des\n"
+"                            participants, certaines parties de données "
+"individuelles pourront être supprimées ou partagées seulement de manière "
+"agrégée. Ces données\n"
+"                            ne peuvent pas être utilisées pour identifier "
+"des participants. De plus, chaque participant recevra une copie de ses\n"
+"                             propres données en tant que membre de l'étude.\n"
+"                        "
+
+#: main/templates/main/home.html:78
+msgid ""
+"You're authenticated and should now get an email to get started with your "
+"survey!"
+msgstr ""
+"Vous êtes inscrit et devriez maintenant recevoir un email pour démarrer "
+"votre questionnaire !"
+
+#: open_survey/settings.py:125
+msgid "English"
+msgstr "Anglais"
+
+#: open_survey/settings.py:126
+msgid "French"
+msgstr "Français"
