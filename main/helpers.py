@@ -6,12 +6,16 @@ from urllib.parse import urljoin
 from django.shortcuts import reverse
 
 
-def get_access_token():
+def get_access_token(download=False):
     url = 'https://opencovid.build.openclinica.io/user-service/api/oauth/token'
     headers = {'Content-Type': "application/json"}
     data = json.dumps(
-        {'username': settings.OPENCLINICA_USERNAME, 'password': settings.OPENCLINICA_PASSWORD}
+        {'username': settings.OPENCLINICA_SITE_USERNAME, 'password': settings.OPENCLINICA_SITE_PASSWORD}
     )
+    if download:
+        data = json.dumps(
+            {'username': settings.OPENCLINICA_DATA_USERNAME, 'password': settings.OPENCLINICA_DATA_PASSWORD}
+        )
     response = requests.post(url, headers=headers, data=data)
     if response.status_code == 200:
         return response.text
