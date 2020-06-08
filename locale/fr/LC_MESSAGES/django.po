@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-08 17:50+0000\n"
+"POT-Creation-Date: 2020-06-08 18:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -243,10 +243,28 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:50
-msgid "How do I end the survey"
+msgid ""
+"Go to <a href=\"https://www.openhumans.org/activity/open-covid-survey/\" "
+"target=\"_blank\">https://www.openhumans.org/activity/open-covid-survey/</a>"
+msgstr ""
+
+#: main/templates/main/faq.html:51
+msgid "Click on \"Leave project\" in the bottom left corner"
 msgstr ""
 
 #: main/templates/main/faq.html:52
+msgid "Check \"Remove my data files for Open COVID Survey from Open Humans\""
+msgstr ""
+
+#: main/templates/main/faq.html:53
+msgid "Click on \"Withdraw & revoke authorization\""
+msgstr ""
+
+#: main/templates/main/faq.html:56
+msgid "How do I end the survey"
+msgstr ""
+
+#: main/templates/main/faq.html:58
 msgid ""
 "\n"
 "            In your daily reminder to complete the survey, simply click on "
@@ -255,11 +273,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:58
+#: main/templates/main/faq.html:64
 msgid "Can others access my data"
 msgstr ""
 
-#: main/templates/main/faq.html:60
+#: main/templates/main/faq.html:66
 msgid ""
 "\n"
 "            Other individual participants will not be able to access your "
@@ -268,11 +286,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:66
+#: main/templates/main/faq.html:72
 msgid "Why do I need to sign up with OpenHumans"
 msgstr ""
 
-#: main/templates/main/faq.html:68
+#: main/templates/main/faq.html:74
 msgid ""
 "\n"
 "            OpenHumans hosts our secure servers, and is the place where all "
@@ -280,11 +298,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:73
+#: main/templates/main/faq.html:79
 msgid "What’s the difference between OpenHumans and OpenClinica"
 msgstr ""
 
-#: main/templates/main/faq.html:75
+#: main/templates/main/faq.html:81
 msgid ""
 "\n"
 "            OpenHumans encrypts and stores the data, OpenClinica is the "
@@ -293,11 +311,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:81
+#: main/templates/main/faq.html:87
 msgid "Can someone under 18 enroll in the survey"
 msgstr ""
 
-#: main/templates/main/faq.html:83
+#: main/templates/main/faq.html:89
 msgid ""
 "\n"
 "            No, this study is not open to participants under the age of 18\n"
