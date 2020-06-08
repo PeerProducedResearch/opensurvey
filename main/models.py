@@ -14,6 +14,7 @@ class SurveyAccount(models.Model):
     member = models.OneToOneField(OpenHumansMember, on_delete=models.CASCADE)
     survey_token = models.TextField(blank=True, null=True)
     last_survey = models.DateField(blank=True, null=True)
+    consent_given = models.BooleanField(default=False)
 
 
 TOKEN_EXPIRATION_MINUTES = 1440  # default expiration is one day

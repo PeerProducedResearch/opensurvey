@@ -1,14 +1,19 @@
-from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.views.generic.base import View
 from openhumans.models import OpenHumansMember
 from .models import ReportToken
 from django.contrib.auth import logout
+from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
 from django.shortcuts import redirect
 from django.conf import settings
+from django.urls import reverse
 import datetime
-from .helpers import create_openclinica_event
+from .helpers import create_openclinica_event, get_openclinica_token, send_user_survey_link
 
-# Create your views here.
+import logging
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 
 class HomeView(TemplateView):
@@ -21,6 +26,7 @@ class HomeView(TemplateView):
             except Exception:
                 logout(request)
                 return redirect("/")
+
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, *args, **kwargs):
@@ -43,6 +49,70 @@ class HomeView(TemplateView):
         return context
 
 
+class ConsentView(View):
+    def get(self, request, *args, **kwargs):
+        logged_in = False
+        if request.user.is_authenticated:
+            logged_in = True
+            survey_member = request.user.openhumansmember.surveyaccount
+        token_string = request.GET.get("login_token", None)
+        oh_id = request.GET.get("oh_id", None)
+        if token_string and oh_id:
+            token = ReportToken.objects.get(token=token_string)
+            if token.is_valid():
+                logged_in = True
+                oh_member = OpenHumansMember.objects.get(oh_id=oh_id)
+                survey_member = oh_member.surveyaccount
+        if logged_in:
+            if request.GET.get("consent"):
+                if request.GET["consent"] == "1":
+                   survey_member.consent_given = True
+                   survey_member.save()
+                   if token_string and oh_id:
+                       return redirect(
+                           "{}?login_token={}".format(reverse("take_survey", kwargs={"oh_id": oh_id}), token_string))
+                   elif request.user.is_authenticated:
+                       get_openclinica_token(survey_member)
+                       send_user_survey_link(survey_member)
+                       messages.add_message(request, messages.INFO, _("Your consent has been saved. You should now get "
+                                                                      "an email to get started with your survey!"))
+                elif request.GET["consent"] == "0":
+                    survey_member.consent_given = False
+                    survey_member.save()
+                    if request.user.is_authenticated:
+                        messages.add_message(request, messages.INFO, _("Your consent has been withdrawn, you will not "
+                                                                       "receive any more daily emails."))
+
+        return redirect("home")
+
+
+def take_survey(request, oh_id):
+    logged_in = False
+    if request.user.is_authenticated:
+        if request.user.openhumansmember.oh_id == oh_id:
+            logged_in = True
+            oh_member = request.user.openhumansmember
+            survey_member = oh_member.surveyaccount
+    token_string = request.GET.get("login_token", None)
+    if token_string:
+        token = ReportToken.objects.get(token=token_string)
+        if token.is_valid():
+            logged_in = True
+            oh_member = OpenHumansMember.objects.get(oh_id=oh_id)
+            survey_member = oh_member.surveyaccount
+    if logged_in:
+        if survey_member.consent_given:
+            if survey_member.last_survey != datetime.date.today():
+                create_openclinica_event(survey_member, "SE_DAILY", str(datetime.date.today()))
+                survey_member.last_survey = datetime.date.today()
+                survey_member.save()
+            return redirect(settings.OPENCLINICA_PARTICIPATE_LINK + "?accessCode={}".format(survey_member.survey_token))
+        else:
+            return redirect("{}?oh_id={}&login_token={}".format(reverse("home"), oh_id,  token_string))
+    else:
+        return redirect('home')
+
+
 def logout_user(request):
     """
     Logout user.
@@ -51,64 +121,25 @@ def logout_user(request):
         logout(request)
     redirect_url = settings.LOGOUT_REDIRECT_URL
     if not redirect_url:
-        redirect_url = "/"
+        redirect_url = "home"
     return redirect(redirect_url)
 
 
-def take_survey(request, oh_id):
-    logged_in = False
-    if request.user.is_authenticated:
-        if request.user.openhumansmember.oh_id == oh_id:
-            print('user is logged in')
-            logged_in = True
-    token_string = request.GET.get('login_token', None)
-    if token_string:
-        token = ReportToken.objects.get(token=token_string)
-        if token.is_valid():
-            print('token is valid')
-            logged_in = True
-    if logged_in:
-        oh_member = OpenHumansMember.objects.get(oh_id=oh_id)
-        survey_member = oh_member.surveyaccount
-        if survey_member.last_survey != datetime.date.today():
-            create_openclinica_event(survey_member, "SE_DAILY", str(datetime.date.today()))
-            survey_member.last_survey = datetime.date.today()
-            survey_member.save()
-        return redirect(settings.OPENCLINICA_PARTICIPATE_LINK + "?accessCode={}".format(survey_member.survey_token))
-    else:
-        redirect('/')
+class FaqView(TemplateView):
+    template_name = "main/faq.html"
 
 
-def faq(request):
-    """
-    Logout user.
-    """
-    return render(request, 'main/faq.html')
+class TeamView(TemplateView):
+    template_name = "main/faq.html"
 
 
-def team(request):
-    """
-    Logout user.
-    """
-    return render(request, 'main/team.html')
+class VisionView(TemplateView):
+    template_name = "main/vision.html"
 
 
-def vision(request):
-    """
-    Logout user.
-    """
-    return render(request, 'main/vision.html')
+class CitizenScienceView(TemplateView):
+    template_name = "main/citizen-science.html"
 
 
-def citizen_science(request):
-    """
-    Logout user.
-    """
-    return render(request, 'main/citizen-science.html')
-
-
-def data(request):
-    """
-    Logout user.
-    """
-    return render(request, 'main/data.html')
+class DataView(TemplateView):
+    template_name = "main/data.html"

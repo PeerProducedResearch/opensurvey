@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block main %}
-    {% if not request.user.is_authenticated %}
+    {% if not request.user.is_authenticated and not request.GET.oh_id %}
         <div class="jumbotron">
             <h1 class="display-4">Open COVID-19 Survey</h1>
             <p class="lead">
@@ -72,9 +72,7 @@
                 </div>
             </div>
         </div>
-    {% endif %}
-
-    {% if request.user.is_authenticated %}
-        {% trans "You're authenticated and should now get an email to get started with your survey!" %}
+    {% else %}
+        {% include "main/includes/consent.html" %}
     {% endif %}
 {% endblock main %}
