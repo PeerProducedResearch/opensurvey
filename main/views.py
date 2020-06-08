@@ -82,6 +82,8 @@ class ConsentView(View):
                     if request.user.is_authenticated:
                         messages.add_message(request, messages.INFO, _("Your consent has been withdrawn, you will not "
                                                                        "receive any more daily emails."))
+                    else:
+                        return redirect("{}?consent_withdrawn=1".format(reverse("home")))
 
         return redirect("home")
 

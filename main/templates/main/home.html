@@ -4,6 +4,9 @@
 
 {% block main %}
     {% if not request.user.is_authenticated and not request.GET.oh_id %}
+        {% if request.GET.consent_withdrawn %}
+            <div class="alert alert-info">{% trans "Your consent has been withdrawn, you will not receive any more daily emails." %}</div>
+        {% endif %}
         <div class="jumbotron">
             <h1 class="display-4">Open COVID-19 Survey</h1>
             <p class="lead">

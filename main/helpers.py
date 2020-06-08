@@ -90,11 +90,24 @@ def create_token_url(member, token):
     return url
 
 
+def create_withdraw_url(member, token):
+    url = urljoin(
+        settings.OPENHUMANS_APP_BASE_URL,
+        'consent') + "/?consent=0&oh_id=" + member.oh_id + "&login_token={}".format(token.token)
+    return url
+
+
 def send_user_survey_link(survey_member):
     token = ReportToken(member=survey_member.member)
     token.save()
     url = create_token_url(survey_member.member, token)
+    withdraw_url = create_withdraw_url(survey_member.member, token)
     survey_member.member.message(
         subject=_("Here's your survey link!"),
-        message="{}: {}".format(_("Please use this link to fill out the survey"), url)
+        message="{}: {}\n\n\n{}: {}".format(
+            _("Please use this link to fill out the survey"),
+            url,
+            _("If you don't want to take part in the survey anymore, please use this link"),
+            withdraw_url
+        )
     )
