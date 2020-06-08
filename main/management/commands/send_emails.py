@@ -8,7 +8,7 @@ class Command(BaseCommand):
     help = "Updates all data for all members"
 
     def handle(self, *args, **options):
-        for survey_account in SurveyAccount.objects.all():
+        for survey_account in SurveyAccount.objects.filter(consent_given=True):
             # we no longer create events on sending out email, it's dynamically
             # done when clicking the email link now
             # create_openclinica_event(survey_account, "SE_DAILY", str(datetime.date.today()))
