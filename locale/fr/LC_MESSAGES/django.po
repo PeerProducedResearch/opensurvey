@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-08 16:43+0000\n"
+"POT-Creation-Date: 2020-06-08 17:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,15 +12,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: main/helpers.py:98
+#: main/helpers.py:106
 msgid "Here's your survey link!"
 msgstr "Voilà le lien pour votre questionnaire !"
 
-#: main/helpers.py:99
+#: main/helpers.py:108
 msgid "Please use this link to fill out the survey"
 msgstr "Merci d'utiliser ce lien pour remplir votre questionnaire"
 
-#: main/templates/base.html:45 main/templates/main/home.html:48
+#: main/helpers.py:110
+msgid ""
+"If you don't want to take part in the survey anymore, please use this link"
+msgstr ""
+"Si vous ne souhaitez plus faire partie de l'étude, merci d'utiliser ce lien"
+
+#: main/templates/base.html:45 main/templates/main/home.html:51
 msgid "Citizen Science"
 msgstr "Science citoyenne"
 
@@ -298,7 +304,13 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/home.html:10
+#: main/templates/main/home.html:8 main/views.py:83
+msgid ""
+"Your consent has been withdrawn, you will not receive any more daily emails."
+msgstr ""
+"Votre consentement a été retiré, vous ne recevrez plus les emails quotidiens."
+
+#: main/templates/main/home.html:13
 msgid ""
 "\n"
 "                    COVID-19 has turned our lives upside down. And while "
@@ -318,43 +330,43 @@ msgstr ""
 "Cela suffit pour faire progresser la science.\n"
 "                "
 
-#: main/templates/main/home.html:18
+#: main/templates/main/home.html:21
 msgid "We’re tackling:"
 msgstr "Nous abordons :"
 
-#: main/templates/main/home.html:20
+#: main/templates/main/home.html:23
 msgid "Your physical health"
 msgstr "Votre santé physique"
 
-#: main/templates/main/home.html:21
+#: main/templates/main/home.html:24
 msgid "Your mental wellbeing"
 msgstr "Votre bien-être mental"
 
-#: main/templates/main/home.html:22
+#: main/templates/main/home.html:25
 msgid "Transmission properties of the virus"
 msgstr "Les propriétés de transmission du virus"
 
-#: main/templates/main/home.html:23
+#: main/templates/main/home.html:26
 msgid "Susceptibility to develop the illness"
 msgstr "La susceptibilité de développement de la maladie"
 
-#: main/templates/main/home.html:24
+#: main/templates/main/home.html:27
 msgid "Medication repurposing"
 msgstr "L'utilisation détournée de médicaments"
 
-#: main/templates/main/home.html:25
+#: main/templates/main/home.html:28
 msgid "And more..."
 msgstr "Et plus..."
 
-#: main/templates/main/home.html:29
+#: main/templates/main/home.html:32
 msgid "And you can shape the future questions."
 msgstr "Et vous pouvez façonner les futures questions."
 
-#: main/templates/main/home.html:32
+#: main/templates/main/home.html:35
 msgid "I want to fight COVID-19 by doing the survey!"
 msgstr "Je veux aider à combattre la COVID-19 en participant à l'étude !"
 
-#: main/templates/main/home.html:36
+#: main/templates/main/home.html:39
 msgid ""
 "\n"
 "                        Click the button above to get started. Accounts are "
@@ -374,7 +386,7 @@ msgstr ""
 "lors du processus de connexion.\n"
 "                    "
 
-#: main/templates/main/home.html:50
+#: main/templates/main/home.html:53
 msgid ""
 "\n"
 "                            When it comes to science, we believe in "
@@ -401,15 +413,15 @@ msgstr ""
 "                            ont concernant l'épidémie.\n"
 "                        "
 
-#: main/templates/main/home.html:58 main/templates/main/home.html:71
+#: main/templates/main/home.html:61 main/templates/main/home.html:74
 msgid "Learn more"
 msgstr "En savoir plus"
 
-#: main/templates/main/home.html:61
+#: main/templates/main/home.html:64
 msgid "Shared Data, Shared Knowledge"
 msgstr "Données partagées, Connaissances partagées"
 
-#: main/templates/main/home.html:63
+#: main/templates/main/home.html:66
 msgid ""
 "\n"
 "                            De-identified data will be made available to the "
@@ -742,9 +754,9 @@ msgid ""
 "mentioned points and that I am participating in this study on a voluntary "
 "basis."
 msgstr ""
-"En cliquant sur le bouton \"ACCEPTER\", je certifie que j'accepte "
-"tous les points mentionnés ci-dessus et que je participe à cette "
-"étude sur une base volontaire."
+"En cliquant sur le bouton \"ACCEPTER\", je certifie que j'accepte tous les "
+"points mentionnés ci-dessus et que je participe à cette étude sur une base "
+"volontaire."
 
 #: main/templates/main/includes/consent.html:97
 msgid "WITHDRAW MY CONSENT"
@@ -954,12 +966,6 @@ msgid ""
 msgstr ""
 "Votre consentement est enregistré. Vous devriez maintenant recevoir un email "
 "pour démarrer votre questionnaire !"
-
-#: main/views.py:83
-msgid ""
-"Your consent has been withdrawn, you will not receive any more daily emails."
-msgstr ""
-"Votre consentement a été retiré, vous ne recevrez plus les emails quotidiens."
 
 #: open_survey/settings.py:125
 msgid "English"
