@@ -158,8 +158,8 @@ class VisionView(TemplateView):
     template_name = "main/vision.html"
 
 
-class CitizenScienceView(TemplateView):
-    template_name = "main/citizen-science.html"
+class AboutView(TemplateView):
+    template_name = "main/about.html"
 
 
 class DataView(TemplateView):

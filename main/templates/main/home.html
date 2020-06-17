@@ -2,80 +2,124 @@
 {% load static %}
 {% load i18n %}
 
-{% block main %}
-    {% if not request.user.is_authenticated and not request.GET.oh_id %}
-        {% if request.GET.consent_withdrawn %}
-            <div class="alert alert-info">{% trans "Your consent has been withdrawn, you will not receive any more daily emails." %}</div>
-        {% endif %}
-        <div class="jumbotron">
-            <h1 class="display-4">Open COVID-19 Survey</h1>
-            <p class="lead">
-                {% blocktrans %}
-                    COVID-19 has turned our lives upside down. And while this virus continues to spread,
-                    millions around the world begin to take positive action. From the comfort of your home, you too can
-                    join the global fight against this virus! 5 minutes. That’s all it takes to advance science.
-                {% endblocktrans %}
-            </p>
-            <hr class="my-4">
-            <p>
-                {% trans "We’re tackling:" %}
-                <ul>
-                    <li>{% trans "Your physical health" %}</li>
-                    <li>{% trans "Your mental wellbeing" %}</li>
-                    <li>{% trans "Transmission properties of the virus" %}</li>
-                    <li>{% trans "Susceptibility to develop the illness" %}</li>
-                    <li>{% trans "Medication repurposing" %}</li>
-                    <li>{% trans "And more..." %}</li>
-                </ul>
-            </p>
-            <p>
-                {% trans "And you can shape the future questions." %}
-            </p>
-            <a class="btn btn-primary btn-lg" href="{{ openhumans_login_url }}" role="button">
-                {% trans "I want to fight COVID-19 by doing the survey!" %}
-            </a>
-            <p>
-                <small>
-                    {% blocktrans %}
-                        Click the button above to get started. Accounts are managed via Open Humans, which enables you to
-                        securely store, access, and manage your data, without us having access to any of your personal
-                        details. You can easily create an account as part of the login process.
-                    {% endblocktrans %}
-                </small>
-            </p>
-        </div>
+{% block intro %}
 
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2>{% trans "Citizen Science" %}</h2>
-                    <p>
-                        {% blocktrans %}
-                            When it comes to science, we believe in harnessing the ingenuity of all citizens. We want you
-                            to contribute your own survey items according to your research questions and interests. This
-                            will not only help us develop the study to cover the needs and interests of the cohort, but
-                            will also help us understand key questions and concerns that citizens outside of Academia have
-                            regarding the pandemic.
-                        {% endblocktrans %}
-                    </p>
-                    <a class="btn btn-primary" href="{% url "citizen_science" %}" role="button">{% trans "Learn more" %}</a>
-                </div>
-                <div class="col">
-                    <h2>{% trans "Shared Data, Shared Knowledge" %}</h2>
-                    <p>
-                        {% blocktrans %}
-                            De-identified data will be made available to the scientific community, and will be distributed
-                            with any publications that arise from this study. If necessary to protect the privacy of
-                            participants, individual bits of data might be removed or only shared in aggregate. These data
-                            cannot be used to identify participants. Additionally, each participant will be given a copy of
-                            their own data as part of this study.
-                        {% endblocktrans %}
-                    </p>
-                    <a class="btn btn-primary" href="{% url "data" %}" role="button">{% trans "Learn more" %}</a>
-                </div>
-            </div>
-        </div>
-    {% else %}
-        {% include "main/includes/consent.html" %}
-    {% endif %}
-{% endblock main %}
+<section class="intro hp-intro">
+  <div class="intro-content intro-content--hp">
+    <h1>Open COVID-19 Survey</h1>
+    <p>
+      {% blocktrans %}
+      COVID-19 has turned our lives upside down. And while this virus continues to spread, millions around the world begin
+      to take positive action. From the comfort of your home, you too can join the global fight against this virus!
+      <strong>5 minutes.</strong> That’s all it takes to advance science.
+      {% endblocktrans %}
+    </p>
+    <p>
+      <strong>I want to help fight COVID-19!</strong>
+    </p>
+    <button class="button--white">Start the survey</button>
+    <a href="#content">Or learn more before taking the survey.</a>
+  </div>
+  <div class="hp-intro__illustration">
+    <svg width="457" height="418" viewBox="0 0 457 418" xmlns="http://www.w3.org/2000/svg">
+    <title>Survey</title>
+    <desc>Ilustration of a survey sheet.</desc>
+    <defs><linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="a"><stop stop-color="gray" stop-opacity=".25" offset="0%"/><stop stop-color="gray" stop-opacity=".12" offset="54%"/><stop stop-color="gray" stop-opacity=".1" offset="100%"/></linearGradient><linearGradient x1="50%" y1="99.981618%" x2="50%" y2="0%" id="b"><stop stop-color="gray" stop-opacity=".25" offset="0%"/><stop stop-color="gray" stop-opacity=".12" offset="54%"/><stop stop-color="gray" stop-opacity=".1" offset="100%"/></linearGradient><linearGradient x1="50%" y1="100%" x2="50%" y2="-.024845%" id="c"><stop stop-color="gray" stop-opacity=".25" offset="0%"/><stop stop-color="gray" stop-opacity=".12" offset="54%"/><stop stop-color="gray" stop-opacity=".1" offset="100%"/></linearGradient></defs><g transform="translate(1)" fill="none" fill-rule="evenodd"><path stroke="#163A40" fill="#FFF" fill-rule="nonzero" d="M128 31h202v280H128z"/><path fill="url(#a)" fill-rule="nonzero" d="M180 24h100v25H180z"/><path d="M230 0c-7.732681 0-14 6.493015-14 14.5S222.267319 29 230 29s14-6.493015 14-14.5S237.732681 0 230 0zm0 22.864154c-3.363309.088915-6.444663-1.891606-7.793123-5.008981-1.34846-3.117376-.695229-6.750199 1.652101-9.187858 2.347331-2.437659 5.920852-3.194239 9.037876-1.913484 3.117024 1.280755 5.156214 4.343543 5.157363 7.746169.052778 4.556254-3.549254 8.296897-8.054217 8.364154z" fill="url(#b)" fill-rule="nonzero"/><path d="M229.5 1c3.580423 0 7.0142 1.422317 9.545942 3.954058C241.577683 7.4858 243 10.919578 243 14.5c0 3.70519-1.492668 7.06175-3.909473 9.501148L279 24v23h-98V24l38.909473.001148C217.492668 21.56175 216 18.205191 216 14.5 216 7.044156 222.044156 1 229.5 1zm0 5.711538c-4.301449 0-7.788462 3.487014-7.788462 7.788462 0 4.301448 3.487013 7.788462 7.788462 7.788462s7.788462-3.487013 7.788462-7.788462c0-4.301448-3.487013-7.788462-7.788462-7.788462z" stroke="#163A40" fill="#FFA318" fill-rule="nonzero"/><path stroke="#163A40" fill="#35D78C" fill-rule="nonzero" d="M139 78h40v40h-40z"/><path stroke="#163A40" fill="#FFA318" fill-rule="nonzero" d="M139 163h40v40h-40zM139 248h40v40h-40z"/><path fill="#E0E0E0" fill-rule="nonzero" d="M206 90h54v4h-54zM206 96h90v4h-90zM206 102h84v4h-84zM206 175h54v4h-54zM206 181h90v4h-90zM206 187h84v4h-84zM206 260h54v4h-54zM206 266h90v4h-90zM206 271h84v4h-84z"/><path fill="url(#c)" fill-rule="nonzero" d="M150.125 95.394783L157.625 102l10.625-15 3.75 3-14.375 18L147 96.6z"/><path fill="#FFF" fill-rule="nonzero" d="M151.625 96.2l6.3 5.657143L166.85 89l3.15 2.571429L157.925 107 149 97.228571zM151.625 181.2l6.3 5.657143L166.85 174l3.15 2.571429L157.925 192 149 182.228571zM151.625 266.2l6.3 5.657143L166.85 259l3.15 2.571429L157.925 277 149 267.228571z"/><g stroke="#163A40" stroke-dasharray="11" stroke-width="5"><path d="M424.5 171.5v-63M339.5 174.5h88"/></g><path d="M119 96H49v67M160 322v38h105" stroke="#163A40" stroke-width="5" stroke-dasharray="12"/><path stroke="#163A40" fill="#FFF" fill-rule="nonzero" d="M455 100h-77V56.871972L416.238095 24 455 56.871972z"/><path fill="#E0E0E0" fill-rule="nonzero" d="M379 57l37.741497 22L455 57"/><path stroke="#979797" fill="#FAFAFA" fill-rule="nonzero" d="M416.764706 79.333333L394 94V39h45v27.971429z"/><path fill="#F5F5F5" fill-rule="nonzero" d="M379 99h76l-76-42z"/><path fill="#E0E0E0" fill-rule="nonzero" d="M400 46h32v2h-32zM400 50h32v2h-32z"/><path fill="#F9A826" fill-rule="nonzero" d="M400 54h32v2h-32z"/><path fill="#E0E0E0" fill-rule="nonzero" d="M400 59h32v2h-32z"/><path fill="#F9A826" fill-rule="nonzero" d="M400 63h32v2h-32z"/><path stroke="#163A40" d="M273 329h88v88h-88z"/><path fill="#FFF" fill-rule="nonzero" d="M278 331h77v68h-77z"/><path d="M355 377.176471c-21.280479 0-38.5-5.447647-38.5-12.176471-21.280479 0-38.5 4.738235-38.5 10.588235V401h77v-23.823529z" fill="#E0E0E0" fill-rule="nonzero"/><circle fill="#FFA318" fill-rule="nonzero" cx="342" cy="346" r="8"/><path stroke="#163A40" fill="#FFF" fill-rule="nonzero" d="M0 170h101v72H0z"/><path d="M53.5 189a19.652713 19.652713 0 00-2.52973.168649L53.5 208.5l-19.452568-1.296486C34.021082 207.630405 34 208.062568 34 208.5c0 10.769553 8.730447 19.5 19.5 19.5S73 219.269553 73 208.5 64.269553 189 53.5 189z" fill="#E0E0E0" fill-rule="nonzero"/><path d="M46.529125 186C37.524358 187.187466 30.605365 194.607353 30 203.725736L49 205l-2.470875-19z" fill="#FFA318" fill-rule="nonzero"/><path fill="#FFF" d="M454 57l-39 22 39 20z"/></g></svg>
+  </div>
+</section>
+{% endblock intro %}
+
+{% block main %}
+{% if not request.user.is_authenticated and not request.GET.oh_id %}
+{% if request.GET.consent_withdrawn %}
+<div class="alert alert-info">{% trans "Your consent has been withdrawn, you will not receive any more daily emails." %}
+</div>
+{% endif %}
+<section id="content" class="questions">
+  <h2>
+    {% trans "We will ask you about:" %}
+  </h2>
+  <ul class="questions__list">
+    <li class="question-item">
+      <div class="question__icon">
+        <svg
+          width="89"
+          height="93"
+          focusable="false"
+          aria-hidden="true"
+        >
+          <use xlink:href="{% static '/img/icon-sprite.svg#bandaid' %}"/>
+        </svg>
+      </div>
+      <h3>{% trans "Your physical health" %}</h3>
+    </li>
+    <li class="question-item">
+      <div class="question__icon">
+        <svg
+          width="88"
+          height="88"
+          focusable="false"
+          aria-hidden="true"
+        >
+          <use xlink:href="{% static '/img/icon-sprite.svg#brain' %}"/>
+        </svg>
+      </div>
+      <h3>{% trans "Your mental wellbeing" %}</h3>
+    </li>
+    <li class="question-item">
+      <div class="question__icon">
+        <svg
+          width="80"
+          height="86"
+          focusable="false"
+          aria-hidden="true"
+        >
+          <use xlink:href="{% static '/img/icon-sprite.svg#dropper' %}"/>
+        </svg>
+      </div>
+      <h3>{% trans "Transmission properties of the virus" %}</h3>
+    </li>
+    <li class="question-item">
+      <div class="question__icon">
+        <svg
+          width="86"
+          height="101"
+          focusable="false"
+          aria-hidden="true"
+        >
+          <use xlink:href="{% static '/img/icon-sprite.svg#drugs' %}"/>
+        </svg>
+      </div>
+      <h3>{% trans "Medication repurposing" %}</h3>
+    </li>
+  </ul>
+  <button class="button--orange questions__button">{% trans "Take the survey" %}</button>
+</section>
+
+<section class="approach">
+  <h2 class="approach__title">{% trans "Our approach" %}</h2>
+  <div class="approach__cards">
+    <div class="card">
+      <h3><a href="{% url "about" %}">{% trans "Citizen Science" %}</a></h3>
+      <p>
+        {% blocktrans %}
+        When it comes to science, we believe in harnessing the ingenuity of all citizens. We want you to contribute your own survey items according to your research questions and interests.
+        {% endblocktrans %}
+      </p>
+      <a class="card__link" href="{% url "about" %}">{% trans "Become a Citizen Scientist" %}</a>
+    </div>
+    <div class="card">
+      <h3><a href="{% url "data" %}">{% trans "Shared Data, Shared Knowledge" %}</a></h3>
+      <p>
+        {% blocktrans %}
+        De-identified data will be made available to the scientific community, and will be distributed with any publications that arise from this study.
+        {% endblocktrans %}
+      </p>
+      <a class="card__link" href="{% url "data" %}">{% trans "Access the data" %}</a>
+    </div>
+  </div>
+  </section>
+  {% else %}
+  {% include "main/includes/consent.html" %}
+  {% endif %}
+  {% endblock main %}

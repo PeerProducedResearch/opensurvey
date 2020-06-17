@@ -1,0 +1,8 @@
+/* normalize */
+@import "_vendor/normalize.css";
+/* styles */
+@import "parts/base.css";
+@import "parts/card.css";
+@import "parts/header.css";
+@import "parts/intro.css";
+@import "parts/home.css";

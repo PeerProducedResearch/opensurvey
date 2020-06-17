@@ -392,7 +392,7 @@ msgstr ""
 "                "
 
 #: main/templates/main/home.html:21
-msgid "We’re tackling:"
+msgid "We will ask you about:"
 msgstr "Nous abordons :"
 
 #: main/templates/main/home.html:23
