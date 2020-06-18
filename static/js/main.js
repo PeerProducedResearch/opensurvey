@@ -14,6 +14,11 @@ window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     header.classList.add("isVisible");
+    if (prevScrollpos > 500) {
+      header.classList.add("hasBackground");
+    } else {
+      header.classList.remove("hasBackground");
+    }
   } else {
     header.classList.remove("isVisible");
   }

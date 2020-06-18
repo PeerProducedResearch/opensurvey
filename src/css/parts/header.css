@@ -13,12 +13,17 @@ header {
   opacity: 0;
   z-index: 99;
   transform: translateX(-50%);
-  transition: opacity 0.3s ease;
+  transition-property: opacity, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }
 
 header.isVisible {
   opacity: 1;
 }
+/* header.hasBackground {
+  background-color: var(--dark);
+} */
 
 .logo {
   display: flex;
@@ -63,9 +68,24 @@ header.isVisible {
 @media screen and (min-width: 700px) {
   header {
     display: flex;
-    margin: 20px 0;
-    padding: 0 20px;
+    margin: 0;
+    padding: 20px;
     flex-flow: row nowrap;
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 100vw;
+    transform: translateX(-50%);
+    opacity: 0;
+    background-color: var(--dark);
+    transition: opacity 0.3s ease;
+  }
+  header.hasBackground::before {
+    opacity: 1;
   }
   .header__nav {
     flex-grow: 1;
@@ -83,6 +103,10 @@ header.isVisible {
     background-color: transparent;
     pointer-events: all;
     color: var(--dark);
+    transition: color 0.3s ease;
+  }
+  header.hasBackground .navbar {
+    color: white;
   }
   .navbar__item:not(:last-child) {
     padding-right: 12px;
