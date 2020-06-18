@@ -3,8 +3,8 @@ header {
   top: 0;
   left: 50%;
   width: 100%;
-  margin: 20px auto;
-  padding: 0 10px;
+  margin: 0 auto 20px auto;
+  padding: 20px 10px 0 10px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -24,6 +24,7 @@ header.isVisible {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  z-index: 10;
 }
 .logo__image {
   max-width: 60px;
@@ -53,6 +54,7 @@ header.isVisible {
   pointer-events: none;
 }
 .navbar.isOpen {
+  height: 100vh;
   visibility: visible;
   pointer-events: all;
   z-index: 9;
@@ -61,6 +63,7 @@ header.isVisible {
 @media screen and (min-width: 700px) {
   header {
     display: flex;
+    margin: 20px 0;
     padding: 0 20px;
     flex-flow: row nowrap;
   }

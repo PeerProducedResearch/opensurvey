@@ -90,6 +90,7 @@
   .question-item {
     flex: 0 0 24%;
   }
-}
-@media screen and (min-width: 1200px) {
+  .questions__button {
+    margin-top: 20px;
+  }
 }

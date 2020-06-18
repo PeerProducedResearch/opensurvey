@@ -151,7 +151,7 @@ class FaqView(TemplateView):
 
 
 class TeamView(TemplateView):
-    template_name = "main/faq.html"
+    template_name = "main/team.html"
 
 
 class VisionView(TemplateView):
