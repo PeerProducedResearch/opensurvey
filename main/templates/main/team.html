@@ -8,105 +8,27 @@
     <h1>{% trans "Meet the Team!" %}</h1>
     <h2>{% trans "Members from around the world" %}</h2>
     <p>
-    {% blocktrans %}
+      {% blocktrans %}
       Meet the team behind OpenCovid and learn a bit more about their background.
-    {% endblocktrans %}
+      {% endblocktrans %}
     </p>
   </div>
 </section>
 {% endblock intro %}
 
 {% block main %}
-    <section>
-      <h4> Anneke Blackburn</h4>
+<section>
+  {% comment %}
+  <pre><code>{{ persons }}</code></pre> {% endcomment %}
+  <ul class="team__list">
+    {% for person in persons %}
+    <li class="card card--team">
+      <h3>{{ person.name }}</h3>
       <p>
-          {% blocktrans %}
-              Associate Professor at the Department of Cancer Biology and Therapy, John Curtin School of Medical Research,
-              Australian National University. Is working to set up an Open Source Pharma organisation in Australia to promote an
-              open science approach to medicine development at the clinical end of the pipeline.
-          {% endblocktrans %}
+        {% trans person.description %}
       </p>
-  
-      <h4>Goeffrey Siwo</h4>
-      <p>
-          {% blocktrans %}
-              Research Assistant Professor at the Center for Research Computing & Eck Institute for Global Health, University of
-              Notre Dame, IN, USA
-          {% endblocktrans %}
-      </p>
-  
-      <h4>Marc-Aurèle Chay</h4>
-      <p>
-          {% blocktrans %}
-              3rd year medical student at McGill University in Montreal. Did a Masters in human genetics before getting interested
-              in global health.
-          {% endblocktrans %}
-      </p>
-  
-      <h4>Spark Yaddav</h4>
-      <p>
-          {% blocktrans %}
-              Was Research Associate at the Genome Biology Division in SciLifeLab, Karolinska Institutet, Stockholm, Sweden.
-              Worked in Open Source Drug Discovery. Also did research on Synthetic Biology research at Delft University of
-              Technology, The Netherlands.
-          {% endblocktrans %}
-      </p>
-  
-      <h4>Anirudh Krishnakumar</h4>
-      <p>
-          {% blocktrans %}
-              PhD student at the INSERM U1284 unit at the Center for Interdisciplinary Research, University of Paris & the Child
-              Mind Institute, New York.
-          {% endblocktrans %}
-      </p>
-  
-      <h4>Bastian Greshake Tzovaras</h4>
-      <p>
-          {% blocktrans %}
-              Research fellow at the INSERM U1284 unit at the Center for Interdisciplinary Research, University of Paris and
-              Director of Research / freelance consultant for OpenHumans.org.
-          {% endblocktrans %}
-      </p>
-  
-      <h4>Mad Price Ball</h4>
-      <p>
-          {% blocktrans %}
-              Executive Director & Co-Founder of OpenHumans.org and started quantifiedflu.org with Bastian  Greshake Tzovaras.
-          {% endblocktrans %}
-      </p>
-  
-      <h4>Ariel B. Lindner</h4>
-      <p>
-          {% blocktrans %}
-              Co-Founder & Research Director at the INSERM U1284 unit at the Center for Interdisciplinary Research, University of
-              Paris
-          {% endblocktrans %}
-      </p>
-  
-      <h4>Natalia Norori</h4>
-      <p>
-          {% blocktrans %}
-              Medical Student at the Universidad Latina de Costa Rica. She also works for Open Access Button, a non-profit
-              organisation that helps people get access to research.
-          {% endblocktrans %}
-      </p>
-  
-      <h4>Bastien Cohin</h4>
-      <p>
-          {% blocktrans %}
-              Third year medical student at the Université de Caen-Normandie, he is concurrently doing a masters in
-              Biology-Health. He also works with ANEMF (French national association of medical students) and IFMSA (International
-              Federation of Medical Student Association.
-          {% endblocktrans %}
-      </p>
-  
-      <h4>Kseniia Konishcheva</h4>
-      <p>
-          {% blocktrans %}
-              Master’s student in interdisciplinary life sciences at the Center for Interdisciplinary Research, University of
-              Paris, intern at the INSERM U1284 unit at the Center for Interdisciplinary Research & the Child Mind Institute, New
-              York.
-          {% endblocktrans %}
-      </p>
-    </section>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
 {% endblock main %}

@@ -2,55 +2,73 @@
 {% load static %}
 {% load i18n %}
 
+{% block intro %}
+<section class="intro">
+  <div class="intro-content">
+    <h1>{% trans "Frequently Asked Questions" %}</h1>
+    <p>
+      {% blocktrans %}
+      Find answers to the most asked questions about OpenCovid, the survey and the data we collect.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+      Feel free to email us any other question you may have at: <a href="mailto:faq@opencovid.org">faq@opencovid.org</a>
+      {% endblocktrans %}
+    </p>
+    <p>
+      Thank you!
+    </p>
+  </div>
+</section>
+{% endblock intro %}
+
 {% block main %}
-    <h1 class="mt-3 text-center">{% trans "Frequently Asked Questions" %}</h1>
-
-    <h2>{% trans "Who will be using my data" %}</h2>
+<section>
+  <article>
+    <h2>{% trans "The data" %}</h2>
+    <h3>{% trans "Who will be using my data" %}</h3>
     <p>
-        {% blocktrans %}
-            De-identified data will be made available to the scientific community, and will be distributed with any publications
-            that arise from this study. If necessary to protect the privacy of participants, individual bits of data might be
-            removed or only shared in aggregate. These data cannot be used to identify participants. Additionally, each
-            participant will be given a copy of their own data as part of this study.
-        {% endblocktrans %}
+      {% blocktrans %}
+      De-identified data will be made available to the scientific community, and will be distributed with any publications
+      that arise from this study. If necessary to protect the privacy of participants, individual bits of data might be
+      removed or only shared in aggregate. These data cannot be used to identify participants. Additionally, each
+      participant will be given a copy of their own data as part of this study.
+      {% endblocktrans %}
     </p>
-
-    <h2>{% trans "How will my data be protected" %}</h2>
+    <h3>{% trans "How will my data be protected" %}</h3>
     <p>
-        {% blocktrans %}
-            All data will be stored on a firewall and password-protected on secure project servers of Open Humans & OpenClinica.
-            This study does not collect individual identifiers such as name or email addresses. Instead, Open Humans assigns
-            each participant a study ID on enrollment.
-        {% endblocktrans %}
+      {% blocktrans %}
+      All data will be stored on a firewall and password-protected on secure project servers of Open Humans & OpenClinica.
+      This study does not collect individual identifiers such as name or email addresses. Instead, Open Humans assigns
+      each participant a study ID on enrollment.
+      {% endblocktrans %}
     </p>
-
-    <h2>{% trans "Will someone make money off my data" %}</h2>
+    <h3>{% trans "Will someone make money off my data" %}</h3>
     <p>
-        {% blocktrans %}
-            Participant data will not be sold and data sharing will be performed within strict protocol-driven procedural
-            guidelines.
-        {% endblocktrans %}
+      {% blocktrans %}
+      Participant data will not be sold and data sharing will be performed within strict protocol-driven procedural
+      guidelines.
+      {% endblocktrans %}
     </p>
-
-    <h2>{% trans "How long will my data be used for" %}</h2>
+    <h3>{% trans "How long will my data be used for" %}</h3>
     <p>
-        {% blocktrans %}
-            The collection period is aimed to end in May 2022. After this we will stop gathering new data but will need some
-            time to analyze everything collected.
-        {% endblocktrans %}
+      {% blocktrans %}
+      The collection period is aimed to end in May 2022. After this we will stop gathering new data but will need some
+      time to analyze everything collected.
+      {% endblocktrans %}
     </p>
-
-    <h2>{% trans "Can I delete my data" %}</h2>
+    <h3>{% trans "Can I delete my data" %}</h3>
     <p>
-        {% blocktrans %}
-            Yes! Your data belongs to you. You can do so automatically from here, or manually through the OpenHumans website.
-        {% endblocktrans %}
+      {% blocktrans %}
+      Yes! Your data belongs to you. You can do so automatically from here, or manually through the OpenHumans website.
+      {% endblocktrans %}
     </p>
     {% if not request.user.is_authenticated %}
-        <p><i>{% trans "Please login to view the automatic delete links" %}.</i></p>
+      <p><i>{% trans "Please login to view the automatic delete links" %}.</i></p>
     {% else %}
-        <p>{% trans "Follow these steps to delete your data automatically:" %}.</p>
-        <ul>
+        <p>{% trans "Follow these steps to delete your data automatically:" %}
+          <ul>
             <li>{% blocktrans count counter=files|length %}You have 1 data file on OpenHumans{% plural %}You have {{ counter }} data files on OpenHumans{% endblocktrans %}. {% if files|length != 0 %}<a href="{% url "delete_all_openhuman_files" %}">{% trans "Click here to delete all your data files" %}</a>.{% else %}{% trans "You don't have anything to delete!" %}{% endif %}</li>
             <li>
                 {% trans "Additionnaly, if you want to revoke access from Open COVID Survey to your OpenHumans account, follow theses steps:" %}
@@ -60,15 +78,17 @@
                     <li>{% trans 'Click on "Withdraw & revoke authorization"' %}</li>
                 </ul>
             </li>
-        </ul>
+          </ul>
+        </p>
     {% endif %}
-    <p>{% trans "Follow these steps to delete your data through the OpenHumans website:" %}</p>
-    <ul>
+    <p>{% trans "Follow these steps to delete your data through the OpenHumans website:" %}
+      <ul>
         <li>{% blocktrans %}Go to <a href="https://www.openhumans.org/activity/open-covid-survey/" target="_blank">https://www.openhumans.org/activity/open-covid-survey/</a>{% endblocktrans %}</li>
         <li>{% trans 'Click on "Leave project" in the bottom left corner' %}</li>
         <li>{% trans 'Check "Remove my data files for Open COVID Survey from Open Humans"' %}</li>
         <li>{% trans 'Click on "Withdraw & revoke authorization"' %}</li>
-    </ul>
+      </ul>
+    </p>
     {% if request.user.is_authenticated %}
         <p>
             {% trans "You can also delete all your data files and your OpenSurvey account:" %}
@@ -76,42 +96,49 @@
             <a href="{% url "delete_all" %}">{% trans "Click here to delete all your data files and your OpenSurvey account" %}</a>.
         </p>
     {% endif %}
-
-    <h2>{% trans "How do I end the survey" %}</h2>
+    
+    <h3>{% trans "Can others access my data" %}</h3>        
     <p>
-        {% blocktrans %}
-            In your daily reminder to complete the survey, simply click on “I do not want to be part of this research initiative
-            anymore” and we will stop sending you reminders.
-        {% endblocktrans %}
+      {% blocktrans %}
+      Other individual participants will not be able to access your data. However, the overall dataset will be made
+      available to the science community.
+      {% endblocktrans %}
     </p>
+  </article>
 
-    <h2>{% trans "Can others access my data" %}</h2>
+  <article>
+    <h2>{% trans "The survey" %}</h2>
+    <h3>{% trans "Why do I need to sign up with OpenHumans" %}</h3>
     <p>
-        {% blocktrans %}
-            Other individual participants will not be able to access your data. However, the overall dataset will be made
-            available to the science community.
-        {% endblocktrans %}
+      {% blocktrans %}
+      OpenHumans hosts our secure servers, and is the place where all the data goes.
+      {% endblocktrans %}
     </p>
-
-    <h2>{% trans "Why do I need to sign up with OpenHumans" %}</h2>
+    <h3>{% trans "How do I end the survey" %}</h3>
     <p>
-        {% blocktrans %}
-            OpenHumans hosts our secure servers, and is the place where all the data goes.
-        {% endblocktrans %}
+      {% blocktrans %}
+      In your daily reminder to complete the survey, simply click on “I do not want to be part of this research initiative
+      anymore” and we will stop sending you reminders.
+      {% endblocktrans %}
     </p>
-
-    <h2>{% trans "What’s the difference between OpenHumans and OpenClinica" %}</h2>
+    <h3>{% trans "Can someone under 18 enroll in the survey" %}</h3>
     <p>
-        {% blocktrans %}
-            OpenHumans encrypts and stores the data, OpenClinica is the survey platform: data is collected there and sent to
-            OpenHumans.
-        {% endblocktrans %}
+      {% blocktrans %}
+      No, this study is not open to participants under the age of 18
+      {% endblocktrans %}
     </p>
-
-    <h2>{% trans "Can someone under 18 enroll in the survey" %}</h2>
+    <h3>{% trans "What’s the difference between OpenHumans and OpenClinica" %}</h3>
     <p>
-        {% blocktrans %}
-            No, this study is not open to participants under the age of 18
-        {% endblocktrans %}
+      {% blocktrans %}
+      OpenHumans encrypts and stores the data, OpenClinica is the survey platform: data is collected there and sent to
+      OpenHumans.
+      {% endblocktrans %}
     </p>
+  </article>
+  <article>
+    <h2>{% trans "The survey" %}</h2>
+    <h3>{% trans "I would like to help, what can I do?" %}</h3>
+    <p>The easiest way to help is by <strong>sharing the survey.</strong> If you want to get involved, send us an email at: <a href="mailto:contact@opencovid.org">contact@opencovid.org</a></p>
+  </article>
+</section>
 {% endblock main %}

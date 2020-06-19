@@ -52,7 +52,9 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
+::placeholder {
+  color: gray;
+}
 body {
   margin: 0;
   position: relative;
@@ -62,6 +64,7 @@ body {
   font-weight: normal;
   line-height: 2.4rem;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 h1,
@@ -231,12 +234,14 @@ button:focus {
 @media screen and (min-width: 700px) {
   h1 {
     font-size: 6rem;
+    line-height: 1;
     margin-bottom: 20px;
     padding: 0;
   }
   h1::after {
     width: 80px;
     height: 8px;
+    bottom: -6px;
   }
   h2 {
     font-size: 4rem;
