@@ -1,3 +1,4 @@
+from django.views.i18n import set_language
 from django.views.generic import TemplateView
 from django.views.generic.base import View
 from openhumans.models import OpenHumansMember
@@ -12,7 +13,6 @@ import datetime
 from .helpers import create_openclinica_event, get_openclinica_token, send_user_survey_link
 
 import logging
-# Get an instance of a logger
 logger = logging.getLogger(__name__)
 
 
@@ -145,3 +145,12 @@ class CitizenScienceView(TemplateView):
 
 class DataView(TemplateView):
     template_name = "main/data.html"
+
+
+def set_language_custom(request):
+    if request.user.is_authenticated and request.POST.get('language'):
+        if request.POST['language'] in [lang[0] for lang in settings.LANGUAGES]:
+            request.user.openhumansmember.surveyaccount.language = request.POST['language']
+            request.user.openhumansmember.surveyaccount.save()
+
+    return set_language(request)

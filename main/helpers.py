@@ -1,8 +1,9 @@
-from django.conf import settings
 import requests
 import json
-from .models import ReportToken
 from urllib.parse import urljoin
+from .models import ReportToken
+from django.utils import translation
+from django.conf import settings
 from django.shortcuts import reverse
 from django.utils.translation import gettext_lazy as _
 
@@ -102,6 +103,8 @@ def send_user_survey_link(survey_member):
     token.save()
     url = create_token_url(survey_member.member, token)
     withdraw_url = create_withdraw_url(survey_member.member, token)
+    saved_language = survey_member.member.surveyaccount.language
+    translation.activate(saved_language)
     survey_member.member.message(
         subject=_("Here's your survey link!"),
         message="{}: {}\n\n\n{}: {}".format(

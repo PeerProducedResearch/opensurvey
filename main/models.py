@@ -15,6 +15,7 @@ class SurveyAccount(models.Model):
     survey_token = models.TextField(blank=True, null=True)
     last_survey = models.DateField(blank=True, null=True)
     consent_given = models.BooleanField(default=False)
+    language = models.CharField(max_length=5, default='en')
 
 
 TOKEN_EXPIRATION_MINUTES = 1440  # default expiration is one day

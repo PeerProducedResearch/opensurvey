@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-08 18:02+0000\n"
+"POT-Creation-Date: 2020-06-24 12:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,15 +12,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: main/helpers.py:106
+#: main/helpers.py:128
 msgid "Here's your survey link!"
 msgstr "Voilà le lien pour votre questionnaire !"
 
-#: main/helpers.py:108
+#: main/helpers.py:130
 msgid "Please use this link to fill out the survey"
 msgstr "Merci d'utiliser ce lien pour remplir votre questionnaire"
 
-#: main/helpers.py:110
+#: main/helpers.py:132
 msgid ""
 "If you don't want to take part in the survey anymore, please use this link"
 msgstr ""
@@ -985,10 +985,10 @@ msgstr ""
 "Votre consentement est enregistré. Vous devriez maintenant recevoir un email "
 "pour démarrer votre questionnaire !"
 
-#: open_survey/settings.py:125
+#: open_survey/settings.py:126
 msgid "English"
 msgstr "Anglais"
 
-#: open_survey/settings.py:126
+#: open_survey/settings.py:127
 msgid "French"
 msgstr "Français"

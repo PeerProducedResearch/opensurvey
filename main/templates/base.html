@@ -57,7 +57,7 @@
                             <a class="nav-link" href="{% url 'faq' %}">{% trans "FAQ" %}</a>
                         </li>
 
-                        <form action="{% url 'set_language' %}" method="post" class="form-inline">
+                        <form action="{% url 'set_language_custom' %}" method="post" class="form-inline">
                             {% csrf_token %}
                             <div class="form-group">
                                 <select name="language" class="custom-select" onchange="this.form.submit()">
