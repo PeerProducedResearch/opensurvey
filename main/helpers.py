@@ -84,25 +84,24 @@ def get_openclinica_token(survey_member):
         raise ValueError("{} returned: {}".format(url, response.text))
 
 
-def create_token_url(member, token):
+def create_autologin_url(member, token):
     url = urljoin(
         settings.OPENHUMANS_APP_BASE_URL,
-        'survey') + "/" + member.oh_id + "?login_token={}".format(token.token)
+        reverse("autologin", kwargs={"oh_id":member.oh_id}) + "?login_token={}".format(token.token)
+    )
     return url
 
 
-def create_withdraw_url(member, token):
-    url = urljoin(
-        settings.OPENHUMANS_APP_BASE_URL,
-        'consent') + "/?consent=0&oh_id=" + member.oh_id + "&login_token={}".format(token.token)
+def create_survey_url(member, token):
+    url = create_autologin_url(member, token) + "&next=/survey"
     return url
 
 
 def send_user_survey_link(survey_member):
     token = ReportToken(member=survey_member.member)
     token.save()
-    url = create_token_url(survey_member.member, token)
-    withdraw_url = create_withdraw_url(survey_member.member, token)
+    url = create_survey_url(survey_member.member, token)
+    withdraw_url = create_autologin_url(survey_member.member, token)
     saved_language = survey_member.member.surveyaccount.language
     translation.activate(saved_language)
     survey_member.member.message(
@@ -110,7 +109,7 @@ def send_user_survey_link(survey_member):
         message="{}: {}\n\n\n{}: {}".format(
             _("Please use this link to fill out the survey"),
             url,
-            _("If you don't want to take part in the survey anymore, please use this link"),
+            _("If you don't want to take part in the survey anymore, please use this link and click on \"WITHDRAW MY CONSENT\""),
             withdraw_url
         )
     )

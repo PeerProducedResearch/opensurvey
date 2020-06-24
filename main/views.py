@@ -9,6 +9,10 @@ from django.utils.translation import gettext_lazy as _
 from django.shortcuts import redirect
 from django.conf import settings
 from django.urls import reverse
+from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login as auth_login
+from django.http import HttpResponseForbidden
 import datetime
 from .helpers import create_openclinica_event, get_openclinica_token, send_user_survey_link
 
@@ -49,68 +53,60 @@ class HomeView(TemplateView):
         return context
 
 
-class ConsentView(View):
-    def get(self, request, *args, **kwargs):
-        logged_in = False
-        if request.user.is_authenticated:
-            logged_in = True
-            survey_member = request.user.openhumansmember.surveyaccount
+def autologin(request, oh_id):
+    if not request.user.is_authenticated:
         token_string = request.GET.get("login_token", None)
-        oh_id = request.GET.get("oh_id", None)
-        if token_string and oh_id:
+        if token_string:
             token = ReportToken.objects.get(token=token_string)
             if token.is_valid():
-                logged_in = True
-                oh_member = OpenHumansMember.objects.get(oh_id=oh_id)
-                survey_member = oh_member.surveyaccount
-        if logged_in:
-            if request.GET.get("consent"):
-                if request.GET["consent"] == "1":
-                   survey_member.consent_given = True
-                   survey_member.save()
-                   if token_string and oh_id:
-                       return redirect(
-                           "{}?login_token={}".format(reverse("take_survey", kwargs={"oh_id": oh_id}), token_string))
-                   elif request.user.is_authenticated:
-                       get_openclinica_token(survey_member)
-                       send_user_survey_link(survey_member)
-                       messages.add_message(request, messages.INFO, _("Your consent has been saved. You should now get "
-                                                                      "an email to get started with your survey!"))
-                elif request.GET["consent"] == "0":
-                    survey_member.consent_given = False
-                    survey_member.save()
-                    if request.user.is_authenticated:
-                        messages.add_message(request, messages.INFO, _("Your consent has been withdrawn, you will not "
-                                                                       "receive any more daily emails."))
-                    else:
-                        return redirect("{}?consent_withdrawn=1".format(reverse("home")))
-
-        return redirect("home")
-
-
-def take_survey(request, oh_id):
-    logged_in = False
+                try:
+                    oh_member = OpenHumansMember.objects.get(oh_id=oh_id)
+                    auth_login(request, oh_member.user)
+                except:
+                    pass
     if request.user.is_authenticated:
-        if request.user.openhumansmember.oh_id == oh_id:
-            logged_in = True
-            oh_member = request.user.openhumansmember
-            survey_member = oh_member.surveyaccount
-    token_string = request.GET.get("login_token", None)
-    if token_string:
-        token = ReportToken.objects.get(token=token_string)
-        if token.is_valid():
-            logged_in = True
-            oh_member = OpenHumansMember.objects.get(oh_id=oh_id)
-            survey_member = oh_member.surveyaccount
-    if logged_in:
-        if survey_member.consent_given:
-            if survey_member.last_survey != datetime.date.today():
-                create_openclinica_event(survey_member, "SE_DAILY", str(datetime.date.today()))
-                survey_member.last_survey = datetime.date.today()
-                survey_member.save()
-            return redirect(settings.OPENCLINICA_PARTICIPATE_LINK + "?accessCode={}".format(survey_member.survey_token))
+        if request.GET.get('next'):
+            return redirect(request.GET['next'])
         else:
-            return redirect("{}?oh_id={}&login_token={}".format(reverse("home"), oh_id,  token_string))
+            return redirect('home')
+    else:
+        return HttpResponseForbidden()
+
+
+@login_required()
+@require_POST
+def consent(request):
+    survey_member = request.user.openhumansmember.surveyaccount
+    if survey_member.consent_given == False:
+       survey_member.consent_given = True
+       survey_member.save()
+       if survey_member.last_survey == datetime.date.today():
+           messages.add_message(request, messages.INFO, _("Your consent has been saved. You should already "
+                                                          "have gotten an email earlier today to get started "
+                                                          "with your survey!"))
+       else:
+           get_openclinica_token(survey_member)
+           send_user_survey_link(survey_member)
+           messages.add_message(request, messages.INFO, _("Your consent has been saved. You should now get "
+                                                          "an email to get started with your survey!"))
+    else:
+        survey_member.consent_given = False
+        survey_member.save()
+        messages.add_message(request, messages.INFO, _("Your consent has been withdrawn, you will not "
+                                                       "receive any more daily emails."))
+    return redirect("home")
+
+
+@login_required()
+def take_survey(request):
+    oh_member = request.user.openhumansmember
+    survey_member = oh_member.surveyaccount
+    if survey_member.consent_given:
+        if survey_member.last_survey != datetime.date.today():
+            create_openclinica_event(survey_member, "SE_DAILY", str(datetime.date.today()))
+            survey_member.last_survey = datetime.date.today()
+            survey_member.save()
+        return redirect(settings.OPENCLINICA_PARTICIPATE_LINK + "?accessCode={}".format(survey_member.survey_token))
     else:
         return redirect('home')
 

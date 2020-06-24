@@ -89,14 +89,16 @@
 </div>
 
 <div class="my-5 text-center">
-    <a class="btn btn-primary btn-lg"
-       href="{% url "consent" %}?consent={% if openhumansmember.surveyaccount.consent_given %}0{% else %}1{% endif %}{% if request.GET.oh_id %}&oh_id={{ request.GET.oh_id }}{% endif %}{% if request.GET.login_token %}&login_token={{ request.GET.login_token }}{% endif %}"
-       role="button"
-    >
-        {% if openhumansmember.surveyaccount.consent_given %}
-            {% trans "WITHDRAW MY CONSENT" %}
-        {% else %}
-            {% trans "ACCEPT" %}
-        {% endif %}
-    </a>
+    <form action="{% url "consent" %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary btn-lg"
+                role="button"
+        >
+            {% if openhumansmember.surveyaccount.consent_given %}
+                {% trans "WITHDRAW MY CONSENT" %}
+            {% else %}
+                {% trans "ACCEPT" %}
+            {% endif %}
+        </button>
+    </form>
 </div>
