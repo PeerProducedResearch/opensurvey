@@ -25,7 +25,7 @@ msgid ""
 "If you don't want to take part in the survey anymore, please use this link "
 "and click on \"WITHDRAW MY CONSENT\""
 msgstr ""
-"Si vous ne souhaitez plus faire partie de l'étude, merci d'utiliser ce lien"
+"Si vous ne souhaitez plus faire partie de l'étude, merci d'utiliser ce lien "
 "et de cliquer sur \"RETIRER MON CONSENTEMENT\""
 
 #: main/templates/base.html:45 main/templates/main/home.html:51
