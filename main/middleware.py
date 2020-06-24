@@ -1,8 +1,20 @@
 from django.conf import settings
 from django.utils import translation
+from openhumans.models import OpenHumansMember
 
 import logging
 logger = logging.getLogger(__name__)
+
+
+class OpenHumansLoginUrlMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        request.openhumans_login_url = OpenHumansMember.get_auth_url()
+
+        response = self.get_response(request)
+        return response
 
 
 class LoginLangMiddleware:

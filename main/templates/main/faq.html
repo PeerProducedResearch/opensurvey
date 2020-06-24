@@ -43,9 +43,26 @@
     <h2>{% trans "Can I delete my data" %}</h2>
     <p>
         {% blocktrans %}
-            Yes! Your data belongs to you. Follow these steps to delete your data through OpenHumans:
+            Yes! Your data belongs to you. You can do so automatically from here, or manually through the OpenHumans website.
         {% endblocktrans %}
     </p>
+    {% if not request.user.is_authenticated %}
+        <p><i>{% trans "Please login to view the automatic delete links" %}.</i></p>
+    {% else %}
+        <p>{% trans "Follow these steps to delete your data automatically:" %}.</p>
+        <ul>
+            <li>{% blocktrans count counter=files|length %}You have 1 data file on OpenHumans{% plural %}You have {{ counter }} data files on OpenHumans{% endblocktrans %}. {% if files|length != 0 %}<a href="{% url "delete_all_openhuman_files" %}">{% trans "Click here to delete all your data files" %}.</a>{% else %}{% trans "You don't have anything to delete!" %}{% endif %}</li>
+            <li>
+                {% trans "Additionnaly, if you want to revoke access from Open COVID Survey to your OpenHumans account, follow theses steps:" %}
+                <ul>
+                    <li>{% blocktrans %}Go to <a href="https://www.openhumans.org/activity/open-covid-survey/" target="_blank">https://www.openhumans.org/activity/open-covid-survey/</a>{% endblocktrans %}</li>
+                    <li>{% trans 'Click on "Leave project" in the bottom left corner' %}</li>
+                    <li>{% trans 'Click on "Withdraw & revoke authorization"' %}</li>
+                </ul>
+            </li>
+        </ul>
+    {% endif %}
+    <p>{% trans "Follow these steps to delete your data through the OpenHumans website:" %}</p>
     <ul>
         <li>{% blocktrans %}Go to <a href="https://www.openhumans.org/activity/open-covid-survey/" target="_blank">https://www.openhumans.org/activity/open-covid-survey/</a>{% endblocktrans %}</li>
         <li>{% trans 'Click on "Leave project" in the bottom left corner' %}</li>

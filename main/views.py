@@ -126,6 +126,28 @@ def logout_user(request):
 class FaqView(TemplateView):
     template_name = "main/faq.html"
 
+    def dispatch(self, request, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            try:
+                self.files = self.request.user.openhumansmember.list_files()
+            except Exception:
+                logout(request)
+                return redirect("/")
+
+        return super().dispatch(request, *args, **kwargs)
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+
+        if self.request.user.is_authenticated:
+            context.update(
+                {
+                    "files": self.files
+                }
+            )
+
+        return context
+
 
 class TeamView(TemplateView):
     template_name = "main/faq.html"
@@ -150,3 +172,11 @@ def set_language_custom(request):
             request.user.openhumansmember.surveyaccount.save()
 
     return set_language(request)
+
+
+@login_required
+def delete_all_openhuman_files(request):
+    oh_member = request.user.openhumansmember
+    oh_member.delete_all_files()
+
+    return redirect('faq')

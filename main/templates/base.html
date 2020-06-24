@@ -80,7 +80,7 @@
                         </li>
                         {% if not request.user.is_authenticated %}
                             <li class="nav-item mr-md-0">
-                                <a href="{{ openhumans_login_url }}" class="btn btn-primary btn-sm mt-md-1 mt-0">
+                                <a href="{{ request.openhumans_login_url }}" class="btn btn-primary btn-sm mt-md-1 mt-0">
                                     {% trans "Log in" %}
                                 </a>
                             </li>

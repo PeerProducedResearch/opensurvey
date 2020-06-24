@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-24 14:23+0000\n"
+"POT-Creation-Date: 2020-06-24 15:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,15 +12,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: main/helpers.py:127
+#: main/helpers.py:130
 msgid "Here's your survey link!"
 msgstr "Voilà le lien pour votre questionnaire !"
 
-#: main/helpers.py:129
+#: main/helpers.py:132
 msgid "Please use this link to fill out the survey"
 msgstr "Merci d'utiliser ce lien pour remplir votre questionnaire"
 
-#: main/helpers.py:131
+#: main/helpers.py:134
 msgid ""
 "If you don't want to take part in the survey anymore, please use this link "
 "and click on \"WITHDRAW MY CONSENT\""
@@ -239,34 +239,67 @@ msgstr ""
 #: main/templates/main/faq.html:45
 msgid ""
 "\n"
-"            Yes! Your data belongs to you. Follow these steps to delete your "
-"data through OpenHumans:\n"
+"            Yes! Your data belongs to you. You can do so automatically from "
+"here, or manually through the OpenHumans website.\n"
 "        "
 msgstr ""
 
 #: main/templates/main/faq.html:50
+msgid "Please login to view the automatic delete links"
+msgstr ""
+
+#: main/templates/main/faq.html:52
+msgid "Follow these steps to delete your data automatically:"
+msgstr ""
+
+#: main/templates/main/faq.html:54
+#, python-format
+msgid "You have 1 data file on OpenHumans"
+msgid_plural "You have %(counter)s data files on OpenHumans"
+msgstr[0] ""
+msgstr[1] ""
+
+#: main/templates/main/faq.html:54
+msgid "Click here to delete all your data files"
+msgstr ""
+
+#: main/templates/main/faq.html:54
+msgid "You don't have anything to delete!"
+msgstr ""
+
+#: main/templates/main/faq.html:56
+msgid ""
+"Additionnaly, if you want to revoke access from Open COVID Survey to your "
+"OpenHumans account, follow theses steps:"
+msgstr ""
+
+#: main/templates/main/faq.html:58 main/templates/main/faq.html:67
 msgid ""
 "Go to <a href=\"https://www.openhumans.org/activity/open-covid-survey/\" "
 "target=\"_blank\">https://www.openhumans.org/activity/open-covid-survey/</a>"
 msgstr ""
 
-#: main/templates/main/faq.html:51
+#: main/templates/main/faq.html:59 main/templates/main/faq.html:68
 msgid "Click on \"Leave project\" in the bottom left corner"
 msgstr ""
 
-#: main/templates/main/faq.html:52
-msgid "Check \"Remove my data files for Open COVID Survey from Open Humans\""
-msgstr ""
-
-#: main/templates/main/faq.html:53
+#: main/templates/main/faq.html:60 main/templates/main/faq.html:70
 msgid "Click on \"Withdraw & revoke authorization\""
 msgstr ""
 
-#: main/templates/main/faq.html:56
+#: main/templates/main/faq.html:65
+msgid "Follow these steps to delete your data through the OpenHumans website:"
+msgstr ""
+
+#: main/templates/main/faq.html:69
+msgid "Check \"Remove my data files for Open COVID Survey from Open Humans\""
+msgstr ""
+
+#: main/templates/main/faq.html:73
 msgid "How do I end the survey"
 msgstr ""
 
-#: main/templates/main/faq.html:58
+#: main/templates/main/faq.html:75
 msgid ""
 "\n"
 "            In your daily reminder to complete the survey, simply click on "
@@ -275,11 +308,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:64
+#: main/templates/main/faq.html:81
 msgid "Can others access my data"
 msgstr ""
 
-#: main/templates/main/faq.html:66
+#: main/templates/main/faq.html:83
 msgid ""
 "\n"
 "            Other individual participants will not be able to access your "
@@ -288,11 +321,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:72
+#: main/templates/main/faq.html:89
 msgid "Why do I need to sign up with OpenHumans"
 msgstr ""
 
-#: main/templates/main/faq.html:74
+#: main/templates/main/faq.html:91
 msgid ""
 "\n"
 "            OpenHumans hosts our secure servers, and is the place where all "
@@ -300,11 +333,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:79
+#: main/templates/main/faq.html:96
 msgid "What’s the difference between OpenHumans and OpenClinica"
 msgstr ""
 
-#: main/templates/main/faq.html:81
+#: main/templates/main/faq.html:98
 msgid ""
 "\n"
 "            OpenHumans encrypts and stores the data, OpenClinica is the "
@@ -313,11 +346,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:87
+#: main/templates/main/faq.html:104
 msgid "Can someone under 18 enroll in the survey"
 msgstr ""
 
-#: main/templates/main/faq.html:89
+#: main/templates/main/faq.html:106
 msgid ""
 "\n"
 "            No, this study is not open to participants under the age of 18\n"
@@ -984,8 +1017,8 @@ msgid ""
 "Your consent has been saved. You should already have gotten an email earlier "
 "today to get started with your survey!"
 msgstr ""
-"Votre consentement est enregistré. Vous devriez déjà avoir reçu un email "
-"un peu plus tôt aujourd'hui pour démarrer votre questionnaire !"
+"Votre consentement est enregistré. Vous devriez déjà avoir reçu un email un "
+"peu plus tôt aujourd'hui pour démarrer votre questionnaire !"
 
 #: main/views.py:90
 msgid ""
