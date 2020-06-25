@@ -1,3 +1,4 @@
+import datetime
 import requests
 import json
 from urllib.parse import urljoin
@@ -113,3 +114,5 @@ def send_user_survey_link(survey_member):
             withdraw_url
         )
     )
+    survey_member.last_email = datetime.date.today()
+    survey_member.save()

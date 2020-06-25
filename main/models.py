@@ -14,6 +14,7 @@ class SurveyAccount(models.Model):
     member = models.OneToOneField(OpenHumansMember, on_delete=models.CASCADE)
     survey_token = models.TextField(blank=True, null=True)
     last_survey = models.DateField(blank=True, null=True)
+    last_email = models.DateField(blank=True, null=True)
     consent_given = models.BooleanField(default=False)
     language = models.CharField(max_length=5, default='en')
 

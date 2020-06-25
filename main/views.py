@@ -80,7 +80,7 @@ def consent(request):
     if survey_member.consent_given == False:
        survey_member.consent_given = True
        survey_member.save()
-       if survey_member.last_survey == datetime.date.today():
+       if survey_member.last_email == datetime.date.today():
            messages.add_message(request, messages.INFO, _("Your consent has been saved. You should already "
                                                           "have gotten an email earlier today to get started "
                                                           "with your survey!"))
