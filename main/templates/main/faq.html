@@ -51,7 +51,7 @@
     {% else %}
         <p>{% trans "Follow these steps to delete your data automatically:" %}.</p>
         <ul>
-            <li>{% blocktrans count counter=files|length %}You have 1 data file on OpenHumans{% plural %}You have {{ counter }} data files on OpenHumans{% endblocktrans %}. {% if files|length != 0 %}<a href="{% url "delete_all_openhuman_files" %}">{% trans "Click here to delete all your data files" %}.</a>{% else %}{% trans "You don't have anything to delete!" %}{% endif %}</li>
+            <li>{% blocktrans count counter=files|length %}You have 1 data file on OpenHumans{% plural %}You have {{ counter }} data files on OpenHumans{% endblocktrans %}. {% if files|length != 0 %}<a href="{% url "delete_all_openhuman_files" %}">{% trans "Click here to delete all your data files" %}</a>.{% else %}{% trans "You don't have anything to delete!" %}{% endif %}</li>
             <li>
                 {% trans "Additionnaly, if you want to revoke access from Open COVID Survey to your OpenHumans account, follow theses steps:" %}
                 <ul>
@@ -69,6 +69,13 @@
         <li>{% trans 'Check "Remove my data files for Open COVID Survey from Open Humans"' %}</li>
         <li>{% trans 'Click on "Withdraw & revoke authorization"' %}</li>
     </ul>
+    {% if request.user.is_authenticated %}
+        <p>
+            {% trans "You can also delete all your data files and your OpenSurvey account:" %}
+            <br>
+            <a href="{% url "delete_all" %}">{% trans "Click here to delete all your data files and your OpenSurvey account" %}</a>.
+        </p>
+    {% endif %}
 
     <h2>{% trans "How do I end the survey" %}</h2>
     <p>

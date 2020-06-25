@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-24 15:27+0000\n"
+"POT-Creation-Date: 2020-06-25 13:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,15 +12,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: main/helpers.py:130
+#: main/helpers.py:131
 msgid "Here's your survey link!"
 msgstr "Voilà le lien pour votre questionnaire !"
 
-#: main/helpers.py:132
+#: main/helpers.py:133
 msgid "Please use this link to fill out the survey"
 msgstr "Merci d'utiliser ce lien pour remplir votre questionnaire"
 
-#: main/helpers.py:134
+#: main/helpers.py:135
 msgid ""
 "If you don't want to take part in the survey anymore, please use this link "
 "and click on \"WITHDRAW MY CONSENT\""
@@ -295,11 +295,19 @@ msgstr ""
 msgid "Check \"Remove my data files for Open COVID Survey from Open Humans\""
 msgstr ""
 
-#: main/templates/main/faq.html:73
+#: main/templates/main/faq.html:74
+msgid "You can also delete all your data files and your OpenSurvey account:"
+msgstr ""
+
+#: main/templates/main/faq.html:76
+msgid "Click here to delete all your data files and your OpenSurvey account"
+msgstr ""
+
+#: main/templates/main/faq.html:80
 msgid "How do I end the survey"
 msgstr ""
 
-#: main/templates/main/faq.html:75
+#: main/templates/main/faq.html:82
 msgid ""
 "\n"
 "            In your daily reminder to complete the survey, simply click on "
@@ -308,11 +316,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:81
+#: main/templates/main/faq.html:88
 msgid "Can others access my data"
 msgstr ""
 
-#: main/templates/main/faq.html:83
+#: main/templates/main/faq.html:90
 msgid ""
 "\n"
 "            Other individual participants will not be able to access your "
@@ -321,11 +329,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:89
+#: main/templates/main/faq.html:96
 msgid "Why do I need to sign up with OpenHumans"
 msgstr ""
 
-#: main/templates/main/faq.html:91
+#: main/templates/main/faq.html:98
 msgid ""
 "\n"
 "            OpenHumans hosts our secure servers, and is the place where all "
@@ -333,11 +341,11 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:96
+#: main/templates/main/faq.html:103
 msgid "What’s the difference between OpenHumans and OpenClinica"
 msgstr ""
 
-#: main/templates/main/faq.html:98
+#: main/templates/main/faq.html:105
 msgid ""
 "\n"
 "            OpenHumans encrypts and stores the data, OpenClinica is the "
@@ -346,18 +354,18 @@ msgid ""
 "        "
 msgstr ""
 
-#: main/templates/main/faq.html:104
+#: main/templates/main/faq.html:111
 msgid "Can someone under 18 enroll in the survey"
 msgstr ""
 
-#: main/templates/main/faq.html:106
+#: main/templates/main/faq.html:113
 msgid ""
 "\n"
 "            No, this study is not open to participants under the age of 18\n"
 "        "
 msgstr ""
 
-#: main/templates/main/home.html:8 main/views.py:95
+#: main/templates/main/home.html:8 main/views.py:96
 msgid ""
 "Your consent has been withdrawn, you will not receive any more daily emails."
 msgstr ""
@@ -1012,7 +1020,7 @@ msgid ""
 "participants partners, changes survey success."
 msgstr ""
 
-#: main/views.py:84
+#: main/views.py:85
 msgid ""
 "Your consent has been saved. You should already have gotten an email earlier "
 "today to get started with your survey!"
@@ -1020,7 +1028,7 @@ msgstr ""
 "Votre consentement est enregistré. Vous devriez déjà avoir reçu un email un "
 "peu plus tôt aujourd'hui pour démarrer votre questionnaire !"
 
-#: main/views.py:90
+#: main/views.py:91
 msgid ""
 "Your consent has been saved. You should now get an email to get started with "
 "your survey!"
@@ -1028,10 +1036,10 @@ msgstr ""
 "Votre consentement est enregistré. Vous devriez maintenant recevoir un email "
 "pour démarrer votre questionnaire !"
 
-#: open_survey/settings.py:126
+#: open_survey/settings.py:127
 msgid "English"
 msgstr "Anglais"
 
-#: open_survey/settings.py:127
+#: open_survey/settings.py:128
 msgid "French"
 msgstr "Français"

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from main.views import HomeView, consent, autologin, logout_user, take_survey, FaqView, VisionView, \
-    CitizenScienceView, DataView, TeamView, set_language_custom, delete_all_openhuman_files
+    CitizenScienceView, DataView, TeamView, set_language_custom, delete_all_openhuman_files, delete_all
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -17,6 +17,7 @@ urlpatterns = [
     path("data/", DataView.as_view(), name="data"),
 
     path("delete-all-openhuman-files/", delete_all_openhuman_files, name="delete_all_openhuman_files"),
+    path("delete-all/", delete_all, name="delete_all"),
 
     path("i18n/", set_language_custom, name="set_language_custom"),
 ]

@@ -12,6 +12,7 @@ from django.urls import reverse
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login as auth_login
+from django.contrib.auth import logout as auth_logout
 from django.http import HttpResponseForbidden
 import datetime
 from .helpers import create_openclinica_event, get_openclinica_token, send_user_survey_link
@@ -180,3 +181,18 @@ def delete_all_openhuman_files(request):
     oh_member.delete_all_files()
 
     return redirect('faq')
+
+
+@login_required
+def delete_all(request):
+    oh_member = request.user.openhumansmember
+    oh_member.delete_all_files()
+
+    user = request.user
+
+    auth_logout(request)
+
+    user.delete()
+
+    return redirect('faq')
+
