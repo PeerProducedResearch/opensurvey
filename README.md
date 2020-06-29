@@ -43,3 +43,37 @@ In order to edit the styles, you need to:
 - run `yarn build` or `npm run dev` for production
 
 The optimized and minified style file is under `static > css`
+
+### Translations / i18n
+
+#### Activate a new language
+
+To activate a new language edit the **LANGUAGES** setting in **settings.py**
+
+```
+LANGUAGES = [
+  ('en', _('English')),
+  ('fr', _('French')),
+  ('de', _('German')),
+]
+```
+
+You need to do this first before translating because the language name itself needs to be translated.
+
+#### Add a new language
+To add a new language simply add a new directory in /locale with the language code as name, for example: 
+**/locale/fr** for french.
+
+Then to generate the translation files run:
+
+`python manage.py makemessages`
+
+It will create **django.po** files inside each /\<lang\>/LC_MESSAGES directory.
+
+You can edit these files directly with any text editor or specialized software / web application. 
+
+Once the translations are complete, to generate the binary files optimized for consumption by Django, run:
+
+`python manage.py compilemessages`
+
+It will create **django.mo** files inside each /\<lang\>/LC_MESSAGES directory.
