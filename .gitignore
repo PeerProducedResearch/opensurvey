@@ -1,2 +1,47 @@
 db.sqlite3
 .env
+
+# vs code
+.vscode
+
+############################
+# Node
+############################
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+# Dependency directories
+node_modules
+# Optional npm cache directory
+.npm
+# Yarn Integrity file
+.yarn-integrity
+
+############################
+# OS X
+############################
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+.Spotlight-V100
+.Trashes
+._*
+
+############################
+# Windows
+############################
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp

@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block intro %}
+<section class="intro">
+  <div class="intro-content">
+    <h1>{% trans "About" %}</h1>
+    <p>
+      {% blocktrans %}
+      The OpenCovid survey was created by a team of scientists at the Center for Research and Interdisciplinarity (CRI)
+      in
+      Paris, with collaborating researchers from the USA, Australia, Canada, Costa Rica, India and more! We are
+      interested
+      in bringing in minds from all over the world, yours included, to come up with great ideas to research this virus.
+      {% endblocktrans %}
+    </p>
+    <p>
+      <a href="/team">Meet the team!</a>
+    </p>
+  </div>
+</section>
+{% endblock intro %}
+
+{% block main %}
+<section>
+  <article>
+    <h2>{% trans "Citizen Science" %}</h2>
+    <h3>{% trans "Be part of the team." %}</h3>
+    <p>
+      {% blocktrans %}
+      When it comes to science, we believe in harnessing the ingenuity of all citizens. We want you to contribute your
+      own survey items according to your research questions and interests. This will not only help us develop the study
+      to cover the needs and interests of the cohort, but will also help us understand key questions and concerns that
+      citizens outside of Academia have regarding the pandemic.
+      {% endblocktrans %}
+    </p>
+    <h3>{% trans "How it works." %}</h3>
+    <p>
+      {% blocktrans %}
+      You will need to access the OpenHumans forum, where a dedicated section for suggestions has been created. Your
+      personal information will be anonymized for your suggestions. You can also create and engage in topics of
+      discussions directly on the forum, as well as vote for suggestions others have made!
+      {% endblocktrans %}
+    </p>
+    <h3>{% trans "What to tell us:" %}</h3>
+    <p>
+      {% trans "We can’t add questions to the survey without an end-goal in mind. We ask you to suggest:" %}
+      <ul>
+        <li>{% trans "A research hypothesis that you’d want to test" %}</li>
+        <li>{% trans "A quick blurb on why you think it would be valuable to look into" %}</li>
+        <li>{% trans "The questions would you incorporate in the survey to test your hypothesis" %}</li>
+      </ul>
+    </p>
+    <h3>{% trans "How we review it." %}</h3>
+    <p>
+      {% blocktrans %}
+      Every 2 weeks, our team will go through your suggestions, and decide on a few that we could incorporate into our
+      next iteration of the survey. We then send the new set of questions to be reviewed by the Institutional Review
+      Board, to make sure it doesn’t go against any legal or ethical regulations. Once we get the green light, we move
+      to code it into the survey.
+      {% endblocktrans %}
+    </p>
+  </article>
+  <article>
+    <h2>{% trans "Our approach" %}</h2>
+    <h3>{% trans "What we do." %}</h3>
+    <p>
+      {% blocktrans %}
+      The OpenCovid survey is a 5 minute questionnaire created for people who want to help fight the COVID-19 virus from
+      the comfort of their home. It consists of a short questionnaire, followed by a daily check-in on how you feel. A
+      wide variety of questions are asked, some of which can be answered daily, others that appear on a rolling basis,
+      so as to always keep it fresh!
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+      Our goal? Better understand the virus’ transmission patterns and its effect on physical and mental health. We want
+      to understand how the virus spreads, who it affects most, and how it impacts your daily life. We hope this may
+      guide public health decisions and medication repurposing in the future.
+      {% endblocktrans %}
+    </p>
+    <h3>{% trans "How we do it." %}</h3>
+    <p>
+      {% blocktrans %}
+      All data collected is anonymized and goes through the OpenHuman platform. From there, you can view what is
+      happening around you. We also seek to promote citizen science and give you the option to contribute research
+      hypotheses that could be implemented in our fast-evolving survey.
+      {% endblocktrans %}
+    </p>
+
+    <p>
+      {% trans "These are our starting research aims that we’re trying to answer:" %}
+      <ul>
+        <li>
+          {% trans "Collect comprehensive symptom reports with a high temporal resolution to better understand the disease progression." %}
+        </li>
+        <li>{% trans "Measuring the impact of the COVID-19 pandemic on mental health." %}</li>
+        <li>{% trans "To identify effective agents for reducing COVID-19 disease severity" %}</li>
+        <li>{% trans "Characterize factors that define susceptibility to developing COVID-19" %}</li>
+        <li>
+          {% trans "Understand how a more participatory approach to survey research, that makes participants partners, changes survey success." %}
+        </li>
+      </ul>
+      <p>
+  </article>
+</section>
+{% endblock main %}

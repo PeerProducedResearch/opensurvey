@@ -2,141 +2,189 @@
 {% load i18n %}
 <!doctype html>
 <html lang="en" class="h-100">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description"
-          content="{% block meta_description %}OpenCOVID 2019 survey does XYZ{% endblock meta_description %}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="{% block meta_description %}OpenCOVID 2019 survey does XYZ{% endblock meta_description %}">
 
-    <title>{% block head_title %}Open COVID19 Survey{% endblock head_title %}</title>
+  <title>{% block head_title %}Covid-Open survey{% endblock head_title %}</title>
 
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.min.css' rel='stylesheet'
-          type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css' rel='stylesheet'
-          type='text/css'>
+  {% comment %}
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.min.css' rel='stylesheet'
+    type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  {% endcomment %}
 
-    {# For internal CSS stylesheets. #}
-    {% block extra_css %}{% endblock %}
+  {# For internal CSS stylesheets. #}
+  <link href="{% static '/css/style.min.css'%}" rel='stylesheet' type='text/css'>
 
 </head>
 
-<body class="d-flex flex-column h-100">
-    <header>
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-light navbar-expand-md fixed-top"
-             style="background-image: linear-gradient(#FFFFFFFF, #fffffffd, #ffffffed, #ffffffed)">
-            <div class="container d-flex">
-                <a class="navbar-brand" href="/">
-                    <img class="navbar-img" src="{% static 'img/icon-192x192.png' %}" style="max-height:2rem;">
-                    Open COVID19 Survey
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse text-right" id="navbarCollapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mt-2 mt-md-0 mr-md-2">
-                            <a class="nav-link" href="{% url 'citizen_science' %}">{% trans "Citizen Science" %}</a>
-                        </li>
-                        <li class="nav-item mt-2 mt-md-0 mr-md-2">
-                            <a class="nav-link" href="{% url 'vision' %}">{% trans "Vision" %}</a>
-                        </li>
-                        <li class="nav-item mt-2 mt-md-0 mr-md-2">
-                            <a class="nav-link" href="{% url 'data' %}">{% trans "Data" %}</a>
-                        </li>
-                        <li class="nav-item mt-2 mt-md-0 mr-md-2">
-                            <a class="nav-link" href="{% url 'team' %}">{% trans "Team" %}</a>
-                        </li>
-                        <li class="nav-item mt-2 mt-md-0 mr-md-2">
-                            <a class="nav-link" href="{% url 'faq' %}">{% trans "FAQ" %}</a>
-                        </li>
+<body>
+  <header id="header" class="header isVisible">
+    <a class="logo" href="/">
+      <img class="logo__image" src="{% static 'img/icon-192x192.png' %}">
+    </a>
+    <!-- Fixed navbar -->
+    <nav class="header__nav">
+      <button id="burger-menu" class="burger-menu" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span>X</span>
+      </button>
+      <ul class="navbar" id="navbar">
+        <li class="navbar__item">
+          <a class="header__link" href="{% url 'about' %}">{% trans "Citizen Science" %}</a>
+        </li>
+        <li class="navbar__item">
+          <a class="header__link" href="{% url 'data' %}">{% trans "Data" %}</a>
+        </li>
+        <li class="navbar__item">
+          <a class="header__link" href="{% url 'team' %}">{% trans "Team" %}</a>
+        </li>
+        <li class="navbar__item">
+          <a class="header__link" href="{% url 'faq' %}">{% trans "FAQ" %}</a>
+        </li>
 
-                        <form action="{% url 'set_language_custom' %}" method="post" class="form-inline">
-                            {% csrf_token %}
-                            <div class="form-group">
-                                <select name="language" class="custom-select" onchange="this.form.submit()">
-                                    {% get_current_language as LANGUAGE_CODE %}
-                                    {% get_available_languages as LANGUAGES %}
-                                    {% get_language_info_list for LANGUAGES as languages %}
-                                    {% for language in languages %}
-                                        <option value="{{ language.code }}"
-                                                {% if language.code == LANGUAGE_CODE %}selected{% endif %}
-                                        >
-                                            {{ language.name_local|title }}
-                                        </option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                        </form>
-
-                        <li class="nav-item mt-2 mt-md-0 mr-md-2">
-                            <a class="nav-link" href="#"></a>
-                        </li>
-                        {% if not request.user.is_authenticated %}
-                            <li class="nav-item mr-md-0">
-                                <a href="{{ request.openhumans_login_url }}" class="btn btn-primary btn-sm mt-md-1 mt-0">
-                                    {% trans "Log in" %}
-                                </a>
-                            </li>
-                        {% else %}
-                            <form class="mt-md-1 mt-0" action="{% url 'logout' %}" method="post">
-                                {% csrf_token %}
-                                <button class="btn btn-info btn-sm float-right" type="submit">{% trans "Log out" %}</button>
-                            </form>
-                        {% endif %}
-                    </ul>
-                </div>
+        <li class="navbar__item">
+          <form action="{% url 'set_language_custom' %}" method="post" class="">
+            {% csrf_token %}
+            <div class="form-group">
+              <select name="language" class="custom-select" onchange="this.form.submit()">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                  {{ language.name_local|title }}
+                </option>
+                {% endfor %}
+              </select>
             </div>
-        </nav>
-    </header>
+          </form>
+        </li>
+        {% if not request.user.is_authenticated %}
+        <li>
+          <a href="{{ request.openhumans_login_url }}" class="header__link">
+            {% trans "Log in" %}
+          </a>
+        </li>
+        {% else %}
+        <li>
+          <form class="navbar__item" action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button class="" type="submit">{% trans "Log out" %}</button>
+          </form>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Page content -->
-    <main role="main" class="flex-shrink-0" style="padding-top:100px">
-        <div class="container">
-            {% block messages_block %}
-            {% if messages %}
-            <div class="mt-2">
-                {% for message in messages %}
-                <div class="alert {% if message.tags %}
+  <!-- Page content -->
+  <main role="main" class="container">
+    {% block messages_block %}
+    {% if messages %}
+    <div class="">
+      {% for message in messages %}
+      <div class="alert {% if message.tags %}
                       alert-{% ifequal message.tags 'error' %}danger{% else %}{{ message.tags }}{% endifequal %}
                       {% endif %}">
-                    {{ message }}
-                </div>
-                {% endfor %}
-            </div>
-            {% endif %}
-            {% endblock messages_block %}
+        {{ message }}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% endblock messages_block %}
 
-            {% block main %}
-            {% endblock main %}
-        </div>
-    </main>
+    {% block intro %}
+    {% endblock intro %}
 
-    <footer class="footer mt-auto pb-3 pt-5">
-        <div class="container">
-            <div class="text-center">
-                <a href="https://github.com/gedankenstuecke/opensurvey/">{% trans "view our code" %}</a>
-            </div>
-        </div>
-    </footer>
+    {% block main %}
+    {% endblock main %}
+  </main>
 
-    {% block extra_modals %}{% endblock %}
-    {% block extra_js_body %}
-        {# Application JavaScript - Note: popper is needed by bootstrap 4 #}
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous"></script>
-    {% endblock %}
+  <footer class="footer">
+    <div class="u-hidden" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol viewBox="0 0 146.74 36.86" id="logo-inserm">
+          <title>logo inserm</title>
+          <g fill="#ffffff">
+            <path
+              d="M38.73 0h6.02v24.15h-6.02zM54.84 8.38a7.7 7.7 0 012-1.69 6.05 6.05 0 013-.8 6.83 6.83 0 013.18.72c1.88 1 2.36 2.59 2.36 5.36v12.18h-5.2v-10a7 7 0 00-.24-2.66 2.38 2.38 0 00-2.36-1.36c-2.78 0-2.78 2.21-2.78 4.43v9.62h-5.24V6.35h5.28zM70.84 18.16a8.08 8.08 0 005.42 2.44c1.27 0 3.21-.41 3.21-1.74a1.09 1.09 0 00-.69-1 12 12 0 00-3.08-.68 20.85 20.85 0 01-2.41-.54 6.72 6.72 0 01-3-1.54A4.77 4.77 0 0169 11.73c0-2.93 2.53-6 7.55-6a13.4 13.4 0 018 2.55l-3 3.07a8.27 8.27 0 00-4.86-1.73c-2.07 0-2.55.82-2.55 1.33 0 1 1.14 1.23 2.86 1.53 3.61.65 7.76 1.61 7.76 5.84s-4.22 6.25-8.45 6.25a12.18 12.18 0 01-8.8-3.39zM100.68 18.09a4.46 4.46 0 01-4.51 2.7c-2.84 0-4.11-2.24-4.07-4.48h12.76c-.07-2-.21-5.5-2.54-8a8.69 8.69 0 00-6.66-2.56c-7 0-8.93 5.53-8.93 9.83 0 5.87 3.45 9.21 9 9.21a9.8 9.8 0 007-2.42 11.87 11.87 0 002.15-2.73zM92.13 13a4.57 4.57 0 011.06-2.34 3.6 3.6 0 012.67-1.16 3.76 3.76 0 012.57 1 4.29 4.29 0 011 2.52zM112.93 8.38a8.27 8.27 0 015.16-2.29v4.67l-1.74.27c-2.53.44-3.28 1.3-3.28 3.55v9.57h-5.25V6.28h5.11zM125.89 8.38A6.16 6.16 0 01131 5.89 5.82 5.82 0 01135.94 8a7.51 7.51 0 015.34-2.09c2.94 0 4.44 1.47 5 2.57a10 10 0 01.48 4.09v11.6h-5.18v-9.36a13.2 13.2 0 00-.21-3 2.32 2.32 0 00-2.31-1.6 2.82 2.82 0 00-1.72.54c-1 .79-1 1.81-1 3.75v9.69h-5.18V13.61a4.59 4.59 0 00-.51-2.52 2.63 2.63 0 00-2.07-.92 2.72 2.72 0 00-1.45.41c-1.18.78-1.21 2.21-1.21 3.42v10.15h-5.18V6.35h5.18z" />
+          </g>
+          <path d="M42.66 28.88a4 4 0 103 3 4 4 0 00-3-3" fill="#e64011" />
+          <path fill="#ffffff" d="M21.12 7.99h2.96v12.25h-2.96z" />
+          <path fill="#ffffff" d="M15.84 1.27h2.97v12.25h-2.97z" />
+          <path fill="#ffffff" d="M15.84 14.69h2.97v12.25h-2.97z" />
+          <path fill="#ffffff" d="M10.56.01h2.97v12.25h-2.97z" />
+          <path fill="#ffffff" d="M10.56 15.95h2.97V28.2h-2.97z" />
+          <path fill="#ffffff" d="M5.28 1.27h2.97v12.25H5.28z" />
+          <path fill="#ffffff" d="M5.28 14.69h2.97v12.25H5.28z" />
+          <path fill="#ffffff" d="M0 7.99h2.97v12.25H0z" />
+        </symbol>
+      </svg>
+    </div>
+    <div class="container footer__content">
+      <div class="footer__logos">
+        <a href="#" class="footer__logo">
+          <svg width="146.74" height="36.86" focusable="false" aria-hidden="true">
+            <use xlink:href="#logo-inserm" />
+          </svg>
+        </a>
+        <a href="#" class="footer__logo">
+          <svg width="146.74" height="36.86" focusable="false" aria-hidden="true">
+            <use xlink:href="#logo-inserm" />
+          </svg>
+        </a>
+        <a href="#" class="footer__logo">
+          <svg width="146.74" height="36.86" focusable="false" aria-hidden="true">
+            <use xlink:href="#logo-inserm" />
+          </svg>
+        </a>
+        <a href="#" class="footer__logo">
+          <svg width="146.74" height="36.86" focusable="false" aria-hidden="true">
+            <use xlink:href="#logo-inserm" />
+          </svg>
+        </a>
+      </div>
+      <nav class="footer__nav">
+        <a href="/" class="footer__link">{% trans "Home" %}</a>
+        <a href="/about" class="footer__link">{% trans "About" %}</a>
+        <a href="/data" class="footer__link">{% trans "Data" %}</a>
+        <a href="/team" class="footer__link">{% trans "Team" %}</a>
+        <a href="/faq" class="footer__link">{% trans "FAQ" %}</a>
+        <a href="#" class="footer__link">{% trans "Privacy Policy" %}</a>
+      </nav>
+      <div class="footer__links">
+        <a href="https://github.com/gedankenstuecke/opensurvey/" class="footer__link" target="_blank"
+          rel="noopener noreferer">{% trans "view our code" %}</a>
+        <a href="#" class="footer__link" target="_blank" rel="noopener noreferer">{% trans "Twitter" %}</a>
+      </div>
+    </div>
+  </footer>
+
+  {% block extra_modals %}{% endblock %}
+  {% block extra_js_body %}
+  <script src="{% static '/js/main.js'%}"></script>
+  {# Application JavaScript - Note: popper is needed by bootstrap 4 #}
+  {% comment %}
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  {% endcomment %}
+  {% endblock %}
 </body>
+
 </html>

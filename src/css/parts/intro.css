@@ -1,0 +1,46 @@
+.intro {
+  padding: 110px 0;
+  margin-bottom: 60px;
+  margin-top: 0;
+  min-height: 450px;
+  position: relative;
+  z-index: 9;
+}
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  background-image: url(../../static/img/wave-full.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40% bottom;
+}
+.intro-content {
+  max-width: 90%;
+}
+
+@media screen and (min-width: 500px) {
+  .intro-content {
+    max-width: 75%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .intro-content {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .intro::before {
+    background-size: 100vw;
+    background-position: bottom left;
+  }
+  .intro-content {
+    max-width: 460px;
+  }
+}

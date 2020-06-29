@@ -1,0 +1,14 @@
+.card {
+  padding: 14px;
+  margin: 40px 0;
+  background: #ffffff;
+  box-shadow: 0 8px 20px 0 rgba(22, 58, 64, 0.2),
+    0 4px 12px 0 rgba(22, 58, 64, 0.1);
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 700px) {
+  .card {
+    padding: 30px;
+  }
+}

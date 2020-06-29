@@ -15,6 +15,7 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.http import HttpResponseForbidden
 import datetime
+import json
 from .helpers import create_openclinica_event, get_openclinica_token, send_user_survey_link
 
 import logging
@@ -151,15 +152,23 @@ class FaqView(TemplateView):
 
 
 class TeamView(TemplateView):
-    template_name = "main/faq.html"
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+
+        with open('./src/_data/team.json') as team:
+          context["persons"] = json.load(team)
+
+        return context
+
+    template_name = "main/team.html"
 
 
 class VisionView(TemplateView):
     template_name = "main/vision.html"
 
 
-class CitizenScienceView(TemplateView):
-    template_name = "main/citizen-science.html"
+class AboutView(TemplateView):
+    template_name = "main/about.html"
 
 
 class DataView(TemplateView):

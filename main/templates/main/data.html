@@ -2,20 +2,30 @@
 {% load static %}
 {% load i18n %}
 
+{% block intro %}
+
+<section class="intro">
+  <div class="intro-content">
+    <h1>{% trans "Access the Data" %}</h1>
+    <p>
+      {% blocktrans %}
+      Your data belongs to you! If you want to get a transcript with your past responses to the survey, <a
+        href="#">click here!</a> You will be redirected to our OpenHumans server which stores your data securely.
+      {% endblocktrans %}
+    </p>
+  </div>
+</section>
+{% endblock intro %}
+
 {% block main %}
-    <h1 class="mt-3 text-center">{% trans "Access the Data" %}</h1>
-
+<section>
+  <article>
     <p>
-        {% blocktrans %}
-            As the survey just launched, we are waiting a few days to have enough data points to show you the trends! Come
-            back later and see what’s happening around you!
-        {% endblocktrans %}
+      {% blocktrans %}
+      As the survey just launched, we are waiting a few days to have enough data points to show you the trends! Come
+      back later and see what’s happening around you!
+      {% endblocktrans %}
     </p>
-
-    <p>
-        {% blocktrans %}
-            Your data belongs to you! If you want to get a transcript with your past responses to the survey, click here! You
-            will be redirected to our OpenHumans server which stores your data securely.
-        {% endblocktrans %}
-    </p>
+  </article>
+</section>
 {% endblock main %}
