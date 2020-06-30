@@ -64,7 +64,12 @@ def create_openclinica_event(survey_member, event, date):
     if response.status_code == 200:
         return response.text
     else:
-        raise ValueError("{} returned: {}".format(url, response.text))
+        try:
+            # Does onboarding event already exists on OpenClinica ?
+            if response.json().get("message") == "errorCode.eventAlreadyExists":
+                return response.text
+        except:
+            raise ValueError("{} returned: {}".format(url, response.text))
 
 
 def get_openclinica_token(survey_member):

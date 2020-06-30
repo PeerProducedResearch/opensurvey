@@ -46,6 +46,7 @@ The optimized and minified style file is under `static > css`
 
 ### Translations / i18n
 
+
 #### Activate a new language
 
 To activate a new language edit the **LANGUAGES** setting in **settings.py**
