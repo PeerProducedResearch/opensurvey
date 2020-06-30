@@ -100,6 +100,21 @@ def consent(request):
 
 
 @login_required()
+@require_POST
+def daily_emails(request):
+    survey_member = request.user.openhumansmember.surveyaccount
+    if survey_member.daily_emails_activated == False:
+       survey_member.daily_emails_activated = True
+       survey_member.save()
+       messages.add_message(request, messages.INFO, _("You have activated the daily emails."))
+    else:
+        survey_member.daily_emails_activated = False
+        survey_member.save()
+        messages.add_message(request, messages.INFO, _("You have deactivated the daily emails."))
+    return redirect("home")
+
+
+@login_required()
 def take_survey(request):
     oh_member = request.user.openhumansmember
     survey_member = oh_member.surveyaccount

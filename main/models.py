@@ -16,6 +16,7 @@ class SurveyAccount(models.Model):
     last_survey = models.DateField(blank=True, null=True)
     last_email = models.DateField(blank=True, null=True)
     consent_given = models.BooleanField(default=False)
+    daily_emails_activated = models.BooleanField(default=True)
     language = models.CharField(max_length=5, default='en')
 
 

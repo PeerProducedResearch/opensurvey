@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from main.views import HomeView, consent, autologin, logout_user, take_survey, FaqView, VisionView, \
+from main.views import HomeView, consent, daily_emails, autologin, logout_user, take_survey, FaqView, VisionView, \
     AboutView, DataView, TeamView, set_language_custom, delete_all_openhuman_files, delete_all
 
 urlpatterns = [
@@ -8,6 +8,7 @@ urlpatterns = [
     path("", HomeView.as_view(), name="home"),
     path("autologin/<int:oh_id>/", autologin, name="autologin"),
     path("consent/", consent, name="consent"),
+    path("daily_emails/", daily_emails, name="daily_emails"),
     path("logout/", logout_user, name="logout"),
     path("survey/", take_survey, name="take_survey"),
     path("team/", TeamView.as_view(), name="team"),
