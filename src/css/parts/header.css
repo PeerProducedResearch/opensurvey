@@ -31,8 +31,16 @@
   align-items: center;
   z-index: 10;
 }
-.logo__image {
-  max-width: 60px;
+.logo-background {
+  fill: transparent;
+  transition: fill 0.3s ease;
+}
+.logo-chain {
+  fill: var(--dark);
+  transition: fill 0.3s ease;
+}
+.hasBackground .logo-chain {
+  fill: var(--white);
 }
 
 .burger-menu {

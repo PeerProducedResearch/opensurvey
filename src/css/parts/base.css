@@ -1,23 +1,23 @@
 @font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/ubuntu-light.woff") format("woff"),
-    url("../fonts/ubuntu-light.woff2") format("woff2");
+  font-family: "Geomanist";
+  src: url("../fonts/geomanist-light.woff") format("woff"),
+    url("../fonts/geomanist-light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/ubuntu-regular.woff") format("woff"),
-    url("../fonts/ubuntu-regular.woff2") format("woff2");
+  font-family: "Geomanist";
+  src: url("../fonts/geomanist-book.woff") format("woff"),
+    url("../fonts/geomanist-book.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/ubuntu-bold.woff") format("woff"),
-    url("../fonts/ubuntu-bold.woff2") format("woff2");
+  font-family: "Geomanist";
+  src: url("../fonts/geomanist-bold.woff") format("woff"),
+    url("../fonts/geomanist-bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -36,15 +36,13 @@ html {
 }
 
 :root {
-  --dark: #163a40;
+  --dark: #042b32;
   --light: #d5f1ea;
   --green: #35d78c;
   --blue: #00c4ac;
   --yellow: #ffd13c;
   --orange: #ffa318;
-
-  --tablet: 700px;
-  --desktop: 960px;
+  --white: #ffffff;
 }
 
 *,
@@ -60,7 +58,7 @@ body {
   position: relative;
   font-size: 1.8rem;
   color: var(--dark);
-  font-family: "Ubuntu", "Helvetica", "Arial", sans-serif;
+  font-family: "Geomanist", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   line-height: 2.4rem;
   text-rendering: optimizeLegibility;
@@ -163,8 +161,13 @@ ul {
   padding: 0;
   margin: 0;
 }
+ol {
+  padding: 0 0 0 1em;
+  margin: 0;
+}
 
-ul > li {
+ul > li,
+ol > li {
   padding: 0;
   margin: 1.4rem 0;
 }
@@ -184,8 +187,8 @@ button {
   color: var(--dark);
   border: none;
   border-radius: 2px;
-  box-shadow: none;
   cursor: pointer;
+  box-shadow: none;
 }
 button:focus {
   outline: solid 4px cornflowerblue;
@@ -213,11 +216,46 @@ button:focus {
 .button--orange:hover {
   background-position: right center;
 }
+.no-btn {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  border: none;
+  border-radius: none;
+  color: inherit;
+  box-shadow: none;
+}
 .container {
   padding: 0 10px;
   margin-left: auto;
   margin-right: auto;
   max-width: 980px;
+}
+.chevron {
+  margin-left: 6px;
+  transition: transform 0.4s ease;
+  transform: rotate(0deg);
+  transform-origin: 50% 40%;
+}
+.collapse__item {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.2s ease;
+}
+[data-collapse] {
+  cursor: pointer;
+}
+.collapse--open + .collapse__item {
+  max-height: 1140px;
+  opacity: 1;
+}
+
+.collapse--open > .chevron {
+  transform: rotate(180deg);
 }
 
 .u-hidden {

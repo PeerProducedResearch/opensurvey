@@ -1,5 +1,6 @@
 // Toggle mobile menu
 const burgerMenu = document.getElementById("burger-menu");
+const logo = document.getElementById("logo");
 const navbar = document.getElementById("navbar");
 const body = document.body;
 let navbarStatus = false;
@@ -39,8 +40,10 @@ window.onscroll = function () {
     header.classList.add("isVisible");
     if (prevScrollpos > 500) {
       // Add a background to the navbar below 500px
+      logo.classList.add("hasBackground");
       header.classList.add("hasBackground");
     } else {
+      logo.classList.remove("hasBackground");
       header.classList.remove("hasBackground");
     }
   } else if (!navbarStatus) {
@@ -49,3 +52,12 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+// collapsable item
+const collapseToggles = document.querySelectorAll("[data-collapse]");
+
+collapseToggles.forEach(function (item) {
+  item.addEventListener("click", function toggleCollapse() {
+    item.classList.toggle("collapse--open");
+  });
+});
