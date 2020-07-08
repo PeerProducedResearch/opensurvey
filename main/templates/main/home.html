@@ -7,6 +7,7 @@
 <section class="intro hp-intro">
   <div class="intro-content intro-content--hp">
     <h1>Covid-Open survey</h1>
+    {% if not request.user.is_authenticated %}
     <p>
       {% blocktrans %}
       COVID-19 has turned our lives upside down. And while this virus continues to spread, millions around the world
@@ -18,8 +19,20 @@
     <p>
       <strong>I want to help fight COVID-19!</strong>
     </p>
-    <button class="button--white">Start the survey</button>
-    <a href="#content">Or learn more before taking the survey.</a>
+    <a class="button button--white" href="{{ request.openhumans_login_url }}">Start the survey</a>
+    <a href="#settings">Or learn more before taking the survey.</a>
+  {% else %}
+      <p>
+      {% blocktrans %}
+      Thank you for taking part in this project! The team is grateful and eager for your participation.
+      {% endblocktrans %}
+    </p>
+      <p>
+      {% blocktrans %}
+      You can find your consent and email settings <a href="#settings">below.</a>
+      {% endblocktrans %}
+    </p>
+  {% endif %}
   </div>
   <div class="hp-intro__illustration">
     <svg width="457" height="418" viewBox="0 0 457 418" xmlns="http://www.w3.org/2000/svg">
@@ -273,7 +286,7 @@
       <h3>{% trans "Medication repurposing" %}</h3>
     </li>
   </ul>
-  <button class="button--orange questions__button">{% trans "Take the survey" %}</button>
+  <a href="{{ request.openhumans_login_url }}" class="button button--orange questions__button">{% trans "Take the survey" %}</a>
 </section>
 
 <section class="approach">

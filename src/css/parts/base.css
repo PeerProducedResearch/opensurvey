@@ -178,19 +178,24 @@ kbd,
 samp {
   position: relative;
 }
-button {
+button,
+.button {
   margin: 12px 0;
   padding: 16px 20px;
   display: block;
+  max-width: 200px;
   font-size: 2.2rem;
   font-weight: bold;
+  text-align: center;
+  text-decoration: none;
   color: var(--dark);
   border: none;
   border-radius: 2px;
   cursor: pointer;
   box-shadow: none;
 }
-button:focus {
+button:focus,
+.button:focus {
   outline: solid 4px cornflowerblue;
 }
 .button--white {
