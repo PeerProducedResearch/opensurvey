@@ -1,0 +1,214 @@
+{% load i18n %}
+
+<section id="settings" class="consent">
+  <div>
+    {% if openhumansmember.surveyaccount.consent_given %}
+    <h2>{% trans "You have given your consent, however you can still withdraw it at any time." %}</h2>
+    <div>
+      <div>
+        {% else %}
+        <h2 class="alert alert-warning">
+          {% trans "You must first consent to the following before getting started with your survey" %}</h2>
+        {% endif %}
+
+        <ol class="consent__list">
+          <li>
+            <h3 data-collapse aria-expanded="false">{% trans "What the survey is about ?" %}
+              <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron chevron--closed">
+                <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+                <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </h3>
+            <p class="collapse__item">
+              {% blocktrans %}
+              As part of this project, we are carrying out an ongoing survey to collect health data on the current
+              COVID-19
+              pandemic. We are doing this in an open and participatory setting, so that everyone can contribute
+              cooperatively and anonymously to support the global effort to contain the COVID-19 pandemic and learn
+              lessons
+              for the future. While most of the world is in a quarantine situation, the majority of COVID-19 patients
+              are at
+              home without regular medical monitoring of disease progression, symptoms, recovery or well-being. Data
+              from
+              patients reporting symptoms at a distance could provide scientists with indications of the different forms
+              of
+              the disease and possible links to parameters such as medical history, physical and mental health, social
+              distancing, etc. The data could also be used to develop a new approach to the management of the disease.
+              The survey includes volunteer participants aged 18 years and older. You will be asked to answer a survey
+              every
+              day for 2-5 minutes each day, during the pandemic period and until the end of May 2022, with questions
+              about
+              the symptoms you are experiencing, how you are doing and some details about your medical history and
+              demographics.
+              You will be able to access your data at any time, as well as all anonymized data acquired in this study.
+              In
+              addition, as a participant, you will be invited to suggest and discuss new survey questions in an
+              anonymous
+              participant forum. Neither answering the survey questions or participation in the forum discussions are
+              compulsory.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h3 data-collapse aria-expanded="false">{% trans "What are the expected benefits ?" %}
+              <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
+                <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+                <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </h3>
+            <p class="collapse__item">
+              {% blocktrans %}
+              Participation in this study will not provide you with any direct personal benefit, but may provide
+              scientists
+              with new data. Although the risk is minimal, the individual survey questions can sometimes be intrusive.
+              You
+              may, of course, choose not to answer these questions, skip them, or terminate your participation. Your
+              involvement is voluntary; refusal to participate will not result in any penalties or loss of benefits to
+              which
+              you are entitled, and you can end your participation (and/or request that your previous data be deleted)
+              at
+              any time without consequence.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h3 data-collapse aria-expanded="false">{% trans "What is the survey schedule?" %}
+              <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
+                <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+                <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </h3>
+            <p class="collapse__item">
+              {% blocktrans %}
+              The study takes place from 1 June 2020 to 31 May 2022. You can stop participating at any time before the
+              end
+              of the study.
+              The research is conducted via an online or SMS survey, a platform to access your data and an anonymous
+              forum
+              to discuss new survey items that should be added. Take as much time as you wish before making a decision.
+              We
+              will be happy to answer any questions you may have about this study. If you have any further questions
+              about
+              this project or if you have a problem with the research, you can contact the study coordinator, Anirudh
+              Krishnakumar, MSc, by phone at +33 1 84 25 68 04, or by e-mail, anirudh.krishnakumar@cri-paris.org.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h3 data-collapse aria-expanded="false">{% trans "Research Data Users." %}
+              <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
+                <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+                <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </h3>
+            <p class="collapse__item">
+              {% blocktrans %}
+              All data will be stored on secure servers, protected by firewall and password, of Open Humans &
+              OpenClinica,
+              in accordance with European data protection regulations. This study does not collect individual
+              identifiers
+              such as name, physical or e-mail addresses. Instead, Open Humans assigns each participant a study
+              identification number upon registration. Only this study identification number will be accessible by
+              research
+              personnel. Finally, participants' data will not be sold and data sharing will be conducted under strict
+              protocol-based procedural guidelines. Participants will be able to remove their data from the study at any
+              time.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h3 data-collapse aria-expanded="false">
+              {% trans "What will happen to the data collected for the research ?" %}
+              <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
+                <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+                <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </h3>
+            <p class="collapse__item">
+              {% blocktrans %}
+              The anonymised data will be made available to all participants and the scientific community, and will be
+              distributed with all publications resulting from this study. If necessary to protect the privacy of
+              participants, individual data may be deleted or only shared in aggregate form. This data cannot be used to
+              identify participants. In addition, each participant will receive a copy of his or her own data as part of
+              this study.
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h3 data-collapse aria-expanded="false">{% trans "What rights do you have ?" %}
+              <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
+                <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+                <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </h3>
+            <p class="collapse__item">
+              {% blocktrans %}
+              In accordance with the French Data Protection Act of 6 January 1978 as amended and with European
+              Regulation
+              n°2016/679/EU of 27 April 2016 ( effective as of 25 May 2018), you may at any time request access,
+              rectification, withdrawal or request that the data provided about you be communicated to you without
+              incurring
+              any liability or prejudice as a result.
+              Limitations to the exercise of these various rights will be examined in application of Article 89-2 of the
+              DPMR (European Data Protection Regulation) relating to exceptions in the field of research.
+              For further information on research, please contact Ariel Lindner (ariel.lindner@inserm.fr).
+              To exercise these rights or if you have any questions about the processing of your data in this system,
+              you
+              can contact our data protection officer, Lionel Devaux (lionel.devaux@cri-pari.org).
+              If you feel, after contacting us, that your rights to Information Technology and Liberties are not
+              respected,
+              you can send a complaint to the CNIL (Commission Nationale Informatique et Libertés www.cnil.fr).
+              {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h3 data-collapse aria-expanded="false">{% trans "Information on the results of the survey" %}
+              <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
+                <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+                <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </h3>
+            <p class="collapse__item">
+              {% blocktrans %}
+              You have the right to see the results of this study. As soon as the results are available, we will publish
+              them openly on the project website on Open Humans and distribute them to all participants.
+              {% endblocktrans %}
+            </p>
+          </li>
+        </ol>
+
+        <ul>
+          <li>
+            {% trans "I have read the above information for participants and my questions regarding participation in the study have been answered satisfactorily." %}
+          </li>
+          <li>
+            {% trans "I know that I can print this information or request a copy at any time and that I can withdraw from the study at any time without giving reasons and without any negative consequences." %}
+          </li>
+          <li>
+            {% trans "I agree that the Principal Investigators and their collaborators may have access to the original data in strict compliance with the rules of confidentiality." %}
+          </li>
+          <li>
+            {% trans "I am aware that the investigator may, without mutual consent, exclude me from the study if I do not meet the inclusion criteria." %}
+          </li>
+          <li>
+            {% trans 'By clicking on the "ACCEPT" button, I certify that I accept all the above-mentioned points and that I am participating in this study on a voluntary basis.' %}
+          </li>
+        </ul>
+
+        {% if openhumansmember.surveyaccount.consent_given %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <form action="{% url "consent" %}" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="button--orange" role="button">
+      {% if openhumansmember.surveyaccount.consent_given %}
+      {% trans "WITHDRAW MY CONSENT" %}
+      {% else %}
+      {% trans "ACCEPT" %}
+      {% endif %}
+    </button>
+  </form>
+</section>

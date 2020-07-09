@@ -1,33 +1,26 @@
-"""open_survey URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
-from main.views import HomeView, logout_user, take_survey, team, faq, vision
-from main.views import citizen_science, data
+from main.views import HomeView, consent, daily_emails, autologin, logout_user, take_survey, FaqView, VisionView, \
+    AboutView, DataView, TeamView, set_language_custom, delete_all_openhuman_files, delete_all
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
     path("", HomeView.as_view(), name="home"),
+    path("autologin/<int:oh_id>/", autologin, name="autologin"),
+    path("consent/", consent, name="consent"),
+    path("daily_emails/", daily_emails, name="daily_emails"),
     path("logout/", logout_user, name="logout"),
-    path('survey/<int:oh_id>/', take_survey, name='take_survey'),
-    path('team/', team, name='team'),
-    path('faq/', faq, name='faq'),
-    path('vision/', vision, name='vision'),
-    path('citizen-science/', citizen_science, name='citizen_science'),
-    path('data/', data, name='data'),
+    path("survey/", take_survey, name="take_survey"),
+    path("team/", TeamView.as_view(), name="team"),
+    path("faq/", FaqView.as_view(), name="faq"),
+    # path("vision/", VisionView.as_view(), name="vision"),
+    path("about/", AboutView.as_view(), name="about"),
+    path("data/", DataView.as_view(), name="data"),
+
+    path("delete-all-openhuman-files/", delete_all_openhuman_files, name="delete_all_openhuman_files"),
+    path("delete-all/", delete_all, name="delete_all"),
+
+    path("i18n/", set_language_custom, name="set_language_custom"),
 ]
 
 urlpatterns += [path("openhumans/", include("openhumans.urls"))]

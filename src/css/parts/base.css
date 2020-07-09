@@ -1,0 +1,308 @@
+@font-face {
+  font-family: "Geomanist";
+  src: url("../fonts/geomanist-light.woff") format("woff"),
+    url("../fonts/geomanist-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geomanist";
+  src: url("../fonts/geomanist-book.woff") format("woff"),
+    url("../fonts/geomanist-book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geomanist";
+  src: url("../fonts/geomanist-bold.woff") format("woff"),
+    url("../fonts/geomanist-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  /* switching to border-box model for all elements */
+  box-sizing: border-box;
+  /* set base font-size to equiv "10px", which is adapted to rem unit */
+  font-size: 62.5%;
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+  font-size: calc(1em * 0.625);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --dark: #042b32;
+  --light: #d5f1ea;
+  --green: #35d78c;
+  --blue: #00c4ac;
+  --yellow: #ffd13c;
+  --orange: #ffa318;
+  --white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+::placeholder {
+  color: gray;
+}
+body {
+  margin: 0;
+  position: relative;
+  font-size: 1.8rem;
+  color: var(--dark);
+  font-family: "Geomanist", "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+  line-height: 2.4rem;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0 0 16px;
+  padding: 0;
+  position: relative;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: var(--dark);
+}
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+section {
+  margin: 60px 0;
+}
+article {
+  margin: 40px 0;
+}
+article h2 {
+  margin-bottom: 30px;
+}
+article h3 {
+  margin: 30px 0 16px;
+}
+article p {
+  margin: 12px 0;
+}
+article ul {
+  position: relative;
+  padding-left: 1em;
+}
+article ul > li::before {
+  content: "\2022";
+  display: inline-block;
+  margin-left: -1em;
+  width: 1em;
+  color: var(--blue);
+  vertical-align: baseline;
+}
+
+a,
+a:visited {
+  text-decoration: underline;
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  margin-top: 12px;
+}
+
+strong,
+b {
+  font-weight: bold;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ol {
+  padding: 0 0 0 1em;
+  margin: 0;
+}
+
+ul > li,
+ol > li {
+  padding: 0;
+  margin: 1.4rem 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+  position: relative;
+}
+button,
+.button {
+  margin: 12px 0;
+  padding: 16px 20px;
+  display: block;
+  max-width: 200px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--dark);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: none;
+}
+button:focus,
+.button:focus {
+  outline: solid 4px cornflowerblue;
+}
+.button--white {
+  background-color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.button--white:focus {
+  outline: solid 4px var(--dark);
+}
+.button--white:hover {
+  color: white;
+  background-color: var(--dark);
+}
+.button--orange {
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to right,
+    var(--orange) 0%,
+    var(--yellow) 100%
+  );
+  transition: background-position 0.3s ease;
+}
+.button--orange:hover {
+  background-position: right center;
+}
+.no-btn {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  border: none;
+  border-radius: none;
+  color: inherit;
+  box-shadow: none;
+}
+.container {
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+}
+.chevron {
+  margin-left: 6px;
+  transition: transform 0.4s ease;
+  transform: rotate(0deg);
+  transform-origin: 50% 40%;
+}
+.collapse__item {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.2s ease;
+}
+[data-collapse] {
+  cursor: pointer;
+}
+.collapse--open + .collapse__item {
+  max-height: 1140px;
+  opacity: 1;
+}
+
+.collapse--open > .chevron {
+  transform: rotate(180deg);
+}
+
+.u-hidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  h1::after {
+    width: 80px;
+    height: 8px;
+    bottom: -6px;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  section {
+    margin: 80px 0;
+  }
+  article {
+    margin: 60px 0;
+  }
+}

@@ -1,0 +1,22 @@
+{% load i18n %}
+
+<section class="daily-emails">
+    {% if openhumansmember.surveyaccount.daily_emails_activated %}
+        <p>{% blocktrans %}The daily emails are activated. You can choose to deactivate them, without withdrawing your consent to participate in the survey. Your past responses will stay usable.{% endblocktrans %}</p>
+    {% else %}
+        <p>{% blocktrans %}You have chosen to deactivate the daily emails. Your past responses will stay usable.{% endblocktrans %}</p>
+    {% endif %}
+
+    <form action="{% url "daily_emails" %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="button--orange"
+                role="button"
+        >
+            {% if openhumansmember.surveyaccount.daily_emails_activated %}
+                {% trans "DEACTIVATE DAILY EMAILS" %}
+            {% else %}
+                {% trans "ACTIVATE DAILY EMAILS" %}
+            {% endif %}
+        </button>
+    </form>
+</section>
