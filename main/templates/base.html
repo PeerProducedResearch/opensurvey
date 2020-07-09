@@ -23,10 +23,10 @@
   {% endcomment %}
 
   {# Favicon #}
-  <link rel="shortcut icon" type="image/png" sizes="32x32" href="{% static '/img/favicon-32x32.png' %}" />
-  <link rel="shortcut icon" type="image/png" sizes="270x270" href="{% static '/img/favicon-270x270.png' %}" />
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}" />
+  <link rel="shortcut icon" type="image/png" sizes="270x270" href="{% static 'img/favicon-270x270.png' %}" />
   {# For internal CSS stylesheets. #}
-  <link href="{% static '/css/style.min.css'%}" rel='stylesheet' type='text/css'>
+  <link href="{% static 'css/style.min.css'%}" rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -187,7 +187,7 @@
 
   {% block extra_modals %}{% endblock %}
   {% block extra_js_body %}
-  <script src="{% static '/js/main.js'%}"></script>
+  <script src="{% static 'js/main.js'%}"></script>
   {# Application JavaScript - Note: popper is needed by bootstrap 4 #}
   {% comment %}
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
