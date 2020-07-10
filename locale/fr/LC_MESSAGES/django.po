@@ -73,7 +73,7 @@ msgid ""
 "interests. This will not only help us develop the\n"
 "            study to cover the needs and interests of the cohort, but will "
 "also help us understand key questions and\n"
-"            concerns that citizens outside of Academia have regarding the "
+"            concerns that citizens outside of academia have regarding the "
 "pandemic.\n"
 "        "
 msgstr ""
@@ -113,7 +113,7 @@ msgid "a research hypothesis that you’d want to test"
 msgstr ""
 
 #: main/templates/main/citizen-science.html:28
-msgid "a quick blurb on why you think it would be valuable to look into"
+msgid "a quick blurb on why you think it would be valuable to explore"
 msgstr ""
 
 #: main/templates/main/citizen-science.html:29
@@ -124,13 +124,13 @@ msgstr ""
 #: main/templates/main/citizen-science.html:33
 msgid ""
 "\n"
-"            How we review it: Every 2 weeks, our team will go through your "
+"            How we review it: Every fortnight, our team will go through your "
 "suggestions, and decide on a few that we could\n"
-"            incorporate into our next iteration of the survey. We then send "
+"            incorporate into our next iteration of the survey. We will then send "
 "the new set of questions to be reviewed by the\n"
 "            Institutional Review Board, to make sure it doesn’t go against "
 "any legal or ethical regulations. Once we get the\n"
-"            green light, we move to code it into the survey.\n"
+"            green light, we will move to code it into the survey.\n"
 "        "
 msgstr ""
 
@@ -971,10 +971,10 @@ msgstr ""
 #: main/templates/main/vision.html:18
 msgid ""
 "\n"
-"            Our goal? Better understand the virus’ transmission patterns and "
+"            Our goal? To better understand the virus’ transmission patterns and "
 "its effect on physical and mental health. We\n"
-"            want to understand how the virus spreads, who it affects most, "
-"and how it impacts your daily life. We hope this\n"
+"            want to understand <strong>how the virus spreads</strong>, <strong>who it affects most</strong>, "
+"and <strong>how it impacts your daily life</strong>. We hope this\n"
 "            may guide public health decisions and medication repurposing in "
 "the future.\n"
 "        "
@@ -986,32 +986,32 @@ msgid ""
 "            All data collected is anonymized and goes through the OpenHuman "
 "platform. From there, you can view what is\n"
 "            happening around you. We also seek to promote citizen science "
-"and give you the option to contribute research\n"
+"and will give you the option to contribute research\n"
 "            hypotheses that could be implemented in our fast-evolving "
 "survey.\n"
 "        "
 msgstr ""
 
 #: main/templates/main/vision.html:33
-msgid "These are our starting research aims that we’re trying to answer:"
+msgid "These are our starting <strong>research aims<strong> and questions that we’re trying to answer:"
 msgstr ""
 
 #: main/templates/main/vision.html:35
 msgid ""
 "Collect comprehensive symptom reports with a high temporal resolution to "
-"better understand the disease progression."
+"better understand the diseases progression."
 msgstr ""
 
 #: main/templates/main/vision.html:36
-msgid "Measuring the impact of the COVID-19 pandemic on mental health."
+msgid "Measure the impact of the COVID-19 pandemic on mental health."
 msgstr ""
 
 #: main/templates/main/vision.html:37
-msgid "To identify effective agents for reducing COVID-19 disease severity"
+msgid "Identify effective agents for reducing COVID-19 disease severity"
 msgstr ""
 
 #: main/templates/main/vision.html:38
-msgid "Characterize factors that define susceptibility to developing COVID-19"
+msgid "Characterize factors linked to increased susceptibility to develop COVID-19"
 msgstr ""
 
 #: main/templates/main/vision.html:39
