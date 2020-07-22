@@ -13,6 +13,7 @@
   },
   {
     "name": "Spark Yaddav",
+    "link": "http://ca.linkedin.com/in/spark-y",
     "description": "Molecular Biology, Medical Biochemistry and Biophysics Researcher. CRI-affiliate. Previously: Researcher at SciLifeLab, KI, Stockholm, Sweden and Bionanoscience, TU Delft, The Netherlands."
   },
   {
@@ -21,14 +22,17 @@
   },
   {
     "name": "Bastian Greshake Tzovaras",
+    "link": "https://tzovar.as",
     "description": "Research fellow at the INSERM U1284 unit at the Center for Interdisciplinary Research, University of Paris and Director of Research / freelance consultant for OpenHumans.org."
   },
   {
     "name": "Mad Price Ball",
+    "link": "http://www.madpriceball.net/",
     "description": "Executive Director & Co-Founder of OpenHumans.org and started quantifiedflu.org with Bastian Greshake Tzovaras."
   },
   {
     "name": "Ariel B. Lindner",
+    "link": "https://research.cri-paris.org/profile?id=c764de6f-735c-4164-beb7-6ec12e99a40c",
     "description": "Co-Founder & Research Director at the INSERM U1284 unit at the Center for Interdisciplinary Research, University of Paris"
   },
   {
@@ -41,10 +45,12 @@
   },
   {
     "name": "Kseniia Konishcheva",
+    "link": "https://www.linkedin.com/in/kkonishcheva42/",
     "description": "Life Sciences Master's student, intern at the Center for Interdisciplinary Research, University of Paris & the Child Mind Institute, New York."
     },
   {
     "name": "Alice Motion",
+    "link": "https://www.sydney.edu.au/science/about/our-people/academic-staff/alice-motion.html",
     "description": "Associate Professor at the School of Chemistry, University of Sydney, Australia. Director of SCOPE Research Group, CRI Research Fellow 2019."
   }
 ]

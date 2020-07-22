@@ -23,7 +23,11 @@
   <ul class="team__list">
     {% for person in persons %}
     <li class="card card--team">
+      {% if person.link%}
+      <h3><a href='{{person.link}}'>{{ person.name }}</a></h3>
+      {%else%}
       <h3>{{ person.name }}</h3>
+      {%endif%}
       <p>
         {% trans person.description %}
       </p>
