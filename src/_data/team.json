@@ -37,7 +37,8 @@
   },
   {
     "name": "Natalia Norori",
-    "description": "Medical Student at the Universidad Latina de Costa Rica. She also works for Open Access Button, a non-profit organisation that helps people get access to research."
+    "link": "https://www.linkedin.com/in/natalianorori/",
+    "description": "Medical Student. She also works for Open Access Button, a non-profit project that helps people get access to research."
   },
   {
     "name": "Bastien Cohin",
@@ -52,5 +53,10 @@
     "name": "Alice Motion",
     "link": "https://www.sydney.edu.au/science/about/our-people/academic-staff/alice-motion.html",
     "description": "Associate Professor at the School of Chemistry, University of Sydney, Australia. Director of SCOPE Research Group, CRI Research Fellow 2019."
+  },
+  {
+    "name": "Nico Arduin",
+    "link": "https://www.nardu.in/",
+    "description": "Freelance web designer and developer. Contributes to open source projects on the side."
   }
 ]
