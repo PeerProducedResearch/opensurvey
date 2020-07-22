@@ -460,7 +460,7 @@ msgstr ""
 
 #: main/templates/main/faq.html:107
 msgid ""
-"Go to <a href=\"https://www.openhumans.org/activity/open-covid-survey/\"\n"
+"Go to <a href=\"https://www.openhumans.org/activity/covid-open-survey/\"\n"
 "                  target=\"_blank\">https://www.openhumans.org/activity/open-"
 "covid-survey/</a>"
 msgstr ""
@@ -479,8 +479,8 @@ msgstr ""
 
 #: main/templates/main/faq.html:120
 msgid ""
-"Go to <a href=\"https://www.openhumans.org/activity/open-covid-survey/\" "
-"target=\"_blank\">https://www.openhumans.org/activity/open-covid-survey/</"
+"Go to <a href=\"https://www.openhumans.org/activity/covid-open-survey/\" "
+"target=\"_blank\">https://www.openhumans.org/activity/covid-open-survey/</"
 "a>\n"
 "            "
 msgstr ""
