@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 13:24+0000\n"
+"POT-Creation-Date: 2020-07-22 10:08+0000\n"
 "PO-Revision-Date: 2020-07-21 13:15+0000\n"
 "Last-Translator: Bastian Greshake Tzovaras <bgreshake@googlemail.com>, 2020\n"
 "Language-Team: German (https://www.transifex.com/opencovid-survey/teams/111172/de/)\n"
@@ -34,6 +34,8 @@ msgid ""
 "If you don't want to take part in the survey anymore, please use this link "
 "and click on \"WITHDRAW MY CONSENT\""
 msgstr ""
+"Falls sie nicht mehr an der Umfrage teilnehmen wollen klicken sie diesen "
+"Link und clicken \"ZUSTIMMUNG WIDERRUFEN\""
 
 #: main/templates/base.html:59 main/templates/main/about.html:28
 #: main/templates/main/home.html:296
@@ -50,11 +52,11 @@ msgstr "Team"
 
 #: main/templates/base.html:68 main/templates/base.html:181
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: main/templates/base.html:71
 msgid "Forum"
-msgstr ""
+msgstr "Forum"
 
 #: main/templates/base.html:94
 msgid "Log in"
@@ -70,24 +72,24 @@ msgstr ""
 
 #: main/templates/base.html:178 main/templates/main/about.html:8
 msgid "About"
-msgstr ""
+msgstr "Über"
 
 #: main/templates/base.html:182
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Datenschutzerklärung"
 
 #: main/templates/base.html:186
 msgid "view our code"
-msgstr ""
+msgstr "Unser Code"
 
 #: main/templates/base.html:187
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: main/templates/main/about.html:10
 msgid ""
 "\n"
-"      The OpenCovid survey was created by a team of scientists at the Center for Research and Interdisciplinarity (CRI)\n"
+"      The Covid Open survey was created by a team of scientists at the Center for Research and Interdisciplinarity (CRI)\n"
 "      in\n"
 "      Paris, with collaborating researchers from the USA, Australia, Canada, Costa Rica, India and more! We are\n"
 "      interested\n"
@@ -97,7 +99,7 @@ msgstr ""
 
 #: main/templates/main/about.html:29
 msgid "Be part of the team."
-msgstr ""
+msgstr "Werden sie ein Teil des Teams"
 
 #: main/templates/main/about.html:31
 msgid ""
@@ -108,46 +110,53 @@ msgid ""
 "      citizens outside of academia have regarding the pandemic.\n"
 "      "
 msgstr ""
+"\n"
+"Wenn es um die Wissenschaft geht, glauben wir daran, den Einfallsreichtum aller Bürger zu nutzen. Wir möchten, dass Sie ihre eigenen Fragen zu unserer Umfrage beitragen, ganz entsprechend Ihren Forschungsfragen und Interessen. Dies wird uns nicht nur dabei helfen die Bedürfnisse und Interessen aller Teilnehmer abzudecken, sondern wird uns auch helfen, Zentrale Fragen und Anliegen zu verstehen, die\n"
+"Bürger außerhalb des akademischen Bereichs über die Pandemie haben."
 
 #: main/templates/main/about.html:38
 msgid "How it works."
-msgstr ""
+msgstr "Wie es funktioniert."
 
 #: main/templates/main/about.html:40
 msgid ""
 "\n"
-"      You will need to access the OpenHumans forum, where a dedicated section for suggestions has been created. Your\n"
-"      personal information will be anonymized for your suggestions. You can also create and engage in topics of\n"
+"      You will need to access the Open Humans forum, where a dedicated section for suggestions has been created. Your\n"
+"      participation in this forum can not be linked to your answers in the Covid Open survey. You can also create and engage in topics of\n"
 "      discussions directly on the forum, as well as vote for suggestions others have made!\n"
 "      "
 msgstr ""
 
 #: main/templates/main/about.html:46
 msgid "What to tell us:"
-msgstr ""
+msgstr "Was sie uns sagen:"
 
 #: main/templates/main/about.html:48
 msgid ""
 "We can’t add questions to the survey without an end-goal in mind. We ask you"
 " to suggest:"
 msgstr ""
+"Ohne ein klares Ziel können wir keine Fragen zur Umfrage hinzufügen. Deshalb"
+" schlagen sie folgendes vor:"
 
 #: main/templates/main/about.html:50
 msgid "A research hypothesis that you’d want to test"
-msgstr ""
+msgstr "Eine Hypothese die sie testen wollen"
 
 #: main/templates/main/about.html:51
 msgid "A quick blurb on why you think it would be valuable to explore"
 msgstr ""
+"Einen kurzen Absatz dazu wieso sie denken dass es interessant ist ihre Frage"
+" zu untersuchen"
 
 #: main/templates/main/about.html:52
 msgid ""
 "The questions would you incorporate in the survey to test your hypothesis"
-msgstr ""
+msgstr "Die Fragen die sie gerne der Umfrage hinzufügen wollen."
 
 #: main/templates/main/about.html:55
 msgid "How we review it."
-msgstr ""
+msgstr "Wie wir ihre Vorschläge prüfen."
 
 #: main/templates/main/about.html:57
 msgid ""
@@ -158,19 +167,21 @@ msgid ""
 "      to code it into the survey.\n"
 "      "
 msgstr ""
+"\n"
+"Alle zwei Wochen wird unser Team die eingegangenen Vorschläge durchsehen und entscheiden welche wir in die nächste Version der Umfrage einbauen können. Diese Vorauswahl an Fragen wird dann von der Ethikkommission überprüft um sicherzustellen das sie nicht gegen rechtliche und ethische Regulationen verstossen. Sobald wir grünes Licht haben werden wir die Fragen zur Umfrage hinzufügen."
 
 #: main/templates/main/about.html:66 main/templates/main/home.html:293
 msgid "Our approach"
-msgstr ""
+msgstr "Unser Ansatz"
 
 #: main/templates/main/about.html:67
 msgid "What we do."
-msgstr ""
+msgstr "Was wir tun."
 
 #: main/templates/main/about.html:69
 msgid ""
 "\n"
-"      The OpenCovid survey is a 5 minute questionnaire created for people who want to help fight the COVID-19 virus from\n"
+"      The Covid Open survey is a 5 minute questionnaire created for people who want to help fight the COVID-19 virus from\n"
 "      the comfort of their home. It consists of a short questionnaire, followed by a daily check-in on how you feel. A\n"
 "      wide variety of questions are asked, some of which can be answered daily, others that appear on a rolling basis,\n"
 "      so as to always keep it fresh!\n"
@@ -188,13 +199,13 @@ msgstr ""
 
 #: main/templates/main/about.html:83
 msgid "How we do it."
-msgstr ""
+msgstr "Wie wir arbeiten"
 
 #: main/templates/main/about.html:85
 msgid ""
 "\n"
-"      All data collected is anonymized and goes through the OpenHuman platform. From there, you can view what is\n"
-"      happening around you. We also seek to promote citizen science and give you the option to contribute research\n"
+"      All data collected is anonymized and goes through the Open Humans platform. We also seek to promote citizen science\n"
+"      and give you the option to contribute research\n"
 "      hypotheses that could be implemented in our fast-evolving survey.\n"
 "      "
 msgstr ""
@@ -202,16 +213,20 @@ msgstr ""
 #: main/templates/main/about.html:93
 msgid "These are our starting research aims that we’re trying to answer:"
 msgstr ""
+"Dies sind die ersten Forschungsfragen die wir versuchen zu beantworten:"
 
 #: main/templates/main/about.html:96
 msgid ""
 "Collect comprehensive symptom reports with a high temporal resolution to "
 "better understand the diseases progression."
 msgstr ""
+"Sammeln von vollständigen Symptomberichten mit einer hohen zeitlichen "
+"Auflösung um den Krankheitsfortschritt besser zu verstehen."
 
 #: main/templates/main/about.html:98
 msgid "Measure the impact of the COVID-19 pandemic on mental health."
 msgstr ""
+"Messen der Auswirkungen der COVID-19 Pandemie auf die psychische Gesundheit"
 
 #: main/templates/main/about.html:99
 msgid "To identify effective agents for reducing COVID-19 disease severity"
@@ -227,10 +242,12 @@ msgid ""
 "Understand how a more participatory approach to survey research, that makes "
 "participants partners, changes survey success."
 msgstr ""
+"Ein Verständnis dafür wie ein partizipatorischer Umfrage-Ansatz – der "
+"Teilnehmer zu Partnern macht – den Erfolg der Umfrage erhöht."
 
 #: main/templates/main/citizen-science.html:6
 msgid "Be a Citizen Scientist"
-msgstr ""
+msgstr "Werden sie Bürgerwissenschaftler"
 
 #: main/templates/main/citizen-science.html:9
 msgid ""
@@ -245,7 +262,7 @@ msgstr ""
 #: main/templates/main/citizen-science.html:18
 msgid ""
 "\n"
-"            How it works: You will need to access the OpenHumans forum, where a dedicated section for suggestions has been\n"
+"            How it works: You will need to access the Open Humans forum, where a dedicated section for suggestions has been\n"
 "            created. Your personal information will be anonymized for your suggestions. You can also create and engage in\n"
 "            topics of discussions directly on the forum, as well as vote for suggestions others have made!\n"
 "        "
@@ -288,7 +305,7 @@ msgstr ""
 msgid ""
 "\n"
 "      Your data belongs to you! If you want to get a transcript with your past responses to the survey, <a\n"
-"        href=\"#\">click here!</a> You will be redirected to our OpenHumans server which stores your data securely.\n"
+"        href=\"#\">click here!</a> You will be redirected to our Open Humans server which stores your data securely.\n"
 "      "
 msgstr ""
 
@@ -302,19 +319,19 @@ msgstr ""
 
 #: main/templates/main/faq.html:8
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Häufig gestelle Fragen"
 
 #: main/templates/main/faq.html:10
 msgid ""
 "\n"
-"      Find answers to the most asked questions about OpenCovid, the survey and the data we collect.\n"
+"      Find answers to the most asked questions about the Covid Open survey and the data we collect.\n"
 "      "
 msgstr ""
 
 #: main/templates/main/faq.html:15
 msgid ""
 "\n"
-"      Feel free to email us any other question you may have at: <a href=\"mailto:faq@opencovid.org\">faq@opencovid.org</a>\n"
+"      Feel free to email us any other question you may have at: <a href=\"mailto:bastian.greshake-tzovaras@cri-paris.org\">bastian.greshake-tzovaras@cri-paris.org</a>\n"
 "      "
 msgstr ""
 
@@ -323,7 +340,7 @@ msgid "The data"
 msgstr ""
 
 #: main/templates/main/faq.html:30
-msgid "Who will be using my data"
+msgid "Who will be using my data?"
 msgstr ""
 
 #: main/templates/main/faq.html:37
@@ -338,7 +355,7 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:45
-msgid "How will my data be protected"
+msgid "How will my data be protected?"
 msgstr ""
 
 #: main/templates/main/faq.html:52
@@ -352,7 +369,7 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:59
-msgid "Will someone make money off my data"
+msgid "Will someone make money off my data?"
 msgstr ""
 
 #: main/templates/main/faq.html:66
@@ -364,7 +381,7 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:71
-msgid "How long will my data be used for"
+msgid "How long will my data be used for?"
 msgstr ""
 
 #: main/templates/main/faq.html:78
@@ -376,45 +393,48 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:83
-msgid "Can I delete my data"
+msgid "Can I delete my data?"
 msgstr ""
 
 #: main/templates/main/faq.html:91
 msgid ""
 "\n"
-"        Yes! Your data belongs to you. You can do so automatically from here, or manually through the OpenHumans website.\n"
+"        Yes! Your data belongs to you. You can do so automatically from here, or manually through the Open Humans website.\n"
 "        "
 msgstr ""
 
 #: main/templates/main/faq.html:96
 msgid "Please login to view the automatic delete links"
 msgstr ""
+"Bitte melden sie sich an um die Links zum automatischen Löschen zu sehen."
 
 #: main/templates/main/faq.html:98
 msgid "Follow these steps to delete your data automatically:"
-msgstr ""
+msgstr "Folgen sie diesen Anweisungen um ihre Daten automatisch zu löschen:"
 
 #: main/templates/main/faq.html:100
 #, python-format
-msgid "You have 1 data file on OpenHumans"
+msgid "You have 1 data file on Open Humans"
 msgid_plural ""
 "You have\n"
-"            %(counter)s data files on OpenHumans"
-msgstr[0] ""
+"            %(counter)s data files on Open Humans"
+msgstr[0] "Sie haben einen Datensatz auf Open Humans"
 msgstr[1] ""
+"Sie haben \n"
+"%(counter)s Umfragedaten auf Open Humans"
 
 #: main/templates/main/faq.html:102
 msgid "Click here to delete all your data files"
-msgstr ""
+msgstr "Clicken sie hier um alle Umfragedaten zu löschen"
 
 #: main/templates/main/faq.html:102
 msgid "You don't have anything to delete!"
-msgstr ""
+msgstr "Sie haben keine Umfragedaten zu löschen!"
 
 #: main/templates/main/faq.html:105
 msgid ""
-"Additionnaly, if you want to revoke access from Open COVID Survey to your "
-"OpenHumans account, follow theses steps:"
+"Additionally, if you want to revoke access from Covid Open Survey to your "
+"Open Humans account, follow theses steps:"
 msgstr ""
 
 #: main/templates/main/faq.html:107
@@ -425,14 +445,15 @@ msgstr ""
 
 #: main/templates/main/faq.html:109 main/templates/main/faq.html:123
 msgid "Click on \"Leave project\" in the bottom left corner"
-msgstr ""
+msgstr "Klicken sie auf \"Leave project\" in der unteren linken Ecke"
 
 #: main/templates/main/faq.html:110 main/templates/main/faq.html:125
 msgid "Click on \"Withdraw & revoke authorization\""
-msgstr ""
+msgstr "Klicken sie auf \"Withdraw & revoke authorization\""
 
 #: main/templates/main/faq.html:117
-msgid "Follow these steps to delete your data through the OpenHumans website:"
+msgid ""
+"Follow these steps to delete your data through the Open Humans website:"
 msgstr ""
 
 #: main/templates/main/faq.html:120
@@ -442,19 +463,21 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:124
-msgid "Check \"Remove my data files for Open COVID Survey from Open Humans\""
+msgid "Check \"Remove my data files for Covid Open Survey from Open Humans\""
 msgstr ""
 
 #: main/templates/main/faq.html:130
-msgid "You can also delete all your data files and your OpenSurvey account:"
+msgid ""
+"You can also delete all your data files and your Covid Open Survey account:"
 msgstr ""
 
 #: main/templates/main/faq.html:133
-msgid "Click here to delete all your data files and your OpenSurvey account"
+msgid ""
+"Click here to delete all your data files and your Covid Open Survey account"
 msgstr ""
 
 #: main/templates/main/faq.html:138
-msgid "Can others access my data"
+msgid "Can others access my data?"
 msgstr ""
 
 #: main/templates/main/faq.html:145
@@ -470,18 +493,18 @@ msgid "The survey"
 msgstr ""
 
 #: main/templates/main/faq.html:154
-msgid "Why do I need to sign up with OpenHumans"
+msgid "Why do I need to sign up with Open Humans?"
 msgstr ""
 
 #: main/templates/main/faq.html:161
 msgid ""
 "\n"
-"      OpenHumans hosts our secure servers, and is the place where all the data goes.\n"
+"      Open Humans hosts our secure servers, and is the place where all the data goes.\n"
 "      "
 msgstr ""
 
 #: main/templates/main/faq.html:165
-msgid "How do I end the survey"
+msgid "How do I end the survey?"
 msgstr ""
 
 #: main/templates/main/faq.html:172
@@ -494,7 +517,7 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:178
-msgid "Can someone under 18 enroll in the survey"
+msgid "Can someone under 18 enroll in the survey?"
 msgstr ""
 
 #: main/templates/main/faq.html:185
@@ -505,14 +528,14 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:189
-msgid "What’s the difference between OpenHumans and OpenClinica"
+msgid "What’s the difference between Open Humans and OpenClinica?"
 msgstr ""
 
 #: main/templates/main/faq.html:196
 msgid ""
 "\n"
-"      OpenHumans encrypts and stores the data, OpenClinica is the survey platform: data is collected there and sent to\n"
-"      OpenHumans.\n"
+"      Open Humans encrypts and stores the data, OpenClinica is the survey platform: data is collected there and sent to\n"
+"      Open Humans.\n"
 "      "
 msgstr ""
 
@@ -558,15 +581,15 @@ msgstr ""
 
 #: main/templates/main/home.html:253
 msgid "We will ask you about:"
-msgstr ""
+msgstr "Wir fragen sie über:"
 
 #: main/templates/main/home.html:262
 msgid "Your physical health"
-msgstr ""
+msgstr "Ihre Gesundheit"
 
 #: main/templates/main/home.html:270
 msgid "Your mental wellbeing"
-msgstr ""
+msgstr "Ihr mentales Wohlbefinden"
 
 #: main/templates/main/home.html:278
 msgid "Transmission properties of the virus"
@@ -590,11 +613,11 @@ msgstr ""
 
 #: main/templates/main/home.html:303
 msgid "Become a Citizen Scientist"
-msgstr ""
+msgstr "Werden sie Bürgerwisschenschaftler"
 
 #: main/templates/main/home.html:306
 msgid "Shared Data, Shared Knowledge"
-msgstr ""
+msgstr "Geteilte Daten, geteiltes Wissen"
 
 #: main/templates/main/home.html:308
 msgid ""
@@ -612,6 +635,8 @@ msgstr ""
 msgid ""
 "You have given your consent, however you can still withdraw it at any time."
 msgstr ""
+"Sie haben ihre Zustimmung gegeben, sie können sie jedoch jederzeit "
+"widerrufen. "
 
 #: main/templates/main/includes/consent.html:11
 msgid ""
@@ -732,7 +757,7 @@ msgstr ""
 
 #: main/templates/main/includes/consent.html:138
 msgid "What rights do you have ?"
-msgstr ""
+msgstr "Welche Rechte haben sie?"
 
 #: main/templates/main/includes/consent.html:145
 msgid ""
@@ -799,14 +824,16 @@ msgid ""
 "mentioned points and that I am participating in this study on a voluntary "
 "basis."
 msgstr ""
+"Durch das Klicken auf den \"ZUSTIMMEN\"-Knopf bestätige das ich allen "
+"obengenannten Punkten zustimme und freiwillig an dieser Studie teilnehme."
 
 #: main/templates/main/includes/consent.html:208
 msgid "WITHDRAW MY CONSENT"
-msgstr ""
+msgstr "EINWILLIGUNG ENTZIEHEN"
 
 #: main/templates/main/includes/consent.html:210
 msgid "ACCEPT"
-msgstr ""
+msgstr "ZUSTIMMEN"
 
 #: main/templates/main/includes/daily_emails_activation.html:5
 msgid ""
@@ -814,6 +841,9 @@ msgid ""
 "withdrawing your consent to participate in the survey. Your past responses "
 "will stay usable."
 msgstr ""
+"Die täglichen eMails sind aktiviert. Sie können diese deaktivieren ohne ihre"
+" Zustimmung an der Study zu widerrufen. Ihre bisherigen Antworten können "
+"damit weiterhin zur Forschung genutzt werden."
 
 #: main/templates/main/includes/daily_emails_activation.html:7
 msgid ""
@@ -831,11 +861,11 @@ msgstr ""
 
 #: main/templates/main/team.html:8
 msgid "Meet the Team!"
-msgstr ""
+msgstr "Lernen sie das Team kennen!"
 
 #: main/templates/main/team.html:9
 msgid "Members from around the world"
-msgstr ""
+msgstr "Mitglieder aus aller Welt"
 
 #: main/templates/main/team.html:11
 msgid ""
@@ -843,6 +873,8 @@ msgid ""
 "      Meet the team behind OpenCovid and learn a bit more about their background.\n"
 "      "
 msgstr ""
+"\n"
+"Lernen sie das Team hinter OpenCovid kennen und erfahren sie mehr über ihren Hintergrund."
 
 #: main/views.py:86
 msgid ""
@@ -858,16 +890,16 @@ msgstr ""
 
 #: main/views.py:109
 msgid "You have activated the daily emails."
-msgstr ""
+msgstr "Sie haben die täglichen eMails aktiviert."
 
 #: main/views.py:113
 msgid "You have deactivated the daily emails."
-msgstr ""
+msgstr "Sie haben die täglichen eMails deaktiviert."
 
-#: open_survey/settings.py:129
+#: open_survey/settings.py:127
 msgid "English"
 msgstr ""
 
-#: open_survey/settings.py:130
+#: open_survey/settings.py:128
 msgid "French"
 msgstr ""

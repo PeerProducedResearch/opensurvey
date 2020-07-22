@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 13:24+0000\n"
+"POT-Creation-Date: 2020-07-22 10:08+0000\n"
 "PO-Revision-Date: 2020-07-21 13:15+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/opencovid-survey/teams/111172/es/)\n"
 "MIME-Version: 1.0\n"
@@ -83,7 +83,7 @@ msgstr ""
 #: main/templates/main/about.html:10
 msgid ""
 "\n"
-"      The OpenCovid survey was created by a team of scientists at the Center for Research and Interdisciplinarity (CRI)\n"
+"      The Covid Open survey was created by a team of scientists at the Center for Research and Interdisciplinarity (CRI)\n"
 "      in\n"
 "      Paris, with collaborating researchers from the USA, Australia, Canada, Costa Rica, India and more! We are\n"
 "      interested\n"
@@ -112,8 +112,8 @@ msgstr ""
 #: main/templates/main/about.html:40
 msgid ""
 "\n"
-"      You will need to access the OpenHumans forum, where a dedicated section for suggestions has been created. Your\n"
-"      personal information will be anonymized for your suggestions. You can also create and engage in topics of\n"
+"      You will need to access the Open Humans forum, where a dedicated section for suggestions has been created. Your\n"
+"      participation in this forum can not be linked to your answers in the Covid Open survey. You can also create and engage in topics of\n"
 "      discussions directly on the forum, as well as vote for suggestions others have made!\n"
 "      "
 msgstr ""
@@ -166,7 +166,7 @@ msgstr ""
 #: main/templates/main/about.html:69
 msgid ""
 "\n"
-"      The OpenCovid survey is a 5 minute questionnaire created for people who want to help fight the COVID-19 virus from\n"
+"      The Covid Open survey is a 5 minute questionnaire created for people who want to help fight the COVID-19 virus from\n"
 "      the comfort of their home. It consists of a short questionnaire, followed by a daily check-in on how you feel. A\n"
 "      wide variety of questions are asked, some of which can be answered daily, others that appear on a rolling basis,\n"
 "      so as to always keep it fresh!\n"
@@ -189,8 +189,8 @@ msgstr ""
 #: main/templates/main/about.html:85
 msgid ""
 "\n"
-"      All data collected is anonymized and goes through the OpenHuman platform. From there, you can view what is\n"
-"      happening around you. We also seek to promote citizen science and give you the option to contribute research\n"
+"      All data collected is anonymized and goes through the Open Humans platform. We also seek to promote citizen science\n"
+"      and give you the option to contribute research\n"
 "      hypotheses that could be implemented in our fast-evolving survey.\n"
 "      "
 msgstr ""
@@ -241,7 +241,7 @@ msgstr ""
 #: main/templates/main/citizen-science.html:18
 msgid ""
 "\n"
-"            How it works: You will need to access the OpenHumans forum, where a dedicated section for suggestions has been\n"
+"            How it works: You will need to access the Open Humans forum, where a dedicated section for suggestions has been\n"
 "            created. Your personal information will be anonymized for your suggestions. You can also create and engage in\n"
 "            topics of discussions directly on the forum, as well as vote for suggestions others have made!\n"
 "        "
@@ -284,7 +284,7 @@ msgstr ""
 msgid ""
 "\n"
 "      Your data belongs to you! If you want to get a transcript with your past responses to the survey, <a\n"
-"        href=\"#\">click here!</a> You will be redirected to our OpenHumans server which stores your data securely.\n"
+"        href=\"#\">click here!</a> You will be redirected to our Open Humans server which stores your data securely.\n"
 "      "
 msgstr ""
 
@@ -303,14 +303,14 @@ msgstr ""
 #: main/templates/main/faq.html:10
 msgid ""
 "\n"
-"      Find answers to the most asked questions about OpenCovid, the survey and the data we collect.\n"
+"      Find answers to the most asked questions about the Covid Open survey and the data we collect.\n"
 "      "
 msgstr ""
 
 #: main/templates/main/faq.html:15
 msgid ""
 "\n"
-"      Feel free to email us any other question you may have at: <a href=\"mailto:faq@opencovid.org\">faq@opencovid.org</a>\n"
+"      Feel free to email us any other question you may have at: <a href=\"mailto:bastian.greshake-tzovaras@cri-paris.org\">bastian.greshake-tzovaras@cri-paris.org</a>\n"
 "      "
 msgstr ""
 
@@ -319,7 +319,7 @@ msgid "The data"
 msgstr ""
 
 #: main/templates/main/faq.html:30
-msgid "Who will be using my data"
+msgid "Who will be using my data?"
 msgstr ""
 
 #: main/templates/main/faq.html:37
@@ -334,7 +334,7 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:45
-msgid "How will my data be protected"
+msgid "How will my data be protected?"
 msgstr ""
 
 #: main/templates/main/faq.html:52
@@ -348,7 +348,7 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:59
-msgid "Will someone make money off my data"
+msgid "Will someone make money off my data?"
 msgstr ""
 
 #: main/templates/main/faq.html:66
@@ -360,7 +360,7 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:71
-msgid "How long will my data be used for"
+msgid "How long will my data be used for?"
 msgstr ""
 
 #: main/templates/main/faq.html:78
@@ -372,13 +372,13 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:83
-msgid "Can I delete my data"
+msgid "Can I delete my data?"
 msgstr ""
 
 #: main/templates/main/faq.html:91
 msgid ""
 "\n"
-"        Yes! Your data belongs to you. You can do so automatically from here, or manually through the OpenHumans website.\n"
+"        Yes! Your data belongs to you. You can do so automatically from here, or manually through the Open Humans website.\n"
 "        "
 msgstr ""
 
@@ -392,10 +392,10 @@ msgstr ""
 
 #: main/templates/main/faq.html:100
 #, python-format
-msgid "You have 1 data file on OpenHumans"
+msgid "You have 1 data file on Open Humans"
 msgid_plural ""
 "You have\n"
-"            %(counter)s data files on OpenHumans"
+"            %(counter)s data files on Open Humans"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -409,8 +409,8 @@ msgstr ""
 
 #: main/templates/main/faq.html:105
 msgid ""
-"Additionnaly, if you want to revoke access from Open COVID Survey to your "
-"OpenHumans account, follow theses steps:"
+"Additionally, if you want to revoke access from Covid Open Survey to your "
+"Open Humans account, follow theses steps:"
 msgstr ""
 
 #: main/templates/main/faq.html:107
@@ -428,7 +428,8 @@ msgid "Click on \"Withdraw & revoke authorization\""
 msgstr ""
 
 #: main/templates/main/faq.html:117
-msgid "Follow these steps to delete your data through the OpenHumans website:"
+msgid ""
+"Follow these steps to delete your data through the Open Humans website:"
 msgstr ""
 
 #: main/templates/main/faq.html:120
@@ -438,19 +439,21 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:124
-msgid "Check \"Remove my data files for Open COVID Survey from Open Humans\""
+msgid "Check \"Remove my data files for Covid Open Survey from Open Humans\""
 msgstr ""
 
 #: main/templates/main/faq.html:130
-msgid "You can also delete all your data files and your OpenSurvey account:"
+msgid ""
+"You can also delete all your data files and your Covid Open Survey account:"
 msgstr ""
 
 #: main/templates/main/faq.html:133
-msgid "Click here to delete all your data files and your OpenSurvey account"
+msgid ""
+"Click here to delete all your data files and your Covid Open Survey account"
 msgstr ""
 
 #: main/templates/main/faq.html:138
-msgid "Can others access my data"
+msgid "Can others access my data?"
 msgstr ""
 
 #: main/templates/main/faq.html:145
@@ -466,18 +469,18 @@ msgid "The survey"
 msgstr ""
 
 #: main/templates/main/faq.html:154
-msgid "Why do I need to sign up with OpenHumans"
+msgid "Why do I need to sign up with Open Humans?"
 msgstr ""
 
 #: main/templates/main/faq.html:161
 msgid ""
 "\n"
-"      OpenHumans hosts our secure servers, and is the place where all the data goes.\n"
+"      Open Humans hosts our secure servers, and is the place where all the data goes.\n"
 "      "
 msgstr ""
 
 #: main/templates/main/faq.html:165
-msgid "How do I end the survey"
+msgid "How do I end the survey?"
 msgstr ""
 
 #: main/templates/main/faq.html:172
@@ -490,7 +493,7 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:178
-msgid "Can someone under 18 enroll in the survey"
+msgid "Can someone under 18 enroll in the survey?"
 msgstr ""
 
 #: main/templates/main/faq.html:185
@@ -501,14 +504,14 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/faq.html:189
-msgid "What’s the difference between OpenHumans and OpenClinica"
+msgid "What’s the difference between Open Humans and OpenClinica?"
 msgstr ""
 
 #: main/templates/main/faq.html:196
 msgid ""
 "\n"
-"      OpenHumans encrypts and stores the data, OpenClinica is the survey platform: data is collected there and sent to\n"
-"      OpenHumans.\n"
+"      Open Humans encrypts and stores the data, OpenClinica is the survey platform: data is collected there and sent to\n"
+"      Open Humans.\n"
 "      "
 msgstr ""
 
@@ -860,10 +863,10 @@ msgstr ""
 msgid "You have deactivated the daily emails."
 msgstr ""
 
-#: open_survey/settings.py:129
+#: open_survey/settings.py:127
 msgid "English"
 msgstr ""
 
-#: open_survey/settings.py:130
+#: open_survey/settings.py:128
 msgid "French"
 msgstr ""

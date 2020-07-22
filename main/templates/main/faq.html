@@ -8,12 +8,12 @@
     <h1>{% trans "Frequently Asked Questions" %}</h1>
     <p>
       {% blocktrans %}
-      Find answers to the most asked questions about OpenCovid, the survey and the data we collect.
+      Find answers to the most asked questions about the Covid Open survey and the data we collect.
       {% endblocktrans %}
     </p>
     <p>
       {% blocktrans %}
-      Feel free to email us any other question you may have at: <a href="mailto:faq@opencovid.org">faq@opencovid.org</a>
+      Feel free to email us any other question you may have at: <a href="mailto:bastian.greshake-tzovaras@cri-paris.org">bastian.greshake-tzovaras@cri-paris.org</a>
       {% endblocktrans %}
     </p>
     <p>
@@ -27,7 +27,7 @@
 <section>
   <article>
     <h2>{% trans "The data" %}</h2>
-    <h3 data-collapse aria-expanded="false">{% trans "Who will be using my data" %}
+    <h3 data-collapse aria-expanded="false">{% trans "Who will be using my data?" %}
       <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
         <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
         <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -42,7 +42,7 @@
       participant will be given a copy of their own data as part of this study.
       {% endblocktrans %}
     </p>
-    <h3 data-collapse aria-expanded="false">{% trans "How will my data be protected" %}
+    <h3 data-collapse aria-expanded="false">{% trans "How will my data be protected?" %}
       <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
         <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
         <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -56,7 +56,7 @@
       each participant a study ID on enrollment.
       {% endblocktrans %}
     </p>
-    <h3 data-collapse aria-expanded="false">{% trans "Will someone make money off my data" %}
+    <h3 data-collapse aria-expanded="false">{% trans "Will someone make money off my data?" %}
       <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
         <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
         <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -68,7 +68,7 @@
       guidelines.
       {% endblocktrans %}
     </p>
-    <h3 data-collapse aria-expanded="false">{% trans "How long will my data be used for" %}
+    <h3 data-collapse aria-expanded="false">{% trans "How long will my data be used for?" %}
       <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
         <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
         <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -80,7 +80,7 @@
       time to analyze everything collected.
       {% endblocktrans %}
     </p>
-    <h3 data-collapse aria-expanded="false">{% trans "Can I delete my data" %}
+    <h3 data-collapse aria-expanded="false">{% trans "Can I delete my data?" %}
       <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
         <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
         <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -89,7 +89,7 @@
     <div class="collapse__item">
       <p>
         {% blocktrans %}
-        Yes! Your data belongs to you. You can do so automatically from here, or manually through the OpenHumans website.
+        Yes! Your data belongs to you. You can do so automatically from here, or manually through the Open Humans website.
         {% endblocktrans %}
       </p>
       {% if not request.user.is_authenticated %}
@@ -97,15 +97,15 @@
       {% else %}
       <p class="collapse__item">{% trans "Follow these steps to delete your data automatically:" %}
         <ul>
-          <li>{% blocktrans count counter=files|length %}You have 1 data file on OpenHumans{% plural %}You have
-            {{ counter }} data files on OpenHumans{% endblocktrans %}. {% if files|length != 0 %}<a
+          <li>{% blocktrans count counter=files|length %}You have 1 data file on Open Humans{% plural %}You have
+            {{ counter }} data files on Open Humans{% endblocktrans %}. {% if files|length != 0 %}<a
               href="{% url "delete_all_openhuman_files" %}">{% trans "Click here to delete all your data files" %}</a>.{% else %}{% trans "You don't have anything to delete!" %}{% endif %}
           </li>
           <li>
-            {% trans "Additionnaly, if you want to revoke access from Open COVID Survey to your OpenHumans account, follow theses steps:" %}
+            {% trans "Additionally, if you want to revoke access from Covid Open Survey to your Open Humans account, follow theses steps:" %}
             <ul>
-              <li>{% blocktrans %}Go to <a href="https://www.openhumans.org/activity/open-covid-survey/"
-                  target="_blank">https://www.openhumans.org/activity/open-covid-survey/</a>{% endblocktrans %}</li>
+              <li>{% blocktrans %}Go to <a href="https://www.openhumans.org/activity/covid-open-survey/"
+                  target="_blank">https://www.openhumans.org/activity/covid-open-survey/</a>{% endblocktrans %}</li>
               <li>{% trans 'Click on "Leave project" in the bottom left corner' %}</li>
               <li>{% trans 'Click on "Withdraw & revoke authorization"' %}</li>
             </ul>
@@ -114,28 +114,28 @@
       </p>
       {% endif %}
       <p>
-        {% trans "Follow these steps to delete your data through the OpenHumans website:" %}
+        {% trans "Follow these steps to delete your data through the Open Humans website:" %}
         <ul>
           <li>
-            {% blocktrans %}Go to <a href="https://www.openhumans.org/activity/open-covid-survey/" target="_blank">https://www.openhumans.org/activity/open-covid-survey/</a>
+            {% blocktrans %}Go to <a href="https://www.openhumans.org/activity/covid-open-survey/" target="_blank">https://www.openhumans.org/activity/covid-open-survey/</a>
             {% endblocktrans %}
           </li>
           <li>{% trans 'Click on "Leave project" in the bottom left corner' %}</li>
-          <li>{% trans 'Check "Remove my data files for Open COVID Survey from Open Humans"' %}</li>
+          <li>{% trans 'Check "Remove my data files for Covid Open Survey from Open Humans"' %}</li>
           <li>{% trans 'Click on "Withdraw & revoke authorization"' %}</li>
         </ul>
       </p>
       {% if request.user.is_authenticated %}
       <p>
-        {% trans "You can also delete all your data files and your OpenSurvey account:" %}
+        {% trans "You can also delete all your data files and your Covid Open Survey account:" %}
         <br>
         <a
-          href="{% url "delete_all" %}">{% trans "Click here to delete all your data files and your OpenSurvey account" %}</a>.
+          href="{% url "delete_all" %}">{% trans "Click here to delete all your data files and your Covid Open Survey account" %}</a>.
       </p>
       {% endif %}
     </div>
 
-    <h3 data-collapse aria-expanded="false">{% trans "Can others access my data" %}
+    <h3 data-collapse aria-expanded="false">{% trans "Can others access my data?" %}
       <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
         <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
         <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -151,7 +151,7 @@
 
   <article>
     <h2>{% trans "The survey" %}</h2>
-    <h3 data-collapse aria-expanded="false">{% trans "Why do I need to sign up with OpenHumans" %}
+    <h3 data-collapse aria-expanded="false">{% trans "Why do I need to sign up with Open Humans?" %}
       <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
         <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
         <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -159,10 +159,10 @@
     </h3>
     <p class="collapse__item">
       {% blocktrans %}
-      OpenHumans hosts our secure servers, and is the place where all the data goes.
+      Open Humans hosts our secure servers, and is the place where all the data goes.
       {% endblocktrans %}
     </p>
-    <h3 data-collapse aria-expanded="false">{% trans "How do I end the survey" %}
+    <h3 data-collapse aria-expanded="false">{% trans "How do I end the survey?" %}
       <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
         <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
         <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -175,7 +175,7 @@
       anymore” and we will stop sending you reminders.
       {% endblocktrans %}
     </p>
-    <h3 data-collapse aria-expanded="false">{% trans "Can someone under 18 enroll in the survey" %}
+    <h3 data-collapse aria-expanded="false">{% trans "Can someone under 18 enroll in the survey?" %}
       <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
         <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
         <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -186,7 +186,7 @@
       No, this study is not open to participants under the age of 18
       {% endblocktrans %}
     </p>
-    <h3 data-collapse aria-expanded="false">{% trans "What’s the difference between OpenHumans and OpenClinica" %}
+    <h3 data-collapse aria-expanded="false">{% trans "What’s the difference between Open Humans and OpenClinica?" %}
       <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
         <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
         <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -194,8 +194,8 @@
     </h3>
     <p class="collapse__item">
       {% blocktrans %}
-      OpenHumans encrypts and stores the data, OpenClinica is the survey platform: data is collected there and sent to
-      OpenHumans.
+      Open Humans encrypts and stores the data, OpenClinica is the survey platform: data is collected there and sent to
+      Open Humans.
       {% endblocktrans %}
     </p>
   </article>
