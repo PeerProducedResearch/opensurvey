@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 13:14+0000\n"
+"POT-Creation-Date: 2020-07-24 08:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,15 +37,15 @@ msgstr ""
 msgid "Citizen Science"
 msgstr ""
 
-#: main/templates/base.html:62 main/templates/base.html:179
+#: main/templates/base.html:62 main/templates/base.html:295
 msgid "Data"
 msgstr ""
 
-#: main/templates/base.html:65 main/templates/base.html:180
+#: main/templates/base.html:65 main/templates/base.html:296
 msgid "Team"
 msgstr ""
 
-#: main/templates/base.html:68 main/templates/base.html:181
+#: main/templates/base.html:68 main/templates/base.html:297
 msgid "FAQ"
 msgstr ""
 
@@ -61,23 +61,23 @@ msgstr ""
 msgid "Log out"
 msgstr ""
 
-#: main/templates/base.html:177
+#: main/templates/base.html:293
 msgid "Home"
 msgstr ""
 
-#: main/templates/base.html:178 main/templates/main/about.html:8
+#: main/templates/base.html:294 main/templates/main/about.html:8
 msgid "About"
 msgstr ""
 
-#: main/templates/base.html:182
+#: main/templates/base.html:298
 msgid "Privacy Policy"
 msgstr ""
 
-#: main/templates/base.html:186
+#: main/templates/base.html:302
 msgid "view our code"
 msgstr ""
 
-#: main/templates/base.html:187
+#: main/templates/base.html:303
 msgid "Twitter"
 msgstr ""
 
@@ -824,11 +824,28 @@ msgid ""
 "              "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:121
+#: main/templates/main/includes/consent.html:119
+msgid ""
+"\n"
+"                Note : The governments in some countries / regions may "
+"monitor internet traffic.\n"
+"                In some countries / regions, monitoring of data transmitted "
+"over the internet may occur.\n"
+"                The researchers cannot control or protect you from risks "
+"associated with this monitoring during the submission of your survey "
+"responses.\n"
+"                If you are concerned that your personal or health data will "
+"be monitored and that this may put you at some risk,\n"
+"                then we recommend that you do not participate in this "
+"survey.\n"
+"                "
+msgstr ""
+
+#: main/templates/main/includes/consent.html:131
 msgid "What will happen to the data collected for the research ?"
 msgstr ""
 
-#: main/templates/main/includes/consent.html:128
+#: main/templates/main/includes/consent.html:138
 msgid ""
 "\n"
 "              The anonymised data will be made available to all participants "
@@ -843,11 +860,11 @@ msgid ""
 "              "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:138
+#: main/templates/main/includes/consent.html:148
 msgid "What rights do you have ?"
 msgstr ""
 
-#: main/templates/main/includes/consent.html:145
+#: main/templates/main/includes/consent.html:155
 msgid ""
 "\n"
 "              In accordance with the French Data Protection Act of 6 January "
@@ -878,11 +895,11 @@ msgid ""
 "              "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:165
+#: main/templates/main/includes/consent.html:175
 msgid "Information on the results of the survey"
 msgstr ""
 
-#: main/templates/main/includes/consent.html:172
+#: main/templates/main/includes/consent.html:182
 msgid ""
 "\n"
 "              You have the right to see the results of this study. As soon "
@@ -892,44 +909,44 @@ msgid ""
 "              "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:182
+#: main/templates/main/includes/consent.html:192
 msgid ""
 "I have read the above information for participants and my questions "
 "regarding participation in the study have been answered satisfactorily."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:185
+#: main/templates/main/includes/consent.html:195
 msgid ""
 "I know that I can print this information or request a copy at any time and "
 "that I can withdraw from the study at any time without giving reasons and "
 "without any negative consequences."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:188
+#: main/templates/main/includes/consent.html:198
 msgid ""
 "I agree that the Principal Investigators and their collaborators may have "
 "access to the original data in strict compliance with the rules of "
 "confidentiality."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:191
+#: main/templates/main/includes/consent.html:201
 msgid ""
 "I am aware that the investigator may, without mutual consent, exclude me "
 "from the study if I do not meet the inclusion criteria."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:194
+#: main/templates/main/includes/consent.html:204
 msgid ""
 "By clicking on the \"ACCEPT\" button, I certify that I accept all the above-"
 "mentioned points and that I am participating in this study on a voluntary "
 "basis."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:208
+#: main/templates/main/includes/consent.html:218
 msgid "WITHDRAW MY CONSENT"
 msgstr ""
 
-#: main/templates/main/includes/consent.html:210
+#: main/templates/main/includes/consent.html:220
 msgid "ACCEPT"
 msgstr ""
 
