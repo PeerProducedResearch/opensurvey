@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-24 08:39+0000\n"
+"POT-Creation-Date: 2020-07-28 09:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,8 +90,8 @@ msgid ""
 "      Paris, with collaborating researchers from the USA, Australia, Canada, "
 "Costa Rica, India and more! We are\n"
 "      interested\n"
-"      in bringing in minds from all over the world, yours included, to come "
-"up with great ideas to research this virus.\n"
+"      in bringing together minds from all over the world, yours included, to "
+"come up with great ideas to research the COVID-19 virus.\n"
 "      "
 msgstr ""
 
@@ -123,12 +123,12 @@ msgstr ""
 #: main/templates/main/about.html:40
 msgid ""
 "\n"
-"      You will need to access the Open Humans forum, where a dedicated "
-"section for suggestions has been created. Your\n"
-"      participation in this forum can not be linked to your answers in the "
+"      You will need to access the Open Humans forum, where we have created a "
+"dedicated section for your suggestions. Your\n"
+"      participation in this forum cannot be linked to your answers in the "
 "Covid Open survey. You can also create and engage in topics of\n"
-"      discussions directly on the forum, as well as vote for suggestions "
-"others have made!\n"
+"      discussion directly on the forum and also vote for suggestions others "
+"have made!\n"
 "      "
 msgstr ""
 
@@ -138,21 +138,24 @@ msgstr ""
 
 #: main/templates/main/about.html:48
 msgid ""
-"We can’t add questions to the survey without an end-goal in mind. We ask you "
-"to suggest:"
+"We want to add questions to the survey with an end-goal in mind. We "
+"therefore ask you to suggest:"
 msgstr ""
 
 #: main/templates/main/about.html:50
-msgid "A research hypothesis that you’d want to test"
+msgid "A research hypothesis that you would like to test"
 msgstr ""
 
 #: main/templates/main/about.html:51
-msgid "A quick blurb on why you think it would be valuable to explore"
+#: main/templates/main/citizen-science.html:28
+msgid "A quick description of why you think your idea is worth exploring"
 msgstr ""
 
 #: main/templates/main/about.html:52
+#: main/templates/main/citizen-science.html:29
 msgid ""
-"The questions would you incorporate in the survey to test your hypothesis"
+"The questions you would like to incorporate in the survey to test your "
+"hypothesis"
 msgstr ""
 
 #: main/templates/main/about.html:55
@@ -163,89 +166,89 @@ msgstr ""
 msgid ""
 "\n"
 "      Every fortnight, our team will go through your suggestions, and decide "
-"on a few that we could incorporate into our\n"
+"on a few to incorporate into our\n"
 "      next iteration of the survey. We will then send the new set of "
 "questions to be reviewed by the Institutional Review\n"
 "      Board, to make sure it doesn’t go against any legal or ethical "
-"regulations. Once we get the green light, we will move\n"
-"      to code it into the survey.\n"
+"regulations. Once we get the green light, we will code the new questions "
+"into the survey.\n"
 "      "
 msgstr ""
 
-#: main/templates/main/about.html:66 main/templates/main/home.html:293
+#: main/templates/main/about.html:65 main/templates/main/home.html:293
 msgid "Our approach"
 msgstr ""
 
-#: main/templates/main/about.html:67
+#: main/templates/main/about.html:66
 msgid "What we do."
 msgstr ""
 
-#: main/templates/main/about.html:69
+#: main/templates/main/about.html:68
 msgid ""
 "\n"
 "      The Covid Open survey is a 5 minute questionnaire created for people "
 "who want to help fight the COVID-19 virus from\n"
 "      the comfort of their home. It consists of a short questionnaire, "
-"followed by a daily check-in on how you feel. A\n"
+"followed by a daily check-in on how you are feeling. A\n"
 "      wide variety of questions are asked, some of which can be answered "
-"daily, others that appear on a rolling basis,\n"
-"      so as to always keep it fresh!\n"
+"daily, others that appear on a rolling basis, in order to keep the survey "
+"fresh!\n"
 "      "
 msgstr ""
 
-#: main/templates/main/about.html:77
+#: main/templates/main/about.html:75
 msgid ""
 "\n"
 "      Our goal? To better understand the virus’ transmission patterns and "
 "its effect on physical and mental health. We want\n"
-"      to understand how the virus spreads, who it affects most, and how it "
-"impacts your daily life. We hope this may\n"
-"      guide public health decisions and medication repurposing in the "
-"future.\n"
+"      to understand <strong>how the virus spreads</strong>, <strong>who it "
+"affects most</strong>, and <strong>how it impacts our daily lives</strong>. "
+"We hope this may\n"
+"      guide decisions surrounding public health and medication repurposing "
+"in the future.\n"
 "      "
 msgstr ""
 
-#: main/templates/main/about.html:83
+#: main/templates/main/about.html:81
 msgid "How we do it."
 msgstr ""
 
-#: main/templates/main/about.html:85
+#: main/templates/main/about.html:83
 msgid ""
 "\n"
 "      All data collected is anonymized and goes through the Open Humans "
 "platform. We also seek to promote citizen science\n"
-"      and give you the option to contribute research\n"
+"      and provide an opportunity for you to contribute to this research\n"
 "      hypotheses that could be implemented in our fast-evolving survey.\n"
 "      "
 msgstr ""
 
-#: main/templates/main/about.html:93
-msgid "These are our starting research aims that we’re trying to answer:"
+#: main/templates/main/about.html:91
+msgid "Our inital research aims are as follows:"
+msgstr ""
+
+#: main/templates/main/about.html:94
+msgid ""
+"To collect comprehensive symptom reports with a high temporal resolution to "
+"better understand COVID-19 disease progression."
 msgstr ""
 
 #: main/templates/main/about.html:96
-msgid ""
-"Collect comprehensive symptom reports with a high temporal resolution to "
-"better understand the diseases progression."
+msgid "To measure the impact of the COVID-19 pandemic on mental health."
+msgstr ""
+
+#: main/templates/main/about.html:97
+msgid "To identify effective agents to reduce COVID-19 disease severity"
 msgstr ""
 
 #: main/templates/main/about.html:98
-msgid "Measure the impact of the COVID-19 pandemic on mental health."
-msgstr ""
-
-#: main/templates/main/about.html:99
-msgid "To identify effective agents for reducing COVID-19 disease severity"
+msgid "To characterize factors linked to increased susceptibility to COVID-19"
 msgstr ""
 
 #: main/templates/main/about.html:100
 msgid ""
-"Characterize factors linked to increased susceptibility to develop COVID-19"
-msgstr ""
-
-#: main/templates/main/about.html:102
-msgid ""
-"Understand how a more participatory approach to survey research, that makes "
-"participants partners, changes survey success."
+"To understand how a more participatory approach to survey research - that "
+"makes participants esearch partners - changes survey success."
 msgstr ""
 
 #: main/templates/main/citizen-science.html:6
@@ -280,21 +283,12 @@ msgstr ""
 
 #: main/templates/main/citizen-science.html:25
 msgid ""
-"What to tell us: We can’t add questions to the survey without an end-goal in "
-"mind. We ask you to suggest"
+"What to tell us: We want to add questions to the survey with an end-goal in "
+"mind. We therefore ask you to suggest:"
 msgstr ""
 
 #: main/templates/main/citizen-science.html:27
-msgid "a research hypothesis that you’d want to test"
-msgstr ""
-
-#: main/templates/main/citizen-science.html:28
-msgid "a quick blurb on why you think it would be valuable to explore"
-msgstr ""
-
-#: main/templates/main/citizen-science.html:29
-msgid ""
-"the questions would you incorporate in the survey to test your hypothesis"
+msgid "a research hypothesis that you would like to test"
 msgstr ""
 
 #: main/templates/main/citizen-science.html:33
@@ -302,11 +296,11 @@ msgid ""
 "\n"
 "            How we review it: Every fortnight, our team will go through your "
 "suggestions, and decide on a few that we could\n"
-"            incorporate into our next iteration of the survey. We will then "
-"send the new set of questions to be reviewed by the\n"
+"            incorporate into our next survey iteration . We will then send "
+"the new set of questions to be reviewed by the\n"
 "            Institutional Review Board, to make sure it doesn’t go against "
 "any legal or ethical regulations. Once we get the\n"
-"            green light, we will move to code it into the survey.\n"
+"            green light, we will code it into the survey.\n"
 "        "
 msgstr ""
 
@@ -327,7 +321,7 @@ msgstr ""
 #: main/templates/main/data.html:24
 msgid ""
 "\n"
-"      As the survey just launched, we are waiting a few days to have enough "
+"      As the survey just launched, we are waiting a few days to gain enough "
 "data points to show you the trends! Come\n"
 "      back later and see what’s happening around you!\n"
 "      "
@@ -340,15 +334,15 @@ msgstr ""
 #: main/templates/main/faq.html:10
 msgid ""
 "\n"
-"      Find answers to the most asked questions about the Covid Open survey "
-"and the data we collect.\n"
+"      Find answers to the most frequently asked questions about the Covid "
+"Open survey and the data we collect.\n"
 "      "
 msgstr ""
 
 #: main/templates/main/faq.html:15
 msgid ""
 "\n"
-"      Feel free to email us any other question you may have at: <a href="
+"      Feel free to email us with any other question you may have at: <a href="
 "\"mailto:bastian.greshake-tzovaras@cri-paris.org\">bastian.greshake-"
 "tzovaras@cri-paris.org</a>\n"
 "      "
@@ -595,8 +589,8 @@ msgid ""
 "\n"
 "      COVID-19 has turned our lives upside down. And while this virus "
 "continues to spread, millions around the world\n"
-"      begin\n"
-"      to take positive action. From the comfort of your home, you too can "
+"      are\n"
+"      taking positive action. From the comfort of your home, you too can "
 "join the global fight against this virus!\n"
 "      <strong>5 minutes.</strong> That’s all it takes to advance science.\n"
 "      "
