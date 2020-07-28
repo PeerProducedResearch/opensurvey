@@ -99,7 +99,7 @@ msgstr ""
 "\n"
 "La encuesta Covid Open fue creada por un equipo de científicos del Centro de Investigación e Interdisciplinariedad (CRI)\n"
 "en\n"
-"París en colaboración con investigadores de Estados Unidos, Australia, Canadá, Costa Rica, India y más! Estamos\n"
+"París en colaboración con investigadores basados en Estados Unidos, Australia, Canadá, Costa Rica, India y más! Estamos\n"
 "interesados en colaborar con mentes de todas las partes del mundo, incluida la tuya, para implementar grandes ideas e investigar mas sobre este virus."
 
 #: main/templates/main/about.html:19
@@ -108,7 +108,7 @@ msgstr "¡Conocé al equipo!"
 
 #: main/templates/main/about.html:29
 msgid "Be part of the team."
-msgstr "Forma parte del equipo"
+msgstr "Formá parte del equipo"
 
 #: main/templates/main/about.html:31
 msgid ""
@@ -120,7 +120,7 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"Cuando se trata de ciencia, creemos en aprovechar el ingenio de todos los ciudadanos. Queremos que contribuyas con tu\n"
+"Cuando se trata de ciencia, creemos en aprovechar el ingenio de todos los ciudadanos. Queremos que contribuyás con tu\n"
 "propios elementos de la encuesta de acuerdo con tus preguntas e intereses. Esto no solo nos ayudará a desarrollar el estudio\n"
 "para cubrir las necesidades e intereses de la cohorte, pero también nos ayudará a comprender las preguntas y preocupaciones clave que los\n"
 "ciudadanos fuera de la academia tienen respecto a la pandemia."
@@ -139,8 +139,8 @@ msgid ""
 msgstr ""
 "\n"
 "Deberás acceder al foro Open Humans, donde se ha creado una sección para sugerencias. Tu\n"
-"participación en este foro no es vinculada a tus respuestas en la encuesta. También podés crear y participar en temas de\n"
-"¡discusiones directamente en el foro, así como votar por sugerencias que otros hayan hecho!"
+"participación en este foro no está vinculada a tus respuestas en la encuesta. También podés crear y participar en temas de\n"
+"discusiones directamente en el foro, así como votar por sugerencias que otros hayan hecho."
 
 #: main/templates/main/about.html:46
 msgid "What to tell us:"
@@ -206,9 +206,8 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"La encuesta Covid Open es un cuestionario de 5 minutos creado para personas que desean ayudar a combatir el virus COVID-19 desde\n"
-"l su hogar. Consiste en un breve cuestionario, seguido de un control diario sobre cómo se siente. \n"
-"Se ha formulado una gran variedad de preguntas,  algunas de las cuales se pueden responder a diario, y  otras que aparecen de forma continua. De esta manera nos aseguramos de mantener siempre frescas las preguntas!"
+"La encuesta Covid Open es un cuestionario de 5 minutos creado para personas que desean ayudar a combatir el virus COVID-19 desde su hogar. Consiste en un breve cuestionario, seguido de un control diario sobre el estado actual de cada uno de los participantes. \n"
+"Se ha formulado una gran variedad de preguntas,  algunas de las cuales se pueden responder a diario, y  otras que aparecen de forma continua. De esta manera nos aseguramos de mantener siempre frescas las preguntas."
 
 #: main/templates/main/about.html:77
 msgid ""
@@ -266,7 +265,7 @@ msgid ""
 "Characterize factors linked to increased susceptibility to develop COVID-19"
 msgstr ""
 "Caracterizar los factores relacionados con una mayor susceptibilidad a "
-"desarrollar COVID-19"
+"desarrollar COVID-19."
 
 #: main/templates/main/about.html:102
 msgid ""
@@ -315,7 +314,7 @@ msgid ""
 " mind. We ask you to suggest"
 msgstr ""
 "Que decirnos: No podemos agregar preguntas a la encuesta sin un objetivo "
-"final en mente. Te pedimos que nos hagas las siguientes sugerencias:"
+"final en mente. Te pedimos que nos hagás las siguientes sugerencias:"
 
 #: main/templates/main/citizen-science.html:27
 msgid "a research hypothesis that you’d want to test"
@@ -369,7 +368,7 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"Como la encuesta acaba de salir, estamos esperando unos días para tener suficientes puntos de datos para mostrar las tendencias. Regresa más tarde para ver lo que sucede a tu alrededor!"
+"Como la encuesta acaba de salir, estamos esperando unos días para tener suficientes puntos de datos para mostrar las tendencias. ¡Regresá más tarde para ver lo que sucede a tu alrededor!"
 
 #: main/templates/main/faq.html:8
 msgid "Frequently Asked Questions"
@@ -1094,7 +1093,7 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"Conoce al equipo detrás de OpenCovid y aprende un poco más sobre sus antecedentes."
+"Conocé al equipo detrás de OpenCovid y aprendé un poco más sobre ellos"
 
 #: main/views.py:86
 msgid ""
