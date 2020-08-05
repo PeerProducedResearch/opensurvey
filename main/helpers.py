@@ -110,8 +110,9 @@ def send_user_survey_link(survey_member):
     withdraw_url = create_autologin_url(survey_member.member, token)
     saved_language = survey_member.member.surveyaccount.language
     translation.activate(saved_language)
+    # make str out of subject as otherwise only last character is subject!
     survey_member.member.message(
-        subject=_("Here's your survey link!"),
+        subject=str(_("Here's your survey link!")),
         message="{}: {}\n\n\n{}: {}".format(
             _("Please use this link to fill out the survey"),
             url,
