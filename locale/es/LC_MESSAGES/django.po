@@ -96,6 +96,11 @@ msgid ""
 "      in bringing together minds from all over the world, yours included, to come up with great ideas to research the COVID-19 virus.\n"
 "      "
 msgstr ""
+"\n"
+"La encuesta Covid Open fue creada por un equipo de científicos del Centro de Investigación e Interdisciplinariedad (CRI)\n"
+"en\n"
+"París, en colaboración con investigadores basados en Estados Unidos, Australia, Canadá, Costa Rica, India y más! Estamos\n"
+"interesados en colaborar con mentes de todas las partes del mundo, incluyendo la tuya, para implementar grandes ideas e investigar mas sobre COVID-19. "
 
 #: main/templates/main/about.html:19
 msgid "Meet the team!"
@@ -132,6 +137,10 @@ msgid ""
 "      discussion directly on the forum and also vote for suggestions others have made!\n"
 "      "
 msgstr ""
+"\n"
+"Deberás acceder al foro Open Humans, donde se ha creado una sección para sugerencias. Tu\n"
+"participación en este foro no está vinculada a tus respuestas en la encuesta. También podés crear y participar en temas de\n"
+"discusiones directamente en el foro, así como votar por sugerencias que otros hayan hecho."
 
 #: main/templates/main/about.html:46
 msgid "What to tell us:"
@@ -142,15 +151,17 @@ msgid ""
 "We want to add questions to the survey with an end-goal in mind. We "
 "therefore ask you to suggest:"
 msgstr ""
+"No podemos agregar preguntas a la encuesta sin un objetivo final en mente, "
+"por lo que te pedimos que nos hagás las siguientes sugerencias:"
 
 #: main/templates/main/about.html:50
 msgid "A research hypothesis that you would like to test"
-msgstr ""
+msgstr "Una hipótesis de investigación que te gustaría probar"
 
 #: main/templates/main/about.html:51
 #: main/templates/main/citizen-science.html:28
 msgid "A quick description of why you think your idea is worth exploring"
-msgstr ""
+msgstr "Una breve reseña de por qué crees que sería valioso explorar tu idea"
 
 #: main/templates/main/about.html:52
 #: main/templates/main/citizen-science.html:29
@@ -158,6 +169,7 @@ msgid ""
 "The questions you would like to incorporate in the survey to test your "
 "hypothesis"
 msgstr ""
+"Las preguntas que incorporarías en la encuesta para probar tu hipótesis"
 
 #: main/templates/main/about.html:55
 msgid "How we review it."
@@ -171,6 +183,11 @@ msgid ""
 "      Board, to make sure it doesn’t go against any legal or ethical regulations. Once we get the green light, we will code the new questions into the survey.\n"
 "      "
 msgstr ""
+"\n"
+"Cada quince días, nuestro equipo revisará las sugerencias y decidirá algunas que podríamos incorporar a la\n"
+"próxima versión de la encuesta. Luego enviaremos el nuevo conjunto de preguntas para que la Junta de Revisión Institucional las evalue,\n"
+"para asegurar de que no vayan en contra de ninguna normativa legal o ética. Una vez que tengamos luz verde, trabajaremos\n"
+"para codificarlo en la encuesta."
 
 #: main/templates/main/about.html:65 main/templates/main/home.html:293
 msgid "Our approach"
@@ -188,6 +205,9 @@ msgid ""
 "      wide variety of questions are asked, some of which can be answered daily, others that appear on a rolling basis, in order to keep the survey fresh!\n"
 "      "
 msgstr ""
+"\n"
+"La encuesta Covid Open es un cuestionario de 5 minutos creado para personas que desean ayudar a combatir el virus COVID-19 desde su hogar. Consiste en un breve cuestionario y responderlo toma alrededor de 20 minutos. Luego sigue un control diario mucho mas rápido sobre el estado actual de cada uno de los participantes. \n"
+"Se ha formulado una gran variedad de preguntas,  algunas de las cuales se pueden responder a diario, y  otras que aparecen de forma continua. De esta manera nos aseguramos de mantener siempre frescas las preguntas."
 
 #: main/templates/main/about.html:75
 msgid ""
@@ -197,6 +217,10 @@ msgid ""
 "      guide decisions surrounding public health and medication repurposing in the future.\n"
 "      "
 msgstr ""
+"\n"
+"¿Nuestro objetivo? Comprender mejor los patrones de transmisión del virus y su efecto en la salud física y mental. Queremos\n"
+"entender <strong>cómo se propaga el virus</strong>, <strong>a quién afecta más</strong>y <strong>cómo afecta la vida diaria</strong>. Esperamos que nuestros resultados puedan\n"
+"guiar decisiones a nivel de salud pública y uso de medicamentos en el futuro."
 
 #: main/templates/main/about.html:81
 msgid "How we do it."
@@ -210,34 +234,46 @@ msgid ""
 "      hypotheses that could be implemented in our fast-evolving survey.\n"
 "      "
 msgstr ""
+"\n"
+"Todos los datos recopilados son anónimos y pasan por la plataforma Open Humans. También buscamos promover la ciencia ciudadana,\n"
+"y darte la opción de contribuir con hipótesis de  investigación que podrían implementarse en nuestra encuesta de rápida evolución."
 
 #: main/templates/main/about.html:91
 msgid "Our inital research aims are as follows:"
-msgstr ""
+msgstr "Nuestros objetivos de investigación principales son los siguientes:"
 
 #: main/templates/main/about.html:94
 msgid ""
 "To collect comprehensive symptom reports with a high temporal resolution to "
 "better understand COVID-19 disease progression."
 msgstr ""
+"Recopilar reportes de síntomas con una alta resolución temporal para "
+"comprender mejor la progresión de la enfermedad causada por COVID-19. "
 
 #: main/templates/main/about.html:96
 msgid "To measure the impact of the COVID-19 pandemic on mental health."
-msgstr ""
+msgstr "Medir el impacto de COVID-19 en la salud mental."
 
 #: main/templates/main/about.html:97
 msgid "To identify effective agents to reduce COVID-19 disease severity"
 msgstr ""
+"Identificar agentes efectivos para reducir la gravedad de la enfermedad de "
+"COVID-19."
 
 #: main/templates/main/about.html:98
 msgid "To characterize factors linked to increased susceptibility to COVID-19"
 msgstr ""
+"Caracterizar los factores relacionados con una mayor susceptibilidad a "
+"desarrollar síntomas relacionados con COVID-19."
 
 #: main/templates/main/about.html:100
 msgid ""
 "To understand how a more participatory approach to survey research - that "
 "makes participants esearch partners - changes survey success."
 msgstr ""
+"Entender cómo un enfoque más participativo a las  encuestas de "
+"investigación, que convierte a los participantes en socios, cambia el éxito "
+"de la encuesta."
 
 #: main/templates/main/citizen-science.html:6
 msgid "Be a Citizen Scientist"
@@ -276,10 +312,12 @@ msgid ""
 "What to tell us: We want to add questions to the survey with an end-goal in "
 "mind. We therefore ask you to suggest:"
 msgstr ""
+"Que decirnos: No podemos agregar preguntas a la encuesta sin un objetivo "
+"final en mente. Te pedimos que nos hagás las siguientes sugerencias:"
 
 #: main/templates/main/citizen-science.html:27
 msgid "a research hypothesis that you would like to test"
-msgstr ""
+msgstr "Una hipótesis de investigación que te gustaría probar"
 
 #: main/templates/main/citizen-science.html:33
 msgid ""
@@ -290,6 +328,11 @@ msgid ""
 "            green light, we will code it into the survey.\n"
 "        "
 msgstr ""
+"\n"
+"Cada quince días, nuestro equipo revisará las sugerencias y decidirá algunas que podríamos incorporar a la\n"
+"próxima versión de la encuesta. Luego enviaremos el nuevo conjunto de preguntas para que la Junta de Revisión Institucional las evalue,\n"
+"para asegurar de que no vayan en contra de ninguna normativa legal o ética. Una vez que tengamos luz verde, trabajaremos\n"
+"para codificarlo en la encuesta."
 
 #: main/templates/main/data.html:9
 msgid "Access the Data"
@@ -312,6 +355,8 @@ msgid ""
 "      back later and see what’s happening around you!\n"
 "      "
 msgstr ""
+"\n"
+"Como la encuesta acaba de salir, estamos esperando unos días para tener suficientes puntos de datos para mostrar las tendencias. ¡Regresá más tarde para ver lo que sucede a tu alrededor!"
 
 #: main/templates/main/faq.html:8
 msgid "Frequently Asked Questions"
@@ -323,6 +368,8 @@ msgid ""
 "      Find answers to the most frequently asked questions about the Covid Open survey and the data we collect.\n"
 "      "
 msgstr ""
+"\n"
+"Encontrá respuestas a las preguntas más frecuentes sobre la encuesta y los datos que recopilamos."
 
 #: main/templates/main/faq.html:15
 msgid ""
@@ -330,6 +377,8 @@ msgid ""
 "      Feel free to email us with any other question you may have at: <a href=\"mailto:bastian.greshake-tzovaras@cri-paris.org\">bastian.greshake-tzovaras@cri-paris.org</a>\n"
 "      "
 msgstr ""
+"\n"
+"No dudes en enviarnos un correo electrónico con cualquier otra pregunta a:<a href=\"mailto:bastian.greshake-tzovaras@cri-paris.org\"> bastian.greshake-tzovaras@cri-paris.org</a>"
 
 #: main/templates/main/faq.html:20
 msgid ""
@@ -604,6 +653,11 @@ msgid ""
 "      <strong>5 minutes a day.</strong> That’s all it takes to advance science.\n"
 "      "
 msgstr ""
+"\n"
+"COVID-19 ha trastornado nuestras vidas. Mientras el virus continúa propagándose, millones en todo el mundo\n"
+"han empezado a \n"
+"tomar medidas para mitigarlo. Vos también podés unirse a la lucha mundial contra este virus desde la comodidad de tu casa.\n"
+"<strong>5 minutos al día.</strong> Eso es todo lo que se necesita para ayudar a avanzar la ciencia."
 
 #: main/templates/main/home.html:22
 msgid "Start the survey "
