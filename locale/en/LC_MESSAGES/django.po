@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-28 12:54+0000\n"
+"POT-Creation-Date: 2020-08-07 08:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: main/helpers.py:114
+#: main/helpers.py:115
 msgid "Here's your survey link!"
 msgstr ""
 
-#: main/helpers.py:116
+#: main/helpers.py:117
 msgid "Please use this link to fill out the survey"
 msgstr ""
 
-#: main/helpers.py:118
+#: main/helpers.py:119
 msgid ""
 "If you don't want to take part in the survey anymore, please use this link "
 "and click on \"WITHDRAW MY CONSENT\""
@@ -37,15 +37,15 @@ msgstr ""
 msgid "Citizen Science"
 msgstr ""
 
-#: main/templates/base.html:62 main/templates/base.html:295
+#: main/templates/base.html:62 main/templates/base.html:298
 msgid "Data"
 msgstr ""
 
-#: main/templates/base.html:65 main/templates/base.html:296
+#: main/templates/base.html:65 main/templates/base.html:299
 msgid "Team"
 msgstr ""
 
-#: main/templates/base.html:68 main/templates/base.html:297
+#: main/templates/base.html:68 main/templates/base.html:300
 msgid "FAQ"
 msgstr ""
 
@@ -61,23 +61,23 @@ msgstr ""
 msgid "Log out"
 msgstr ""
 
-#: main/templates/base.html:293
+#: main/templates/base.html:296
 msgid "Home"
 msgstr ""
 
-#: main/templates/base.html:294 main/templates/main/about.html:8
+#: main/templates/base.html:297 main/templates/main/about.html:8
 msgid "About"
 msgstr ""
 
-#: main/templates/base.html:298
+#: main/templates/base.html:301
 msgid "Privacy Policy"
 msgstr ""
 
-#: main/templates/base.html:302
+#: main/templates/base.html:305
 msgid "view our code"
 msgstr ""
 
-#: main/templates/base.html:303
+#: main/templates/base.html:306
 msgid "Twitter"
 msgstr ""
 
@@ -743,62 +743,97 @@ msgid ""
 msgstr ""
 
 #: main/templates/main/includes/consent.html:53
-msgid "What are the expected benefits ?"
+msgid "What are the expected benefits and risks?"
 msgstr ""
 
 #: main/templates/main/includes/consent.html:60
 msgid ""
 "\n"
-"              Participation in this study will not provide you with any "
-"direct personal benefit, but may provide\n"
-"              scientists\n"
-"              with new data. Although the risk is minimal, the individual "
-"survey questions can sometimes be intrusive.\n"
-"              You\n"
-"              may, of course, choose not to answer these questions, skip "
-"them, or terminate your participation. Your\n"
-"              involvement is voluntary; refusal to participate will not "
-"result in any penalties or loss of benefits to\n"
-"              which\n"
-"              you are entitled, and you can end your participation (and/or "
-"request that your previous data be deleted)\n"
-"              at\n"
-"              any time without consequence.\n"
+"              <b>Benefits</b>: Participation in this study will not provide "
+"you with any direct personal benefit, but may provide\n"
+"              scientists, policy makers, health professionals and the global "
+"community with new data about COVID-19.\n"
 "              "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:75
+#: main/templates/main/includes/consent.html:65
+msgid ""
+"\n"
+"              You agree that your participation in this study will not be in "
+"exchange of any payment.\n"
+"              "
+msgstr ""
+
+#: main/templates/main/includes/consent.html:69
+msgid ""
+"\n"
+"              <b>Risks:</b> Although the risk is minimal, the individual "
+"survey questions can sometimes be intrusive.\n"
+"              You may, of course, choose not to answer these questions, skip "
+"them, or terminate your participation.\n"
+"              Your involvement is voluntary; refusal to participate will not "
+"result in any penalties or loss of benefits to which you are entitled,\n"
+"              and you can end your participation (and/or request that your "
+"previous data be deleted) at any time without consequence.\n"
+"              "
+msgstr ""
+
+#: main/templates/main/includes/consent.html:76
+msgid ""
+"\n"
+"              We recognise that many people are experiencing high levels of "
+"anxiety and concern at this time.\n"
+"              The questions we ask about mental health and wellbeing, or the "
+"wellbeing of family members may be particularly sensitive in this context. "
+"If you feel distressed or upset by any of the questions, please discontinue "
+"the survey and contact relevant support services in your area.\n"
+"              "
+msgstr ""
+
+#: main/templates/main/includes/consent.html:81
+msgid ""
+"\n"
+"              In Australia, these may include your GP or a mental health "
+"support service,\n"
+"              or community services like Lifeline on 13 11 14, SANE "
+"Australia at https://www.sane.org, or\n"
+"              Beyond Blue at https://www.beyondblue.org.au/ or 1300 22 "
+"4636.\n"
+"              For mental health advice specific to the COVID-19 outbreak,\n"
+"              see https://www.who.int/docs/default-source/coronaviruse/"
+"mental-health-considerations.pdf\n"
+"              "
+msgstr ""
+
+#: main/templates/main/includes/consent.html:91
 msgid "What is the survey schedule?"
 msgstr ""
 
-#: main/templates/main/includes/consent.html:82
+#: main/templates/main/includes/consent.html:98
 msgid ""
 "\n"
-"              The study takes place from 1 June 2020 to 31 May 2022. You can "
-"stop participating at any time before the\n"
-"              end\n"
-"              of the study.\n"
-"              The research is conducted via an online or SMS survey, a "
-"platform to access your data and an anonymous\n"
-"              forum\n"
-"              to discuss new survey items that should be added. Take as much "
-"time as you wish before making a decision.\n"
-"              We\n"
-"              will be happy to answer any questions you may have about this "
-"study. If you have any further questions\n"
-"              about\n"
-"              this project or if you have a problem with the research, you "
-"can contact the study coordinator, Anirudh\n"
-"              Krishnakumar, MSc, by phone at +33 1 84 25 68 04, or by e-"
-"mail, anirudh.krishnakumar@cri-paris.org.\n"
+"              The study takes place from 1 June 2020 to 31 May 2022.\n"
+"              You can stop participating at any time before the end of the "
+"study.\n"
+"              You will be asked to answer a survey every day for 2-5 minutes "
+"each day,\n"
+"              during the pandemic period and until the end of May 2022, with "
+"questions about the symptoms you are experiencing,\n"
+"              how you are doing and some details about your medical history "
+"and demographics.\n"
+"              The research is conducted via an online or SMS survey,\n"
+"              a platform to access your data and an anonymous forum to "
+"discuss new survey items that should be added.\n"
+"              Take as much time as you wish before making a decision.\n"
+"\n"
 "              "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:98
+#: main/templates/main/includes/consent.html:112
 msgid "Research Data Users."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:105
+#: main/templates/main/includes/consent.html:119
 msgid ""
 "\n"
 "              All data will be stored on secure servers, protected by "
@@ -820,7 +855,7 @@ msgid ""
 "              "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:119
+#: main/templates/main/includes/consent.html:133
 msgid ""
 "\n"
 "                Note : The governments in some countries / regions may "
@@ -837,11 +872,11 @@ msgid ""
 "                "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:131
+#: main/templates/main/includes/consent.html:145
 msgid "What will happen to the data collected for the research ?"
 msgstr ""
 
-#: main/templates/main/includes/consent.html:138
+#: main/templates/main/includes/consent.html:152
 msgid ""
 "\n"
 "              The anonymised data will be made available to all participants "
@@ -856,11 +891,43 @@ msgid ""
 "              "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:148
+#: main/templates/main/includes/consent.html:159
+msgid ""
+"\n"
+"              Your confidentiality will be protected as far as the law "
+"allows.\n"
+"              In collecting your personal information within this research,\n"
+"              the ANU must comply with the Australian Privacy Act 1988.\n"
+"              The ANU Privacy Policy is available at https://policies.anu."
+"edu.au/ppl/document/ANUP_010007 and it\n"
+"              contains information about how a person can\n"
+"              access or seek correction to their personal information and\n"
+"              complain about a breach of an Australian Privacy Principle by "
+"ANU, and how ANU will handle the complaint.\n"
+"              "
+msgstr ""
+
+#: main/templates/main/includes/consent.html:168
+msgid ""
+"\n"
+"              Organizations that may inspect and/or copy your research "
+"records for quality assurance and data analysis\n"
+"              include groups such as the study investigator and his/her "
+"research associates,\n"
+"              the University of Notre Dame Institutional Review Board or its "
+"designees,\n"
+"              and (as allowed by law) state or federal agencies, especially "
+"the\n"
+"              Office for Human Research Protections (OHRP), who may need to "
+"access the research records.\n"
+"              "
+msgstr ""
+
+#: main/templates/main/includes/consent.html:179
 msgid "What rights do you have ?"
 msgstr ""
 
-#: main/templates/main/includes/consent.html:155
+#: main/templates/main/includes/consent.html:186
 msgid ""
 "\n"
 "              In accordance with the French Data Protection Act of 6 January "
@@ -891,11 +958,11 @@ msgid ""
 "              "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:175
+#: main/templates/main/includes/consent.html:206
 msgid "Information on the results of the survey"
 msgstr ""
 
-#: main/templates/main/includes/consent.html:182
+#: main/templates/main/includes/consent.html:213
 msgid ""
 "\n"
 "              You have the right to see the results of this study. As soon "
@@ -905,44 +972,99 @@ msgid ""
 "              "
 msgstr ""
 
-#: main/templates/main/includes/consent.html:192
+#: main/templates/main/includes/consent.html:220
+msgid "Questions or concerns about the survey"
+msgstr ""
+
+#: main/templates/main/includes/consent.html:227
+msgid ""
+"\n"
+"              We will be happy to answer any questions you may have about "
+"this study.\n"
+"              If you have any further questions about this project or if you "
+"have a problem with the research, you can contact:\n"
+"              "
+msgstr ""
+
+#: main/templates/main/includes/consent.html:232
+msgid ""
+"\n"
+"              The study coordinator, Anirudh Krishnakumar, MSc, by phone at "
+"+33 1 84 25 68 04,\n"
+"              or by e-mail, anirudh.krishnakumar@cri-paris.org. Australian "
+"Team Members: Dr Anneke Blackburn,\n"
+"              The Australian National University, Canberra, ACT (e-mail: "
+"anneke.blackburn@anu.edu.au). Dr Alice Motion,\n"
+"              The University of Sydney, Sydney, NSW (e-mail: alice."
+"motion@sydney.edu.au)\n"
+"              "
+msgstr ""
+
+#: main/templates/main/includes/consent.html:239
+msgid ""
+"\n"
+"              Research involving humans in Australia is reviewed by an "
+"independent group of people called a\n"
+"              Human Research Ethics Committee (HREC). The ethical aspects of "
+"this study have been approved by\n"
+"              the HREC of the Australian National University (Protocol "
+"2020-343).\n"
+"              As part of this process, we have agreed to carry out the study "
+"according to the Australian NHMRC National Statement\n"
+"              on Ethical Conduct in Human Research (2018).\n"
+"              This statement has been developed to protect people who agree "
+"to take part in research studies.\n"
+"              If you are concerned about the way this study is being "
+"conducted or you wish to make a complaint\n"
+"              to someone independent from the study, please contact the "
+"university using the details outlined below.\n"
+"              Please quote the study title and the relevant protocol "
+"number:\n"
+"              Ethics Manager, The ANU Human Research Ethics Committee, The "
+"Australian National University,\n"
+"              e-mail: human.ethics.officer@anu.edu.au (preferred method of "
+"contact), tel: +61 2 6125 3427\n"
+"              "
+msgstr ""
+
+#: main/templates/main/includes/consent.html:259
 msgid ""
 "I have read the above information for participants and my questions "
 "regarding participation in the study have been answered satisfactorily."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:195
+#: main/templates/main/includes/consent.html:262
 msgid ""
 "I know that I can print this information or request a copy at any time and "
 "that I can withdraw from the study at any time without giving reasons and "
 "without any negative consequences."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:198
+#: main/templates/main/includes/consent.html:265
 msgid ""
 "I agree that the Principal Investigators and their collaborators may have "
 "access to the original data in strict compliance with the rules of "
 "confidentiality."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:201
+#: main/templates/main/includes/consent.html:268
 msgid ""
 "I am aware that the investigator may, without mutual consent, exclude me "
 "from the study if I do not meet the inclusion criteria."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:204
+#: main/templates/main/includes/consent.html:271
 msgid ""
 "By clicking on the \"ACCEPT\" button, I certify that I accept all the above-"
 "mentioned points and that I am participating in this study on a voluntary "
 "basis."
 msgstr ""
 
-#: main/templates/main/includes/consent.html:218
+#: main/templates/main/includes/consent.html:285
 msgid "WITHDRAW MY CONSENT"
 msgstr ""
 
-#: main/templates/main/includes/consent.html:220
+#: main/templates/main/includes/consent.html:287
 msgid "ACCEPT"
 msgstr ""
 
