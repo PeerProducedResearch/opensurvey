@@ -50,7 +50,7 @@
             </p>
           </li>
           <li>
-            <h3 data-collapse aria-expanded="false">{% trans "What are the expected benefits ?" %}
+            <h3 data-collapse aria-expanded="false">{% trans "What are the expected benefits and risks?" %}
               <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
                 <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
                 <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
@@ -58,16 +58,32 @@
             </h3>
             <p class="collapse__item">
               {% blocktrans %}
-              Participation in this study will not provide you with any direct personal benefit, but may provide
-              scientists
-              with new data. Although the risk is minimal, the individual survey questions can sometimes be intrusive.
-              You
-              may, of course, choose not to answer these questions, skip them, or terminate your participation. Your
-              involvement is voluntary; refusal to participate will not result in any penalties or loss of benefits to
-              which
-              you are entitled, and you can end your participation (and/or request that your previous data be deleted)
-              at
-              any time without consequence.
+              <b>Benefits</b>: Participation in this study will not provide you with any direct personal benefit, but may provide
+              scientists, policy makers, health professionals and the global community with new data about COVID-19.
+              {% endblocktrans %}
+              <br/><br/>
+              {% blocktrans %}
+              You agree that your participation in this study will not be in exchange of any payment.
+              {% endblocktrans %}
+              <br/><br/>
+              {% blocktrans %}
+              <b>Risks:</b> Although the risk is minimal, the individual survey questions can sometimes be intrusive.
+              You may, of course, choose not to answer these questions, skip them, or terminate your participation.
+              Your involvement is voluntary; refusal to participate will not result in any penalties or loss of benefits to which you are entitled,
+              and you can end your participation (and/or request that your previous data be deleted) at any time without consequence.
+              {% endblocktrans %}
+              <br/><br/>
+              {% blocktrans %}
+              We recognise that many people are experiencing high levels of anxiety and concern at this time.
+              The questions we ask about mental health and wellbeing, or the wellbeing of family members may be particularly sensitive in this context. If you feel distressed or upset by any of the questions, please discontinue the survey and contact relevant support services in your area.
+              {% endblocktrans %}
+              <br/><br/>
+              {% blocktrans %}
+              In Australia, these may include your GP or a mental health support service,
+              or community services like Lifeline on 13 11 14, SANE Australia at https://www.sane.org, or
+              Beyond Blue at https://www.beyondblue.org.au/ or 1300 22 4636.
+              For mental health advice specific to the COVID-19 outbreak,
+              see https://www.who.int/docs/default-source/coronaviruse/mental-health-considerations.pdf
               {% endblocktrans %}
             </p>
           </li>
@@ -80,17 +96,15 @@
             </h3>
             <p class="collapse__item">
               {% blocktrans %}
-              The study takes place from 1 June 2020 to 31 May 2022. You can stop participating at any time before the
-              end
-              of the study.
-              The research is conducted via an online or SMS survey, a platform to access your data and an anonymous
-              forum
-              to discuss new survey items that should be added. Take as much time as you wish before making a decision.
-              We
-              will be happy to answer any questions you may have about this study. If you have any further questions
-              about
-              this project or if you have a problem with the research, you can contact the study coordinator, Anirudh
-              Krishnakumar, MSc, by phone at +33 1 84 25 68 04, or by e-mail, anirudh.krishnakumar@cri-paris.org.
+              The study takes place from 1 June 2020 to 31 May 2022.
+              You can stop participating at any time before the end of the study.
+              You will be asked to answer a survey every day for 2-5 minutes each day,
+              during the pandemic period and until the end of May 2022, with questions about the symptoms you are experiencing,
+              how you are doing and some details about your medical history and demographics.
+              The research is conducted via an online or SMS survey,
+              a platform to access your data and an anonymous forum to discuss new survey items that should be added.
+              Take as much time as you wish before making a decision.
+
               {% endblocktrans %}
             </p>
           </li>
@@ -142,6 +156,23 @@
               identify participants. In addition, each participant will receive a copy of his or her own data as part of
               this study.
               {% endblocktrans %}
+              {% blocktrans %}
+              Your confidentiality will be protected as far as the law allows.
+              In collecting your personal information within this research,
+              the ANU must comply with the Australian Privacy Act 1988.
+              The ANU Privacy Policy is available at https://policies.anu.edu.au/ppl/document/ANUP_010007 and it
+              contains information about how a person can
+              access or seek correction to their personal information and
+              complain about a breach of an Australian Privacy Principle by ANU, and how ANU will handle the complaint.
+              {% endblocktrans %}
+              {% blocktrans %}
+              Organizations that may inspect and/or copy your research records for quality assurance and data analysis
+              include groups such as the study investigator and his/her research associates,
+              the University of Notre Dame Institutional Review Board or its designees,
+              and (as allowed by law) state or federal agencies, especially the
+              Office for Human Research Protections (OHRP), who may need to access the research records.
+              {% endblocktrans %}
+
             </p>
           </li>
           <li>
@@ -183,6 +214,42 @@
               You have the right to see the results of this study. As soon as the results are available, we will publish
               them openly on the project website on Open Humans and distribute them to all participants.
               {% endblocktrans %}
+            </p>
+          </li>
+          <li>
+            <h3 data-collapse aria-expanded="false">{% trans "Questions or concerns about the survey" %}
+              <svg xmlns="http://www.w3.org/2000/svg" height="12" width="20" viewbox="0 0 20 12" class="chevron">
+                <line x1="0" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+                <line x1="20" y1="0" x2="10" y2="10" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </h3>
+            <p class="collapse__item">
+              {% blocktrans %}
+              We will be happy to answer any questions you may have about this study.
+              If you have any further questions about this project or if you have a problem with the research, you can contact:
+              {% endblocktrans %}
+              <br/><br/>
+              {% blocktrans %}
+              The study coordinator, Anirudh Krishnakumar, MSc, by phone at +33 1 84 25 68 04,
+              or by e-mail, anirudh.krishnakumar@cri-paris.org. Australian Team Members: Dr Anneke Blackburn,
+              The Australian National University, Canberra, ACT (e-mail: anneke.blackburn@anu.edu.au). Dr Alice Motion,
+              The University of Sydney, Sydney, NSW (e-mail: alice.motion@sydney.edu.au)
+              {% endblocktrans %}
+              <br/><br/>
+              {% blocktrans %}
+              Research involving humans in Australia is reviewed by an independent group of people called a
+              Human Research Ethics Committee (HREC). The ethical aspects of this study have been approved by
+              the HREC of the Australian National University (Protocol 2020-343).
+              As part of this process, we have agreed to carry out the study according to the Australian NHMRC National Statement
+              on Ethical Conduct in Human Research (2018).
+              This statement has been developed to protect people who agree to take part in research studies.
+              If you are concerned about the way this study is being conducted or you wish to make a complaint
+              to someone independent from the study, please contact the university using the details outlined below.
+              Please quote the study title and the relevant protocol number:
+              Ethics Manager, The ANU Human Research Ethics Committee, The Australian National University,
+              e-mail: human.ethics.officer@anu.edu.au (preferred method of contact), tel: +61 2 6125 3427
+              {% endblocktrans %}
+              <br/><br/>
             </p>
           </li>
         </ol>

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-28 12:54+0000\n"
+"POT-Creation-Date: 2020-08-07 08:35+0000\n"
 "PO-Revision-Date: 2020-07-21 13:15+0000\n"
 "Last-Translator: Natalia Norori <natalianorori@gmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/opencovid-survey/teams/111172/es/)\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: main/helpers.py:114
+#: main/helpers.py:115
 msgid "Here's your survey link!"
 msgstr "Este es el enlace de tu encuesta"
 
-#: main/helpers.py:116
+#: main/helpers.py:117
 msgid "Please use this link to fill out the survey"
 msgstr "Utiliza este enlace para completar la encuesta"
 
-#: main/helpers.py:118
+#: main/helpers.py:119
 msgid ""
 "If you don't want to take part in the survey anymore, please use this link "
 "and click on \"WITHDRAW MY CONSENT\""
@@ -42,15 +42,15 @@ msgstr ""
 msgid "Citizen Science"
 msgstr "Ciencia Ciudadana"
 
-#: main/templates/base.html:62 main/templates/base.html:295
+#: main/templates/base.html:62 main/templates/base.html:298
 msgid "Data"
 msgstr "Datos"
 
-#: main/templates/base.html:65 main/templates/base.html:296
+#: main/templates/base.html:65 main/templates/base.html:299
 msgid "Team"
 msgstr "Equipo"
 
-#: main/templates/base.html:68 main/templates/base.html:297
+#: main/templates/base.html:68 main/templates/base.html:300
 msgid "FAQ"
 msgstr "Preguntas Frecuentes "
 
@@ -66,23 +66,23 @@ msgstr "Iniciar sesión"
 msgid "Log out"
 msgstr "Cerrar sesión"
 
-#: main/templates/base.html:293
+#: main/templates/base.html:296
 msgid "Home"
 msgstr "Inicio"
 
-#: main/templates/base.html:294 main/templates/main/about.html:8
+#: main/templates/base.html:297 main/templates/main/about.html:8
 msgid "About"
 msgstr "Sobre el proyecto"
 
-#: main/templates/base.html:298
+#: main/templates/base.html:301
 msgid "Privacy Policy"
 msgstr "Política de privacidad"
 
-#: main/templates/base.html:302
+#: main/templates/base.html:305
 msgid "view our code"
 msgstr "Ver nuestro código"
 
-#: main/templates/base.html:303
+#: main/templates/base.html:306
 msgid "Twitter"
 msgstr "Twitter"
 
@@ -820,62 +820,104 @@ msgstr ""
 "foro anónimo de participantes . Tanto responder las preguntas de la encuesta, como participar en las discusiones del foro son opcionales para los participantes. "
 
 #: main/templates/main/includes/consent.html:53
-msgid "What are the expected benefits ?"
-msgstr "¿Cuáles son los beneficios esperados?"
+msgid "What are the expected benefits and risks?"
+msgstr "¿Cuáles son los beneficios y riesgos esperados?"
 
 #: main/templates/main/includes/consent.html:60
 msgid ""
 "\n"
-"              Participation in this study will not provide you with any direct personal benefit, but may provide\n"
-"              scientists\n"
-"              with new data. Although the risk is minimal, the individual survey questions can sometimes be intrusive.\n"
-"              You\n"
-"              may, of course, choose not to answer these questions, skip them, or terminate your participation. Your\n"
-"              involvement is voluntary; refusal to participate will not result in any penalties or loss of benefits to\n"
-"              which\n"
-"              you are entitled, and you can end your participation (and/or request that your previous data be deleted)\n"
-"              at\n"
-"              any time without consequence.\n"
+"              <b>Benefits</b>: Participation in this study will not provide you with any direct personal benefit, but may provide\n"
+"              scientists, policy makers, health professionals and the global community with new data about COVID-19.\n"
 "              "
 msgstr ""
 "\n"
-"La participación en este estudio no proporcionará ningún beneficio personal directo, pero puede ayudarle a los\n"
-"científicos a obtener uevos datos.  Aunque el riesgo es mínimo, las preguntas de las encuestas individuales a veces pueden ser intrusivas.\n"
-"Cada participante puede, por supuesto, elegir no responder a estas preguntas, saltearlas o finalizar su participación en el estudio. \n"
-"La la participación es voluntaria y negarse participar no dará lugar a sanciones ni a la pérdida de beneficios. Cada participante puede finalizar su participación (y/o solicitar que se eliminen sus datos anteriores) en cualquier momento sin consecuencia."
+"<b>Beneficios</b>Tu participación en este estudio no te va a brindar beneficios personales directos, pero podrá brindarle a los científicos, creadores de políticas publicas, profesionales de la salud y a la comunidad global con nuevos datos para mitigar el impacto de COVID-19. "
 
-#: main/templates/main/includes/consent.html:75
+#: main/templates/main/includes/consent.html:65
+msgid ""
+"\n"
+"              You agree that your participation in this study will not be in exchange of any payment.\n"
+"              "
+msgstr ""
+"\n"
+"Estás de acuerdo que tu participación en este estudio no sera renumerada. "
+
+#: main/templates/main/includes/consent.html:69
+msgid ""
+"\n"
+"              <b>Risks:</b> Although the risk is minimal, the individual survey questions can sometimes be intrusive.\n"
+"              You may, of course, choose not to answer these questions, skip them, or terminate your participation.\n"
+"              Your involvement is voluntary; refusal to participate will not result in any penalties or loss of benefits to which you are entitled,\n"
+"              and you can end your participation (and/or request that your previous data be deleted) at any time without consequence.\n"
+"              "
+msgstr ""
+"\n"
+"<b>Riesgos:</b> Aunque el riesgo es mínimo, las preguntas individuales de la encuesta a veces pueden ser intrusivas.\n"
+"Podés optar por no responder a estas preguntas, omitirlas o finalizar tu participación en el estudio.\n"
+"Tu participación es voluntaria; negarse a participar no dará lugar a ninguna sanción o pérdida de los beneficios a los que tenés derecho,\n"
+"Podés finalizar tu participación (y / o solicitar que se eliminen sus datos anteriores) en cualquier momento sin consecuencias."
+
+#: main/templates/main/includes/consent.html:76
+msgid ""
+"\n"
+"              We recognise that many people are experiencing high levels of anxiety and concern at this time.\n"
+"              The questions we ask about mental health and wellbeing, or the wellbeing of family members may be particularly sensitive in this context. If you feel distressed or upset by any of the questions, please discontinue the survey and contact relevant support services in your area.\n"
+"              "
+msgstr ""
+"\n"
+"Reconocemos que muchas personas están experimentando altos niveles de ansiedad y preocupación en este momento.\n"
+"Las preguntas que hacemos sobre salud mental y bienestar, o el bienestar de los miembros de la familia, pueden ser particularmente delicadas en este contexto. Si te causan angustia o molestia algunas de las preguntas, te recomendamos interrumpir la encuesta y comunicarte con los servicios de soporte relevantes en tu área."
+
+#: main/templates/main/includes/consent.html:81
+msgid ""
+"\n"
+"              In Australia, these may include your GP or a mental health support service,\n"
+"              or community services like Lifeline on 13 11 14, SANE Australia at https://www.sane.org, or\n"
+"              Beyond Blue at https://www.beyondblue.org.au/ or 1300 22 4636.\n"
+"              For mental health advice specific to the COVID-19 outbreak,\n"
+"              see https://www.who.int/docs/default-source/coronaviruse/mental-health-considerations.pdf\n"
+"              "
+msgstr ""
+"\n"
+"En Australia, estos pueden incluir tu médico de cabecera o un servicio de apoyo de salud mental,\n"
+"o servicios comunitarios como Lifeline en 13 11 14, SANE Australia en https://www.sane.org, o\n"
+"Beyond Blue en https://www.beyondblue.org.au/ o 1300 22 4636.\n"
+"Para obtener consejos de salud mental específicos del brote de COVID-19,\n"
+"ver https://www.who.int/docs/default-source/coronaviruse/mental-health-considerations.pdf"
+
+#: main/templates/main/includes/consent.html:91
 msgid "What is the survey schedule?"
 msgstr "¿En que período de tiempo se llevara a cabo la encuesta?"
 
-#: main/templates/main/includes/consent.html:82
+#: main/templates/main/includes/consent.html:98
 msgid ""
 "\n"
-"              The study takes place from 1 June 2020 to 31 May 2022. You can stop participating at any time before the\n"
-"              end\n"
-"              of the study.\n"
-"              The research is conducted via an online or SMS survey, a platform to access your data and an anonymous\n"
-"              forum\n"
-"              to discuss new survey items that should be added. Take as much time as you wish before making a decision.\n"
-"              We\n"
-"              will be happy to answer any questions you may have about this study. If you have any further questions\n"
-"              about\n"
-"              this project or if you have a problem with the research, you can contact the study coordinator, Anirudh\n"
-"              Krishnakumar, MSc, by phone at +33 1 84 25 68 04, or by e-mail, anirudh.krishnakumar@cri-paris.org.\n"
+"              The study takes place from 1 June 2020 to 31 May 2022.\n"
+"              You can stop participating at any time before the end of the study.\n"
+"              You will be asked to answer a survey every day for 2-5 minutes each day,\n"
+"              during the pandemic period and until the end of May 2022, with questions about the symptoms you are experiencing,\n"
+"              how you are doing and some details about your medical history and demographics.\n"
+"              The research is conducted via an online or SMS survey,\n"
+"              a platform to access your data and an anonymous forum to discuss new survey items that should be added.\n"
+"              Take as much time as you wish before making a decision.\n"
+"\n"
 "              "
 msgstr ""
 "\n"
-"El estudio se lleva a cabo del 1 de junio de 2020 al 31 de mayo de 2022. Se puede dejar de participar en cualquier momento antes del final de el estudio.\n"
-"\n"
-"La investigación se realiza a través de una encuesta en línea o SMS, una plataforma para acceder a sus datos y un foro anónimo para discutir nuevos elementos de la encuesta que deberían agregarse. Tómese el tiempo que desee antes de tomar una decisión.\n"
-"\n"
-"Con gusto responderemos cualquier pregunta que pueda tener sobre este estudio. Si se tiene alguna otra pregunta acerca de este proyecto o si existen problemas con la investigación, se puede contactar al coordinador del estudio, Anirudh Krishnakumar, MSc, por teléfono al +33 1 84 25 68 04, o por correo electrónico, anirudh.krishnakumar@cri-paris.org."
+"El estudio se lleva a cabo del 1 de junio de 2020 al 31 de mayo de 2022.\n"
+"Podés dejar de participar en cualquier momento antes de que finalice el estudio.\n"
+"Se te pedirá que responda una encuesta todos los días que toma entre 2-5 minutos cada día,\n"
+"durante el período de la pandemia y hasta finales de mayo de 2022, con preguntas sobre los síntomas que experimentas,\n"
+"tu estado actual, y  algunos detalles sobre su historial médico y datos demográficos.\n"
+"La investigación se realiza a través de una encuesta en línea o por SMS,\n"
+"una plataforma para acceder a tus datos y un foro anónimo para discutir los nuevos elementos de la encuesta que deberían agregarse.\n"
+"Tomate todo el tiempo que desee antes de tomar una decisión."
 
-#: main/templates/main/includes/consent.html:98
+#: main/templates/main/includes/consent.html:112
 msgid "Research Data Users."
 msgstr "Usuarios de los Datos de Investigación"
 
-#: main/templates/main/includes/consent.html:105
+#: main/templates/main/includes/consent.html:119
 msgid ""
 "\n"
 "              All data will be stored on secure servers, protected by firewall and password, of Open Humans &\n"
@@ -897,7 +939,7 @@ msgstr ""
 "Los datos de los participantes no se venderán y el intercambio de datos se realizará bajo estrictas\n"
 "pautas de procedimiento basadas en protocolos. Los participantes podrán eliminar sus datos del estudio en cualquier momento que deseen."
 
-#: main/templates/main/includes/consent.html:119
+#: main/templates/main/includes/consent.html:133
 msgid ""
 "\n"
 "                Note : The governments in some countries / regions may monitor internet traffic.\n"
@@ -914,11 +956,11 @@ msgstr ""
 "Si le preocupa que sus datos personales o de salud sean monitoreados y que esto pueda ponerlo en riesgo,\n"
 "entonces le recomendamos que no participe en este estudio."
 
-#: main/templates/main/includes/consent.html:131
+#: main/templates/main/includes/consent.html:145
 msgid "What will happen to the data collected for the research ?"
 msgstr "¿Qué pasará con los datos recopilados para la investigación?"
 
-#: main/templates/main/includes/consent.html:138
+#: main/templates/main/includes/consent.html:152
 msgid ""
 "\n"
 "              The anonymised data will be made available to all participants and the scientific community, and will be\n"
@@ -935,11 +977,49 @@ msgstr ""
 "Identificar participantes. Además, cada participante recibirá una copia de sus propios datos como parte de\n"
 "este estudio."
 
-#: main/templates/main/includes/consent.html:148
+#: main/templates/main/includes/consent.html:159
+msgid ""
+"\n"
+"              Your confidentiality will be protected as far as the law allows.\n"
+"              In collecting your personal information within this research,\n"
+"              the ANU must comply with the Australian Privacy Act 1988.\n"
+"              The ANU Privacy Policy is available at https://policies.anu.edu.au/ppl/document/ANUP_010007 and it\n"
+"              contains information about how a person can\n"
+"              access or seek correction to their personal information and\n"
+"              complain about a breach of an Australian Privacy Principle by ANU, and how ANU will handle the complaint.\n"
+"              "
+msgstr ""
+"\n"
+"Tu confidencialidad estará protegida hasta donde la ley lo permita.\n"
+"Al recopilar tu información personal dentro de esta investigación,\n"
+"la ANU debe cumplir con la Ley de Privacidad de Australia de 1988.\n"
+"La Política de privacidad de ANU está disponible en https://policies.anu.edu.au/ppl/document/ANUP_010007 y\n"
+"contiene información sobre cómo una persona puede\n"
+"acceder o buscar la corrección de su información personal y\n"
+"quejarse de una violación de un Principio de Privacidad Australiano por parte de ANU, y cómo ANU manejará la queja."
+
+#: main/templates/main/includes/consent.html:168
+msgid ""
+"\n"
+"              Organizations that may inspect and/or copy your research records for quality assurance and data analysis\n"
+"              include groups such as the study investigator and his/her research associates,\n"
+"              the University of Notre Dame Institutional Review Board or its designees,\n"
+"              and (as allowed by law) state or federal agencies, especially the\n"
+"              Office for Human Research Protections (OHRP), who may need to access the research records.\n"
+"              "
+msgstr ""
+"\n"
+"El grupo de organizaciones que pueden inspeccionar y / o copiar tus registros de investigación para garantizar la calidad y el análisis de datos\n"
+"incluye a los investigadores del estudio y sus socios,\n"
+"la Junta de Revisión Institucional de la Universidad de Notre Dame o sus designados,\n"
+"y (según lo permita la ley) agencias estatales o federales, especialmente\n"
+"Office for Human Research Protections (OHRP), que pueden necesitar acceder a los registros de la investigación."
+
+#: main/templates/main/includes/consent.html:179
 msgid "What rights do you have ?"
 msgstr "¿Cúales son tus derechos?"
 
-#: main/templates/main/includes/consent.html:155
+#: main/templates/main/includes/consent.html:186
 msgid ""
 "\n"
 "              In accordance with the French Data Protection Act of 6 January 1978 as amended and with European\n"
@@ -970,11 +1050,11 @@ msgstr ""
 "se puede contactar a nuestro oficial de protección de datos, Lionel Devaux (lionel.devaux@cri-pari.org).\n"
 "Si el participante siente, después de contactarnos, que sus derechos a las Tecnologías de la Información y Libertades no son respetados, se  puede enviar una queja a la CNIL (Commission Nationale Informatique et Libertés www.cnil.fr)."
 
-#: main/templates/main/includes/consent.html:175
+#: main/templates/main/includes/consent.html:206
 msgid "Information on the results of the survey"
 msgstr "Información sobre los resultados del estudio"
 
-#: main/templates/main/includes/consent.html:182
+#: main/templates/main/includes/consent.html:213
 msgid ""
 "\n"
 "              You have the right to see the results of this study. As soon as the results are available, we will publish\n"
@@ -985,7 +1065,66 @@ msgstr ""
 "Todos tienen derecho a ver los resultados de este estudio. Tan pronto como los resultados estén disponibles, los vamos a publicar\n"
 "abiertamente en el sitio web del proyecto Open Human. Los resultados también van a ser distribuidos a todos los participantes."
 
-#: main/templates/main/includes/consent.html:192
+#: main/templates/main/includes/consent.html:220
+msgid "Questions or concerns about the survey"
+msgstr "Preguntas o dudas sobre la encuesta"
+
+#: main/templates/main/includes/consent.html:227
+msgid ""
+"\n"
+"              We will be happy to answer any questions you may have about this study.\n"
+"              If you have any further questions about this project or if you have a problem with the research, you can contact:\n"
+"              "
+msgstr ""
+"\n"
+"Estaremos encantados de responder cualquier pregunta que pueda tener sobre este estudio.\n"
+"Si tiene más preguntas sobre este proyecto o si tiene algún problema con la investigación, puede comunicarse con:"
+
+#: main/templates/main/includes/consent.html:232
+msgid ""
+"\n"
+"              The study coordinator, Anirudh Krishnakumar, MSc, by phone at +33 1 84 25 68 04,\n"
+"              or by e-mail, anirudh.krishnakumar@cri-paris.org. Australian Team Members: Dr Anneke Blackburn,\n"
+"              The Australian National University, Canberra, ACT (e-mail: anneke.blackburn@anu.edu.au). Dr Alice Motion,\n"
+"              The University of Sydney, Sydney, NSW (e-mail: alice.motion@sydney.edu.au)\n"
+"              "
+msgstr ""
+"\n"
+"El coordinador del estudio, Anirudh Krishnakumar, MSc, por teléfono al +33 1 84 25 68 04,\n"
+"o por correo electrónico, anirudh.krishnakumar@cri-paris.org. Miembros del equipo australiano: Dra. Anneke Blackburn,\n"
+"La Universidad Nacional de Australia, Canberra, ACT (correo electrónico: anneke.blackburn@anu.edu.au). Dr. Alice Motion,\n"
+"La Universidad de Sydney, Sydney, NSW (correo electrónico: alice.motion@sydney.edu.au)"
+
+#: main/templates/main/includes/consent.html:239
+msgid ""
+"\n"
+"              Research involving humans in Australia is reviewed by an independent group of people called a\n"
+"              Human Research Ethics Committee (HREC). The ethical aspects of this study have been approved by\n"
+"              the HREC of the Australian National University (Protocol 2020-343).\n"
+"              As part of this process, we have agreed to carry out the study according to the Australian NHMRC National Statement\n"
+"              on Ethical Conduct in Human Research (2018).\n"
+"              This statement has been developed to protect people who agree to take part in research studies.\n"
+"              If you are concerned about the way this study is being conducted or you wish to make a complaint\n"
+"              to someone independent from the study, please contact the university using the details outlined below.\n"
+"              Please quote the study title and the relevant protocol number:\n"
+"              Ethics Manager, The ANU Human Research Ethics Committee, The Australian National University,\n"
+"              e-mail: human.ethics.officer@anu.edu.au (preferred method of contact), tel: +61 2 6125 3427\n"
+"              "
+msgstr ""
+"\n"
+"La investigación que involucra humanos en Australia es revisada por un grupo independiente de personas llamado\n"
+"Comité de Ética en Investigación Humana (HREC). Los aspectos éticos de este estudio han sido aprobados por\n"
+"HREC de la Universidad Nacional de Australia (Protocolo 2020-343).\n"
+"Como parte de este proceso, hemos acordado realizar el estudio de acuerdo con la Declaración Nacional Australiana del NHMRC.\n"
+"sobre conducta ética en la investigación humana (2018).\n"
+"Esta declaración se ha desarrollado para proteger a las personas que acceden a participar en estudios de investigación.\n"
+"Si le preocupa la forma en que se está realizando este estudio o desea presentar una queja\n"
+"a alguien independiente del estudio, comuníquese con la universidad utilizando los detalles que se describen a continuación.\n"
+"Indique el título del estudio y el número de protocolo correspondiente:\n"
+"Gerente de Ética, Comité de Ética de Investigación Humana ANU, Universidad Nacional de Australia,\n"
+"correo electrónico: human.ethics.officer@anu.edu.au (método de contacto preferido), tel: +61 2 6125 3427"
+
+#: main/templates/main/includes/consent.html:259
 msgid ""
 "I have read the above information for participants and my questions "
 "regarding participation in the study have been answered satisfactorily."
@@ -994,7 +1133,7 @@ msgstr ""
 "sobre la participación en el estudio han sido respondidas "
 "satisfactoriamente."
 
-#: main/templates/main/includes/consent.html:195
+#: main/templates/main/includes/consent.html:262
 msgid ""
 "I know that I can print this information or request a copy at any time and "
 "that I can withdraw from the study at any time without giving reasons and "
@@ -1004,7 +1143,7 @@ msgstr ""
 "momento y que puedo retirarme del estudio en cualquier momento sin dar "
 "razones y sin consecuencias negativas."
 
-#: main/templates/main/includes/consent.html:198
+#: main/templates/main/includes/consent.html:265
 msgid ""
 "I agree that the Principal Investigators and their collaborators may have "
 "access to the original data in strict compliance with the rules of "
@@ -1014,7 +1153,7 @@ msgstr ""
 "pueden tener acceso a los datos originales en estricto cumplimiento de las "
 "normas de confidencialidad."
 
-#: main/templates/main/includes/consent.html:201
+#: main/templates/main/includes/consent.html:268
 msgid ""
 "I am aware that the investigator may, without mutual consent, exclude me "
 "from the study if I do not meet the inclusion criteria."
@@ -1022,7 +1161,7 @@ msgstr ""
 "Soy consciente de que el investigador puede, sin consentimiento mutuo, "
 "excluirme del estudio si no cumplo con los criterios de inclusión."
 
-#: main/templates/main/includes/consent.html:204
+#: main/templates/main/includes/consent.html:271
 msgid ""
 "By clicking on the \"ACCEPT\" button, I certify that I accept all the above-"
 "mentioned points and that I am participating in this study on a voluntary "
@@ -1032,11 +1171,11 @@ msgstr ""
 " mencionados anteriormente y que estoy participando en este estudio de forma"
 " voluntaria."
 
-#: main/templates/main/includes/consent.html:218
+#: main/templates/main/includes/consent.html:285
 msgid "WITHDRAW MY CONSENT"
 msgstr "RETIRAR MI CONSENTIMIENTO"
 
-#: main/templates/main/includes/consent.html:220
+#: main/templates/main/includes/consent.html:287
 msgid "ACCEPT"
 msgstr "ACEPTAR"
 
