@@ -13,4 +13,7 @@ class Command(BaseCommand):
             # done when clicking the email link now
             # create_openclinica_event(survey_account, "SE_DAILY", str(datetime.date.today()))
             get_openclinica_token(survey_account)
-            send_user_survey_link(survey_account)
+            try:
+                send_user_survey_link(survey_account)
+            except:
+                pass
